@@ -775,7 +775,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".container {\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  height: 100%; }\n  .container .frontlogin {\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 341px;\n    min-height: 250px;\n    padding: 20px; }\n    .container .frontlogin button {\n      margin: 16px;\n      padding: 6px; }\n", ""]);
 
 // exports
 
@@ -77966,58 +77966,6 @@ __webpack_require__(31);
 
 __webpack_require__(32);
 
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/hrefDirective.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/26tooltip.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/27parsing.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/28infoFromList.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/29dynamicData.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/32dropDown.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/32.1ngOptions.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/32.5lists.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/37parsing.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/37.4directive.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/42Menudirective.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/42.1.1directive.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/42.1.2path.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/43directive.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/43countDowndir.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/43.2ctrlToDir.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/43.3ctrlToDir.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/43.3.2dissapearBTN.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/43.3.3generatingList.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/43.3.4disable.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/44Services.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/44ulli.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/40iconList.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/IndexLIST.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/41IconListDir.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./custom/controllers/35tabMenu.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
 /***/ }),
 /* 31 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -78029,7 +77977,7 @@ var _main = __webpack_require__(2);
 
 _main.app.config(function ($routeProvider) {
   $routeProvider.when("/", {
-    templateUrl: "src/views/IndexLIST.html"
+    templateUrl: "src/views/loginPage.html"
   }).when('/404', {
     templateUrl: "src/views/404.html"
   }).otherwise("/404");

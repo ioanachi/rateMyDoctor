@@ -4,7 +4,7 @@ import {
 app.config(function($routeProvider) {
   $routeProvider
     .when("/", {
-      templateUrl: "src/views/IndexLIST.html"
+      templateUrl: "src/views/loginPage.html"
     })
 
     .when('/404', {

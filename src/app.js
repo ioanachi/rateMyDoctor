@@ -1,0 +1,11 @@
+import '../index.html';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/angular-material/angular-material.min.css';
+import './scss/main.scss';
+import 'angular';
+import 'angular-route';
+import 'angular-animate';
+import 'angular-aria';
+import 'angular-messages';
+import 'angular-material';
+import './js/script.js';

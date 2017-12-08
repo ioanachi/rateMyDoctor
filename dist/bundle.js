@@ -775,7 +775,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".container {\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  height: 100%; }\n  .container .frontlogin {\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 341px;\n    min-height: 250px;\n    padding: 20px; }\n    .container .frontlogin button {\n      margin: 16px;\n      padding: 6px; }\n", ""]);
+exports.push([module.i, "body {\n  background-image: url(\"/src/img/loginphoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: 100%; }\n  body .container {\n    align-items: center;\n    display: flex;\n    justify-content: center;\n    width: 100%;\n    height: 100%; }\n    body .container .frontlogin {\n      background-color: rgba(255, 255, 255, 0.9);\n      border: 1px solid #cccccc;\n      display: inline-block;\n      align-items: center;\n      justify-content: center;\n      text-align: center;\n      min-width: 400px;\n      min-height: 300px;\n      padding: 20px; }\n      body .container .frontlogin button {\n        margin: 16px;\n        padding: 6px;\n        min-width: 184px;\n        min-height: 45px;\n        background-color: #0b74c1;\n        border: 0;\n        color: white; }\n      body .container .frontlogin md-input-container {\n        text-align: left; }\n", ""]);
 
 // exports
 

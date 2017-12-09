@@ -21,3 +21,4 @@ import './custom/model/directives/registerValidation.js';
 
 // import services
 import './custom/model/servicePut.js';
+import './custom/model/servicePost.js';

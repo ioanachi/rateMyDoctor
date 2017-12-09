@@ -2,9 +2,9 @@ import {
   app
 } from '../main.js';
 
-app.controller("validationRegisterController", ["$http", "generalService", "httpPutService", function($http, generalService, httpPutService) {
+app.controller("validationRegisterController", [ 'Notification', "$http","generalService", "httpPutService", "$location",  function( Notification, $http, generalService, httpPutService , $location) {
   var tThis = this;
-  tThis.validateRorm = function(formName) {
+  tThis.validateForm = function(formName) {
 
     if (formName.$valid) {
       var _data = {
@@ -13,11 +13,14 @@ app.controller("validationRegisterController", ["$http", "generalService", "http
         "email": tThis.email,
       };
       httpPutService.registerUser(_data).then(function(raspuns) {
-        console.log(raspuns);
+        console.log(raspuns,"raspuns");
+         Notification.success("User created");
+        $location.path('/login');
       });
 
     } else {
       console.log("errrrrrrrrrrrr");
+      Notification.error({message: 'Could not add user'});
 
     }
   };

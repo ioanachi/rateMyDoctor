@@ -22,6 +22,7 @@ module.exports = {
       // browse to http://localhost:3000/ during development,
       // ./public directory is being served
       host: 'localhost',
+      files: ['./src/views/*.html'],
       port: 3000,
       server: {
         baseDir: ['']

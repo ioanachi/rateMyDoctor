@@ -21,5 +21,5 @@ app.directive("pwCheck", function() {
       });
 
     },
-  }
-})
+  };
+});

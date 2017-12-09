@@ -13,7 +13,7 @@
   min-height: 100%;
 
   .frontregister {
-    background-color: rgba(255, 255, 255,0.94);
+    background-color: rgba(255, 255, 255,0.8);
     border: 1px solid #cccccc;
     display: inline-block;
     align-items: center;
@@ -54,5 +54,10 @@
       color: #F00;
       font-size: 14px;
     }
+  }
+
+  .other:hover {
+    background-color: blue;
+    cursor: pointer;
   }
 }

@@ -4,8 +4,8 @@ import {
 
 app.factory('httpPostService', ['generalService', '$http', function(generalService,$http) {
   return {
-     loginUser:function(_data){
-      return $http.post(generalService.requestLinks("/login"), _data);
+     logInn:function(param){
+      return $http.post(generalService.requestLinks("/login"), param);
      }
   };
 }]);

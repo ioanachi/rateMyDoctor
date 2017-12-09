@@ -78540,6 +78540,10 @@ __webpack_require__(36);
 
 __webpack_require__(37);
 
+__webpack_require__(42);
+
+__webpack_require__(43);
+
 __webpack_require__(38);
 
 __webpack_require__(39);
@@ -78547,10 +78551,6 @@ __webpack_require__(39);
 __webpack_require__(40);
 
 __webpack_require__(41);
-
-__webpack_require__(42);
-
-__webpack_require__(43);
 
 /***/ }),
 /* 36 */
@@ -78601,16 +78601,17 @@ var _main = __webpack_require__(0);
 
 console.log("generalService");
 
-_main.app.controller("LogvalidateController", ['Notification', "$http", "generalService", "httpPostService", "$localStorage", "$location", function (Notification, $http, generalService, $localStorage, httpPostService, $location) {
+_main.app.controller("LogvalidateController", ['Notification', "$http", "generalService", "httpPostService", "$localStorage", function (Notification, $http, generalService, httpPostService, $localStorage) {
   var tThis = this;
   console.log(generalService);
+
   tThis.validateLogin = function (formName) {
     if (formName.$valid) {
       var _data = {
         "username": tThis.username,
         "password": tThis.password
       };
-      httpPostService.loginUser(_data).then(function (raspuns) {
+      httpPostService.logInn(_data).then(function (raspuns) {
         var data = raspuns.data;
         console.log(raspuns, "raspuns");
         Notification.success("Login successfull");
@@ -78621,10 +78622,14 @@ _main.app.controller("LogvalidateController", ['Notification', "$http", "general
 
         $location.path('/dashboard');
       }, function (err) {
-        Notification.error({ message: 'Could not find user' });
+        Notification.error({
+          message: 'Could not find user'
+        });
       });
     } else {
-      Notification.error({ message: 'Form not valid' });
+      Notification.error({
+        message: 'Form not valid'
+      });
     }
   };
 }]);
@@ -78742,8 +78747,8 @@ var _main = __webpack_require__(0);
 
 _main.app.factory('httpPostService', ['generalService', '$http', function (generalService, $http) {
   return {
-    loginUser: function loginUser(_data) {
-      return $http.post(generalService.requestLinks("/login"), _data);
+    logInn: function logInn(param) {
+      return $http.post(generalService.requestLinks("/login"), param);
     }
   };
 }]);

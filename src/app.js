@@ -10,5 +10,6 @@ import 'angular-animate';
 import 'angular-aria';
 import 'angular-messages';
 import 'angular-material';
+import 'ngStorage';
 import 'angular-ui-notification';
 import './js/script.js';

@@ -1,5 +1,20 @@
 webpackJsonp([0],[
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// define angular myApp which must be imported in every controller file
+
+var app = angular.module('myApp', ['ngRoute', 'ngMaterial', 'ngMessages']);
+exports.app = app;
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 /*
@@ -81,7 +96,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -440,21 +455,6 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-// define angular myApp which must be imported in every controller file
-
-var app = angular.module('myApp', ['ngRoute', 'ngMaterial']);
-exports.app = app;
-
-/***/ }),
 /* 3 */
 /***/ (function(module, exports) {
 
@@ -524,7 +524,7 @@ __webpack_require__(30);
 /* 9 */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\r\n<html ng-app=\"myApp\">\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title></title>\r\n</head>\r\n<body>\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-12\">\r\n        <div ></div>\r\n        <ng-view> </ng-view>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <script src=\"./dist/commons.js\"></script>\r\n  <script src=\"./dist/bundle.js\"></script>\r\n</body>\r\n\r\n</html>\r\n";
+module.exports = "<!DOCTYPE html>\r\n<html ng-app=\"myApp\">\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title></title>\r\n</head>\r\n<body>\r\n\r\n        <ng-view> </ng-view>\r\n    \r\n  <script src=\"./dist/commons.js\"></script>\r\n  <script src=\"./dist/bundle.js\"></script>\r\n</body>\r\n\r\n</html>\r\n";
 
 /***/ }),
 /* 10 */
@@ -541,7 +541,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
+var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -561,7 +561,7 @@ if(false) {
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(undefined);
+exports = module.exports = __webpack_require__(1)(undefined);
 // imports
 
 
@@ -705,7 +705,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
+var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -725,7 +725,7 @@ if(false) {
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(undefined);
+exports = module.exports = __webpack_require__(1)(undefined);
 // imports
 
 
@@ -750,7 +750,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
+var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -770,12 +770,12 @@ if(false) {
 /* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(undefined);
+exports = module.exports = __webpack_require__(1)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "body {\n  background-image: url(\"/src/img/loginphoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: 100%; }\n  body .container {\n    align-items: center;\n    display: flex;\n    justify-content: center;\n    width: 100%;\n    height: 100%; }\n    body .container .frontlogin {\n      background-color: rgba(255, 255, 255, 0.9);\n      border: 1px solid #cccccc;\n      display: inline-block;\n      align-items: center;\n      justify-content: center;\n      text-align: center;\n      min-width: 400px;\n      min-height: 300px;\n      padding: 20px; }\n      body .container .frontlogin button {\n        margin: 16px;\n        padding: 6px;\n        min-width: 184px;\n        min-height: 45px;\n        background-color: #0b74c1;\n        border: 0;\n        color: white; }\n      body .container .frontlogin md-input-container {\n        text-align: left; }\n", ""]);
+exports.push([module.i, ".backImg {\n  background-image: url(\"/src/img/loginphoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .backImg .frontlogin {\n    background-color: rgba(255, 255, 255, 0.9);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .backImg .frontlogin button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .backImg .frontlogin md-input-container {\n      text-align: left; }\n\n.ImgReg {\n  background-image: url(\"/src/img/registerphoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-color: #e9e9e9;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .ImgReg .frontregister {\n    background-color: rgba(255, 255, 255, 0.94);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .ImgReg .frontregister button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .ImgReg .frontregister md-input-container {\n      text-align: left; }\n      .ImgReg .frontregister md-input-container input.ng-untouched.ng-invalid {\n        border-bottom: 1px solid blue; }\n      .ImgReg .frontregister md-input-container input.ng-invalid {\n        border-bottom: 1px solid red; }\n      .ImgReg .frontregister md-input-container input.ng-valid {\n        border-bottom: 1px solid green; }\n    .ImgReg .frontregister .msg-error {\n      color: #F00;\n      font-size: 14px; }\n", ""]);
 
 // exports
 
@@ -77960,46 +77960,176 @@ angular.module("material.core").constant("$MD_THEME_CSS", "md-autocomplete.md-TH
 "use strict";
 
 
-__webpack_require__(2);
+__webpack_require__(0);
 
-__webpack_require__(31);
+__webpack_require__(35);
 
-__webpack_require__(32);
+__webpack_require__(34);
+
+__webpack_require__(33);
+
+__webpack_require__(38);
+
+__webpack_require__(36);
+
+__webpack_require__(37);
+
+__webpack_require__(39);
 
 /***/ }),
-/* 31 */
+/* 31 */,
+/* 32 */,
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _main = __webpack_require__(2);
+var _main = __webpack_require__(0);
+
+console.log("generalService");
+
+_main.app.controller("MyTestController", ['generalService', function (generalService) {
+  var tThis = this;
+  console.log(generalService);
+}]);
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.factory('generalService', function () {
+  return {
+    requestLinks: function requestLinks(routePath) {
+      return 'http://rmdserver.ioanachichernea.com' + routePath;
+    }
+  };
+});
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
 
 _main.app.config(function ($routeProvider) {
   $routeProvider.when("/", {
     templateUrl: "src/views/loginPage.html"
+  }).when("/login", {
+    templateUrl: "src/views/loginPage.html"
+  }).when("/register", {
+    templateUrl: "src/views/registerPage.html"
   }).when('/404', {
     templateUrl: "src/views/404.html"
   }).otherwise("/404");
 });
 
 /***/ }),
-/* 32 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _main = __webpack_require__(2);
+var _main = __webpack_require__(0);
 
-_main.app.factory('myMenuService', function () {
+_main.app.directive("registrDirective", ["$location", function ($location) {
   return {
-    getMenuData: function getMenuData() {
-      var menuData = [];
-      return menuData;
+    restrictive: "A",
+    link: function link(scope, element, attrs) {
+      element.on("click", function () {
+        console.log(attrs.registrDirective, "attrs");
+        scope.$apply(function () {
+          $location.path(attrs.registrDirective);
+        });
+      });
+    }
+  };
+}]);
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.directive("pwCheck", function () {
+  return {
+    require: "ngModel",
+    link: function link(scope, elem, attrs, ctrl) {
+      console.log(attrs, "attrs");
+      var firstPassword = '#' + attrs.pwCheck;
+      var firstPasswordObj = angular.element(document.querySelector(firstPassword));
+      firstPasswordObj.on('keyup', function () {
+        scope.$apply(function () {
+          console.log(firstPasswordObj.val(), elem.val());
+          ctrl.$setValidity('pwmatch', elem.val() === firstPasswordObj.val());
+        });
+      });
+      elem.on('keyup', function () {
+        scope.$apply(function () {
+          ctrl.$setValidity('pwmatch', elem.val() === firstPasswordObj.val());
+        });
+      });
     }
   };
 });
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.controller("validationRegisterController", ["$http", "generalService", "httpPutService", function ($http, generalService, httpPutService) {
+  var tThis = this;
+  tThis.validateRorm = function (formName) {
+
+    if (formName.$valid) {
+      var _data = {
+        "username": tThis.username,
+        "password": tThis.pw1,
+        "email": tThis.email
+      };
+      httpPutService.registerUser(_data).then(function (raspuns) {
+        console.log(raspuns);
+      });
+    } else {
+      console.log("errrrrrrrrrrrr");
+    }
+  };
+}]);
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.factory('httpPutService', ['generalService', '$http', function (generalService, $http) {
+  return {
+    registerUser: function registerUser(_data) {
+      return $http.put(generalService.requestLinks("/user"), _data);
+    }
+  };
+}]);
 
 /***/ })
 ],[7]);

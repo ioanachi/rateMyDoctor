@@ -1,4 +1,4 @@
 // define angular myApp which must be imported in every controller file
 
-var app = angular.module('myApp',['ngRoute', 'ngMaterial']);
+var app = angular.module('myApp',['ngRoute', 'ngMaterial','ngMessages']);
 export {app};

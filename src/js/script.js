@@ -1,8 +1,10 @@
 import './custom/main.js';
-import './custom/controllers/routes.js';
+import './custom/model/routes.js';
 
 
-import './custom/services.js';
+import './custom/model/services.js';
+import './custom/controllers/loginPage.js';
+import './custom/controllers/registerValidate.js';
 
 
 
@@ -11,3 +13,11 @@ import './custom/services.js';
 
 
 // import directives with diferent names
+import './custom/model/directives/register-path.js';
+import './custom/model/directives/registerValidation.js';
+
+
+
+
+// import services
+import './custom/model/servicePut.js';

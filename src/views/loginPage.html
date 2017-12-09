@@ -1,14 +1,17 @@
 <!-- <img src="src/img/loginphoto.jpg" alt="" class="loginimg"> -->
+<div class="backImg">
 
-<div class="frontlogin">
-  <md-input-container class="md-block" flex-gt-sm>
-    <label>User</label>
-    <input ng-model="username">
-  </md-input-container>
-  <md-input-container class="md-block" flex-gt-sm>
-    <label>Password</label>
-    <input ng-model="password">
-  </md-input-container>
-  <button type="button" name="button">Log In</button>
-  <p>Register</p>
+
+  <form class="frontlogin">
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>User</label>
+      <input ng-model="username">
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Password</label>
+      <input ng-model="password">
+    </md-input-container>
+    <button type="button" name="button">Log In</button>
+    <p registr-directive="/register">Register</p>
+  </form>
 </div>

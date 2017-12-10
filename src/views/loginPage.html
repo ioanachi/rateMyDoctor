@@ -16,12 +16,12 @@
       <label>Password</label>
       <input type="password" name="pass" ng-model="logvctrl.password" required>
     </md-input-container>
-    <div ng-show="formLogin.pass.$invalid">This field is required</div>
+    <div ng-show="formLogin.pass.$invalid && formLogin.pass.$dirty">This field is required</div>
 
 
 
 
     <button type="button" name="button" ng-click="logvctrl.validateLogin(formLogin)">Log In</button>
-    <p class="other" goto-path="/register">Register</p>
+    <p class="other" goto-path="/register"><span>Register</span></p>
   </form>
 </div>

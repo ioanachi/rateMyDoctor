@@ -36,4 +36,16 @@
       text-align: left;
     }
   }
+
+  .other {
+    min-width: 5%;
+    min-height: 10px;
+    padding: 10px;
+
+    span:hover {
+      padding: 5px;
+      border-bottom: 1px solid rgb(159, 211, 237);
+      cursor: pointer;
+    }
+  }
 }

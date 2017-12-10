@@ -530,7 +530,7 @@ __webpack_require__(35);
 /* 9 */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\r\n<html ng-app=\"myApp\">\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title></title>\r\n</head>\r\n<body>\r\n\r\n        <ng-view></ng-view>\r\n\r\n  <script src=\"./dist/commons.js\"></script>\r\n  <script src=\"./dist/bundle.js\"></script>\r\n</body>\r\n\r\n</html>\r\n";
+module.exports = "<!DOCTYPE html>\r\n<html ng-app=\"myApp\">\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title></title>\r\n</head>\r\n\r\n<body ng-controller=\"MainController as mnctrl\">\r\n\r\n\r\n\r\n  <!-- <div ng-show=\"mnctrl.user\" ng-include=\"'./src/views/menu.html'\"></div> -->\r\n  <div ng-include=\"'./src/views/menu.html'\"></div>\r\n  <ng-view></ng-view>\r\n\r\n  <script src=\"./dist/commons.js\"></script>\r\n  <script src=\"./dist/bundle.js\"></script>\r\n</body>\r\n\r\n</html>\r\n";
 
 /***/ }),
 /* 10 */
@@ -35022,7 +35022,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".backImg {\n  background-image: url(\"/src/img/loginphoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .backImg .frontlogin {\n    background-color: rgba(255, 255, 255, 0.9);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .backImg .frontlogin button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .backImg .frontlogin md-input-container {\n      text-align: left; }\n\n.ImgReg {\n  background-image: url(\"/src/img/RegisterPhoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-color: #e9e9e9;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .ImgReg .frontregister {\n    background-color: rgba(255, 255, 255, 0.8);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .ImgReg .frontregister button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .ImgReg .frontregister md-input-container {\n      text-align: left; }\n      .ImgReg .frontregister md-input-container input.ng-untouched.ng-invalid {\n        border-bottom: 1px solid blue; }\n      .ImgReg .frontregister md-input-container input.ng-invalid {\n        border-bottom: 1px solid red; }\n      .ImgReg .frontregister md-input-container input.ng-valid {\n        border-bottom: 1px solid green; }\n    .ImgReg .frontregister .msg-error {\n      color: #F00;\n      font-size: 14px; }\n  .ImgReg .other:hover {\n    background-color: blue;\n    cursor: pointer; }\n\n.menu {\n  float: left;\n  padding: 0;\n  margin: 0; }\n  .menu .menuUl {\n    margin-top: 40px;\n    display: inline-block;\n    padding: 0;\n    list-style: none; }\n    .menu .menuUl li {\n      color: #1a05c6;\n      float: left;\n      cursor: pointer;\n      padding: 10px;\n      margin: 5px;\n      font-size: 15px;\n      text-align: left; }\n      .menu .menuUl li:hover {\n        text-align: left;\n        border-bottom: 1px solid #1ed2eb; }\n        .menu .menuUl li:hover a {\n          color: inherit;\n          text-decoration: none;\n          transition: inherit; }\n\n.classes {\n  min-width: 100%;\n  min-height: 680px;\n  top: 50%;\n  border: 1px solid #bbecf6;\n  justify-content: center;\n  align-items: center;\n  align-self: center;\n  display: flex;\n  left: 50%; }\n  .classes .hospitals {\n    min-width: 300px;\n    min-height: 300px;\n    background: black;\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    background-image: url(\"/src/img/hospitalDash.jpg\"); }\n  .classes .specialities {\n    min-width: 300px;\n    min-height: 300px;\n    background: blue;\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    background-image: url(\"/src/img/specialityDash.jpg\"); }\n  .classes .doctors {\n    min-width: 300px;\n    min-height: 300px;\n    background: red;\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    background-image: url(\"/src/img/drDash.jpg\"); }\n\n.transparent {\n  min-width: 300px;\n  min-height: 300px;\n  background-color: rgba(0, 0, 0, 0.4);\n  justify-content: center;\n  display: flex;\n  align-items: center; }\n  .transparent p {\n    color: #fff;\n    padding: 10px;\n    font-size: 29px font; }\n  .transparent:hover {\n    background-color: transparent; }\n    .transparent:hover p {\n      background-color: rgba(0, 0, 0, 0.5); }\n", ""]);
+exports.push([module.i, ".backImg {\n  background-image: url(\"/src/img/loginphoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .backImg .frontlogin {\n    background-color: rgba(255, 255, 255, 0.9);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .backImg .frontlogin button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .backImg .frontlogin md-input-container {\n      text-align: left; }\n\n.ImgReg {\n  background-image: url(\"/src/img/RegisterPhoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-color: #e9e9e9;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .ImgReg .frontregister {\n    background-color: rgba(255, 255, 255, 0.8);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .ImgReg .frontregister button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .ImgReg .frontregister md-input-container {\n      text-align: left; }\n      .ImgReg .frontregister md-input-container input.ng-untouched.ng-invalid {\n        border-bottom: 1px solid blue; }\n      .ImgReg .frontregister md-input-container input.ng-invalid {\n        border-bottom: 1px solid red; }\n      .ImgReg .frontregister md-input-container input.ng-valid {\n        border-bottom: 1px solid green; }\n    .ImgReg .frontregister .msg-error {\n      color: #F00;\n      font-size: 14px; }\n  .ImgReg .other:hover {\n    background-color: blue;\n    cursor: pointer; }\n\n.classes {\n  min-width: 100%;\n  min-height: 680px;\n  top: 50%;\n  border: 1px solid #bbecf6;\n  justify-content: center;\n  align-items: center;\n  align-self: center;\n  display: flex;\n  left: 50%; }\n  .classes .common {\n    min-width: 300px;\n    min-height: 300px;\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    background-size: cover; }\n  .classes .hospitals {\n    background-image: url(\"/src/img/hospitalDash.jpg\"); }\n  .classes .specialities {\n    background-image: url(\"/src/img/specialityDash.jpg\"); }\n  .classes .doctors {\n    background-image: url(\"/src/img/drDash.jpg\"); }\n\n.transparent {\n  min-width: 100%;\n  min-height: 300px;\n  background-color: rgba(0, 0, 0, 0.4);\n  justify-content: center;\n  display: flex;\n  align-items: center; }\n  .transparent p {\n    color: #fff;\n    padding: 10px;\n    font-size: 16px;\n    font-weight: bold; }\n  .transparent:hover {\n    background-color: transparent;\n    cursor: pointer; }\n    .transparent:hover p {\n      background-color: rgba(0, 0, 0, 0.5); }\n\n.menu {\n  padding: 0;\n  margin: 0; }\n  .menu .menuUl {\n    margin-top: 40px;\n    display: block;\n    padding: 0 0 50px 0;\n    list-style: none; }\n    .menu .menuUl li {\n      color: #1a05c6;\n      float: left;\n      cursor: pointer;\n      padding: 10px;\n      margin: 5px;\n      font-size: 15px;\n      text-align: left; }\n      .menu .menuUl li:hover {\n        text-align: left;\n        border-bottom: 1px solid #1ed2eb; }\n        .menu .menuUl li:hover a {\n          color: inherit;\n          text-decoration: none;\n          transition: inherit; }\n    .menu .menuUl .logoutbtn {\n      float: right; }\n", ""]);
 
 // exports
 
@@ -78544,6 +78544,8 @@ __webpack_require__(38);
 
 __webpack_require__(39);
 
+__webpack_require__(44);
+
 __webpack_require__(40);
 
 __webpack_require__(41);
@@ -78637,7 +78639,7 @@ var _main = __webpack_require__(0);
 
 console.log("generalService");
 
-_main.app.controller("LogvalidateController", ['Notification', "$http", "generalService", "httpPostService", "$location", "$localStorage", function (Notification, $http, generalService, httpPostService, $location, $localStorage) {
+_main.app.controller("LogvalidateController", ['Notification', "$http", "generalService", "httpPostService", "$location", "$localStorage", "$scope", function (Notification, $http, generalService, httpPostService, $location, $localStorage, $scope) {
   var tThis = this;
   console.log(generalService);
 
@@ -78654,6 +78656,7 @@ _main.app.controller("LogvalidateController", ['Notification', "$http", "general
           username: tThis.username,
           token: data.token
         };
+        $scope.userData($localStorage.user);
         console.log($localStorage.user);
 
         $location.path('/dashboard');
@@ -78754,6 +78757,23 @@ _main.app.directive("pwCheck", function () {
     }
   };
 });
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.controller("MainController", ["$localStorage", "$scope", function ($localStorage, $scope) {
+  var tThis = this;
+  tThis.user;
+  $scope.userData = function (param) {
+    tThis.user = param;
+  };
+}]);
 
 /***/ })
 ],[7]);

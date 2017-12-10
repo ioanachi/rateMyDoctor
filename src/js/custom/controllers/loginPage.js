@@ -5,7 +5,7 @@ import {
 
 console.log("generalService");
 
-app.controller("LogvalidateController", ['Notification', "$http", "generalService", "httpPostService","$location", "$localStorage", function(Notification, $http, generalService, httpPostService, $location, $localStorage) {
+app.controller("LogvalidateController", ['Notification', "$http", "generalService", "httpPostService","$location", "$localStorage", "$scope", function(Notification, $http, generalService, httpPostService, $location, $localStorage, $scope) {
   var tThis = this;
   console.log(generalService);
 
@@ -22,6 +22,7 @@ app.controller("LogvalidateController", ['Notification', "$http", "generalServic
             username: tThis.username,
             token: data.token,
           };
+          $scope.userData($localStorage.user);
           console.log($localStorage.user );
 
 

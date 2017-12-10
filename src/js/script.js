@@ -7,6 +7,10 @@ import './custom/model/services.js';
 import './custom/model/servicePut.js';
 import './custom/model/servicePost.js';
 
+
+
+import './custom/controllers/mainController.js';
+
 import './custom/controllers/loginPage.js';
 import './custom/controllers/registerValidate.js';
 

@@ -5,7 +5,7 @@ import {
 
 console.log("generalService");
 
-app.controller("LogvalidateController", ['Notification', "$http", "generalService", "httpPostService", "$localStorage", function(Notification, $http, generalService, httpPostService, $localStorage) {
+app.controller("LogvalidateController", ['Notification', "$http", "generalService", "httpPostService","$location", "$localStorage", function(Notification, $http, generalService, httpPostService, $location, $localStorage) {
   var tThis = this;
   console.log(generalService);
 
@@ -17,12 +17,13 @@ app.controller("LogvalidateController", ['Notification', "$http", "generalServic
       };
       httpPostService.logInn(_data).then(function(raspuns) {
           var data = raspuns.data;
-          console.log(raspuns, "raspuns");
           Notification.success("Login successfull");
           $localStorage.user = {
             username: tThis.username,
             token: data.token,
           };
+          console.log($localStorage.user );
+
 
           $location.path('/dashboard');
         },

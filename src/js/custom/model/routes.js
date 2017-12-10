@@ -12,7 +12,9 @@ app.config(function($routeProvider) {
     .when("/register", {
       templateUrl: "src/views/registerPage.html"
     })
-
+    .when("/dashboard", {
+      templateUrl: "src/views/dashboard.html"
+    })
 
 
     .when('/404', {

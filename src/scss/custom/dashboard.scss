@@ -1,0 +1,100 @@
+.menu {
+  // margin-top: 1%;
+  float: left;
+  padding: 0;
+  margin: 0;
+
+  .menuUl {
+    margin-top: 40px;
+    display: inline-block;
+    padding: 0;
+    list-style: none;
+
+    li {
+      color: rgb(26, 5, 198);
+      float: left;
+      cursor: pointer;
+      padding: 10px;
+      margin: 5px;
+      font-size: 15px;
+      text-align: left;
+
+      &:hover {
+        text-align: left;
+        border-bottom: 1px solid rgb(30, 210, 235);
+
+        a {
+          color: inherit;
+          text-decoration: none;
+          transition: inherit;
+        }
+      }
+    }
+  }
+}
+
+.classes {
+  min-width: 100%;
+  min-height: 680px;
+  top: 50%;
+  border: 1px solid rgb(187, 236, 246);
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  display: flex;
+  left: 50%;
+
+  .hospitals {
+    min-width: 300px;
+    min-height: 300px;
+    background: black;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-image: url("/src/img/hospitalDash.jpg");
+  }
+
+  .specialities {
+    min-width: 300px;
+    min-height: 300px;
+    background: blue;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-image: url("/src/img/specialityDash.jpg");
+  }
+
+  .doctors {
+    min-width: 300px;
+    min-height: 300px;
+    background: red;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-image: url("/src/img/drDash.jpg");
+  }
+}
+
+
+
+.transparent {
+  min-width: 300px;
+  min-height: 300px;
+  background-color: rgba(0, 0, 0,0.4);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  p {
+    color: #fff;
+    padding: 10px;
+    font-size: 29px font;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0,0.0);
+    p{
+      background-color: rgba(0, 0, 0,0.5);
+
+    }
+  }
+}

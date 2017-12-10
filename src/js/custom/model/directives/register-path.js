@@ -8,7 +8,7 @@ app.directive("gotoPath", ["$location", function($location) {
       element.on("click", function() {
         console.log(attrs.gotoPath, "attrs");
         scope.$apply(function() {
-          $location.path(attrs.gotoPath)
+          $location.path(attrs.gotoPath);
         });
       });
     },

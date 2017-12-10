@@ -530,7 +530,7 @@ __webpack_require__(35);
 /* 9 */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\r\n<html ng-app=\"myApp\">\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title></title>\r\n</head>\r\n\r\n<body ng-controller=\"MainController as mnctrl\">\r\n\r\n\r\n\r\n  <!-- <div ng-show=\"mnctrl.user\" ng-include=\"'./src/views/menu.html'\"></div> -->\r\n  <div ng-include=\"'./src/views/menu.html'\"></div>\r\n  <ng-view></ng-view>\r\n\r\n  <script src=\"./dist/commons.js\"></script>\r\n  <script src=\"./dist/bundle.js\"></script>\r\n</body>\r\n\r\n</html>\r\n";
+module.exports = "<!DOCTYPE html>\r\n<html ng-app=\"myApp\">\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title></title>\r\n</head>\r\n\r\n<body ng-controller=\"MainController as mnctrl\">\r\n\r\n\r\n\r\n  <div ng-show=\"mnctrl.user\" ng-include=\"'./src/views/menu.html'\"></div>\r\n  <!-- <div ng-include=\"'./src/views/menu.html'\"></div> -->\r\n  <ng-view></ng-view>\r\n\r\n  <script src=\"./dist/commons.js\"></script>\r\n  <script src=\"./dist/bundle.js\"></script>\r\n</body>\r\n\r\n</html>\r\n";
 
 /***/ }),
 /* 10 */
@@ -78544,8 +78544,6 @@ __webpack_require__(38);
 
 __webpack_require__(39);
 
-__webpack_require__(44);
-
 __webpack_require__(40);
 
 __webpack_require__(41);
@@ -78553,6 +78551,8 @@ __webpack_require__(41);
 __webpack_require__(42);
 
 __webpack_require__(43);
+
+__webpack_require__(44);
 
 /***/ }),
 /* 36 */
@@ -78637,11 +78637,33 @@ _main.app.factory('httpPostService', ['generalService', '$http', function (gener
 
 var _main = __webpack_require__(0);
 
-console.log("generalService");
+_main.app.controller("MainController", ["$localStorage", "$scope", "$location", function ($localStorage, $scope, $location) {
+  var tThis = this;
+  tThis.user;
+  $scope.userData = function (param) {
+    tThis.user = param;
+  };
+
+  tThis.activateLogout = function () {
+    console.log("start");
+    $localStorage.user = null;
+    tThis.user = null;
+    $location.path("/login");
+    console.log("end");
+  };
+}]);
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
 
 _main.app.controller("LogvalidateController", ['Notification', "$http", "generalService", "httpPostService", "$location", "$localStorage", "$scope", function (Notification, $http, generalService, httpPostService, $location, $localStorage, $scope) {
   var tThis = this;
-  console.log(generalService);
 
   tThis.validateLogin = function (formName) {
     if (formName.$valid) {
@@ -78657,7 +78679,6 @@ _main.app.controller("LogvalidateController", ['Notification', "$http", "general
           token: data.token
         };
         $scope.userData($localStorage.user);
-        console.log($localStorage.user);
 
         $location.path('/dashboard');
       }, function (err) {
@@ -78674,7 +78695,7 @@ _main.app.controller("LogvalidateController", ['Notification', "$http", "general
 }]);
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78705,7 +78726,7 @@ _main.app.controller("validationRegisterController", ['Notification', "$http", "
 }]);
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78728,7 +78749,7 @@ _main.app.directive("gotoPath", ["$location", function ($location) {
 }]);
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78757,23 +78778,6 @@ _main.app.directive("pwCheck", function () {
     }
   };
 });
-
-/***/ }),
-/* 44 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _main = __webpack_require__(0);
-
-_main.app.controller("MainController", ["$localStorage", "$scope", function ($localStorage, $scope) {
-  var tThis = this;
-  tThis.user;
-  $scope.userData = function (param) {
-    tThis.user = param;
-  };
-}]);
 
 /***/ })
 ],[7]);

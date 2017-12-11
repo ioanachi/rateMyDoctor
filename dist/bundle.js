@@ -78644,6 +78644,13 @@ _main.app.factory('httpPutService', ['generalService', '$http', function (genera
     }
   };
 }]);
+_main.app.factory('httpPutSpeciality', ['generalService', '$http', function (generalService, $http) {
+  return {
+    addSpeciality: function addSpeciality(_data) {
+      return $http.put(generalService.requestLinks("/specialitiesAdd"), _data);
+    }
+  };
+}]);
 
 /***/ }),
 /* 39 */
@@ -78776,10 +78783,31 @@ _main.app.controller("validationRegisterController", ['Notification', "$http", "
 var _main = __webpack_require__(0);
 
 console.log("efrejheruergygu");
-_main.app.controller("AddspecialityController", ["$scope", function ($scope) {
+_main.app.controller("AddspecialityController", ["$scope", "httpPutSpeciality", "$localStorage", function ($scope, httpPutSpeciality, $localStorage) {
   var tThis = this;
   $scope.specialityAdded;
   $scope.addSpecialDescription;
+  tThis.addspec = function () {
+    if (typeof $scope.specialityAdded != "undefined") {
+      var _data = {
+
+        "code": "869754",
+        "name": "$scope.specialityAdded",
+        "description": "$scope.addSpecialDescription"
+
+      };
+      httpPutService.addSpeciality(_data).then(function (raspuns) {
+        console.log(raspuns, "raspuns");
+        Notification.success("Speciality created");
+        // $location.path('/login');
+      });
+    } else {
+      console.log("errrrrrrrrrrrr");
+      Notification.error({
+        message: 'Could not add speciality'
+      });
+    };
+  };
 
   tThis.addSpecialityList = function () {
     $scope.objSpecility = {};

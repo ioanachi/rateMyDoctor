@@ -1,26 +1,33 @@
 .specialAdd {
-  padding: 30px;
   color: rgb(1, 105, 149);
-.add{
-  padding: 50px;
-  margin-top: 20px;
-  border: 1px solid #c3c3c3;
 
-}
+  .add {
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #c3c3c3;
+  }
+
   input {
     margin: 10px;
   }
 
-  em {
-    margin: 50px;
+  .textCont {
+    margin-top: 20px;
+
+    span {
+      font-weight: 600;
+      min-width: 50%;
+      overflow: scroll;
+    }
   }
 
   button {
     margin-top: 50px;
     margin-left: 5px;
-    padding:5px;
+    padding: 5px;
   }
-  .description{
+
+  .description {
     padding: 50px;
     margin-top: 20px;
     border: 1px solid #c3c3c3;

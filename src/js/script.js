@@ -7,6 +7,8 @@ import './custom/model/services.js';
 import './custom/model/servicePut.js';
 import './custom/model/servicePost.js';
 import './custom/model/serviceGet.js';
+import './custom/model/serviceDelete.js';
+import './custom/model/serviceUpdate.js';
 
 
 
@@ -14,7 +16,7 @@ import './custom/controllers/mainController.js';
 
 import './custom/controllers/loginPage.js';
 import './custom/controllers/registerValidate.js';
-import './custom/controllers/specialitiesAdd.js';
+import './custom/controllers/specialitiesAddEdit.js';
 import './custom/controllers/specialitiesList.js';
 
 

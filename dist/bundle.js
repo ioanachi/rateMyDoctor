@@ -35022,7 +35022,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".backImg {\n  background-image: url(\"/src/img/loginphoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .backImg .frontlogin {\n    background-color: rgba(255, 255, 255, 0.9);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .backImg .frontlogin button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .backImg .frontlogin md-input-container {\n      text-align: left; }\n  .backImg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .backImg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.ImgReg {\n  background-image: url(\"/src/img/RegisterPhoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-color: #e9e9e9;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .ImgReg .frontregister {\n    background-color: rgba(255, 255, 255, 0.8);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .ImgReg .frontregister button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .ImgReg .frontregister md-input-container {\n      text-align: left; }\n      .ImgReg .frontregister md-input-container input.ng-untouched.ng-invalid {\n        border-bottom: 1px solid blue; }\n      .ImgReg .frontregister md-input-container input.ng-invalid {\n        border-bottom: 1px solid red; }\n      .ImgReg .frontregister md-input-container input.ng-valid {\n        border-bottom: 1px solid green; }\n    .ImgReg .frontregister .msg-error {\n      color: #F00;\n      font-size: 14px; }\n  .ImgReg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .ImgReg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.classes {\n  min-width: 100%;\n  min-height: 680px;\n  top: 50%;\n  border: 1px solid #bbecf6;\n  justify-content: center;\n  align-items: center;\n  align-self: center;\n  display: flex;\n  left: 50%; }\n  .classes .common {\n    min-width: 300px;\n    min-height: 300px;\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    background-size: cover; }\n  .classes .hospitals {\n    background-image: url(\"/src/img/hospitalDash.jpg\"); }\n  .classes .specialities {\n    background-image: url(\"/src/img/specialityDash.jpg\"); }\n  .classes .doctors {\n    background-image: url(\"/src/img/drDash.jpg\"); }\n\n.transparent {\n  min-width: 100%;\n  min-height: 300px;\n  background-color: rgba(0, 0, 0, 0.4);\n  justify-content: center;\n  display: flex;\n  align-items: center; }\n  .transparent p {\n    color: #fff;\n    padding: 10px;\n    font-size: 16px;\n    font-weight: bold; }\n  .transparent:hover {\n    background-color: transparent;\n    cursor: pointer; }\n    .transparent:hover p {\n      background-color: rgba(0, 0, 0, 0.5); }\n\n.menu {\n  padding: 0;\n  margin: 0; }\n  .menu .menuUl {\n    margin-top: 40px;\n    display: block;\n    padding: 0 0 50px 0;\n    list-style: none; }\n    .menu .menuUl li {\n      color: #1a05c6;\n      float: left;\n      cursor: pointer;\n      padding: 10px;\n      margin: 5px;\n      font-size: 15px;\n      text-align: left; }\n      .menu .menuUl li:hover {\n        text-align: left;\n        border-bottom: 1px solid #1ed2eb; }\n        .menu .menuUl li:hover a {\n          color: inherit;\n          text-decoration: none;\n          transition: inherit; }\n    .menu .menuUl .logoutbtn {\n      float: right; }\n\n.specialAdd {\n  padding: 30px;\n  color: #016995; }\n  .specialAdd .add {\n    padding: 50px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3; }\n  .specialAdd input {\n    margin: 10px; }\n  .specialAdd em {\n    margin: 50px; }\n  .specialAdd button {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n  .specialAdd .description {\n    padding: 50px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3; }\n\n.specilityList {\n  padding: 40px;\n  margin-top: 50px; }\n  .specilityList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .specilityList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .specilityList table tr {\n      border: 1px solid #c3c3c3; }\n      .specilityList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .specilityList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .specilityList .btns {\n    float: right; }\n    .specilityList .btns .btn {\n      padding: 0;\n      background-color: #fff;\n      margin: 2px; }\n  .specilityList .active {\n    background-color: #61d7f6; }\n", ""]);
+exports.push([module.i, ".backImg {\n  background-image: url(\"/src/img/loginphoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .backImg .frontlogin {\n    background-color: rgba(255, 255, 255, 0.9);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .backImg .frontlogin button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .backImg .frontlogin md-input-container {\n      text-align: left; }\n  .backImg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .backImg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.ImgReg {\n  background-image: url(\"/src/img/RegisterPhoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-color: #e9e9e9;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .ImgReg .frontregister {\n    background-color: rgba(255, 255, 255, 0.8);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .ImgReg .frontregister button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .ImgReg .frontregister md-input-container {\n      text-align: left; }\n      .ImgReg .frontregister md-input-container input.ng-untouched.ng-invalid {\n        border-bottom: 1px solid blue; }\n      .ImgReg .frontregister md-input-container input.ng-invalid {\n        border-bottom: 1px solid red; }\n      .ImgReg .frontregister md-input-container input.ng-valid {\n        border-bottom: 1px solid green; }\n    .ImgReg .frontregister .msg-error {\n      color: #F00;\n      font-size: 14px; }\n  .ImgReg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .ImgReg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.classes {\n  min-width: 100%;\n  min-height: 680px;\n  top: 50%;\n  border: 1px solid #bbecf6;\n  justify-content: center;\n  align-items: center;\n  align-self: center;\n  display: flex;\n  left: 50%; }\n  .classes .common {\n    min-width: 300px;\n    min-height: 300px;\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    background-size: cover; }\n  .classes .hospitals {\n    background-image: url(\"/src/img/hospitalDash.jpg\"); }\n  .classes .specialities {\n    background-image: url(\"/src/img/specialityDash.jpg\"); }\n  .classes .doctors {\n    background-image: url(\"/src/img/drDash.jpg\"); }\n\n.transparent {\n  min-width: 100%;\n  min-height: 300px;\n  background-color: rgba(0, 0, 0, 0.4);\n  justify-content: center;\n  display: flex;\n  align-items: center; }\n  .transparent p {\n    color: #fff;\n    padding: 10px;\n    font-size: 16px;\n    font-weight: bold; }\n  .transparent:hover {\n    background-color: transparent;\n    cursor: pointer; }\n    .transparent:hover p {\n      background-color: rgba(0, 0, 0, 0.5); }\n\n.menu {\n  padding: 0;\n  margin: 0; }\n  .menu .menuUl {\n    margin-top: 40px;\n    display: block;\n    padding: 0 0 50px 0;\n    list-style: none; }\n    .menu .menuUl li {\n      color: #1a05c6;\n      float: left;\n      cursor: pointer;\n      padding: 10px;\n      margin: 5px;\n      font-size: 15px;\n      text-align: left; }\n      .menu .menuUl li:hover {\n        text-align: left;\n        border-bottom: 1px solid #1ed2eb; }\n        .menu .menuUl li:hover a {\n          color: inherit;\n          text-decoration: none;\n          transition: inherit; }\n    .menu .menuUl .logoutbtn {\n      float: right; }\n\n.specialAdd {\n  color: #016995; }\n  .specialAdd .add {\n    padding: 20px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3; }\n  .specialAdd input {\n    margin: 10px; }\n  .specialAdd .textCont {\n    margin-top: 20px; }\n    .specialAdd .textCont span {\n      font-weight: 600;\n      min-width: 50%;\n      overflow: scroll; }\n  .specialAdd button {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n  .specialAdd .description {\n    padding: 50px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3; }\n\n.specilityList {\n  padding: 40px;\n  margin-top: 50px; }\n  .specilityList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .specilityList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .specilityList table tr {\n      border: 1px solid #c3c3c3; }\n      .specilityList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .specilityList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .specilityList .btns {\n    float: right; }\n    .specilityList .btns .btn {\n      padding: 0;\n      background-color: #fff;\n      margin: 2px; }\n  .specilityList .active {\n    background-color: #61d7f6; }\n", ""]);
 
 // exports
 
@@ -78548,17 +78548,21 @@ __webpack_require__(40);
 
 __webpack_require__(41);
 
+__webpack_require__(49);
+
 __webpack_require__(42);
 
 __webpack_require__(43);
 
 __webpack_require__(44);
 
-__webpack_require__(45);
+__webpack_require__(50);
 
 __webpack_require__(46);
 
 __webpack_require__(47);
+
+__webpack_require__(48);
 
 /***/ }),
 /* 36 */
@@ -78584,15 +78588,22 @@ _main.app.config(function ($routeProvider) {
     //     return generalService.isLogged();
     //   },
     // }
-  }).when("/specialitiesAdd", {
-    templateUrl: "src/views/specialitiesAdd.html"
+  }).when("/specialities", {
+    templateUrl: "src/views/specialitiesList.html"
     // resolve:{
     //   factoryResolve:function(generalService){
     //     return generalService.isLogged();
     //   },
     // }
-  }).when("/specialitiesList", {
-    templateUrl: "src/views/specialitiesList.html"
+  }).when("/specialities/add", {
+    templateUrl: "src/views/specialitiesAddUpdate.html"
+    // resolve:{
+    //   factoryResolve:function(generalService){
+    //     return generalService.isLogged();
+    //   },
+    // }
+  }).when("/specialities/edit/:id", {
+    templateUrl: "src/views/specialitiesAddUpdate.html"
     // resolve:{
     //   factoryResolve:function(generalService){
     //     return generalService.isLogged();
@@ -78639,17 +78650,13 @@ _main.app.factory('generalService', ["$localStorage", function ($localStorage) {
 
 var _main = __webpack_require__(0);
 
-_main.app.factory('httpPutService', ['generalService', '$http', function (generalService, $http) {
+_main.app.factory('httpPutService', ['generalService', '$http', '$localStorage', function (generalService, $http, $localStorage) {
   return {
     registerUser: function registerUser(_data) {
       return $http.put(generalService.requestLinks("/user"), _data);
-    }
-  };
-}]);
-_main.app.factory('httpPutSpeciality', ['generalService', '$http', function (generalService, $http) {
-  return {
+    },
     addSpeciality: function addSpeciality(_data) {
-      return $http.put(generalService.requestLinks("/speciality"), _data);
+      return $http.put(generalService.requestLinks("/speciality" + '?token=' + $localStorage.user.token), _data);
     }
   };
 }]);
@@ -78684,12 +78691,32 @@ _main.app.factory('httpGetService', ['generalService', '$http', '$localStorage',
   return {
     getSpecialy: function getSpecialy() {
       return $http.get(generalService.requestLinks('/specialities?token=' + $localStorage.user.token));
+    },
+    getSpecialityById: function getSpecialityById(id) {
+      return $http.get(generalService.requestLinks('/speciality/' + id + '?token=' + $localStorage.user.token));
     }
   };
 }]);
 
 /***/ }),
 /* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.factory('httpDeleteService', ['generalService', '$http', '$localStorage', function (generalService, $http, $localStorage) {
+  return {
+    deleteSpeciality: function deleteSpeciality(id) {
+      return $http.delete(generalService.requestLinks('/speciality/' + id + '?token=' + $localStorage.user.token));
+    }
+  };
+}]);
+
+/***/ }),
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78718,7 +78745,7 @@ _main.app.controller("MainController", ["$localStorage", "$scope", "$location", 
 }]);
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78759,7 +78786,7 @@ _main.app.controller("LogvalidateController", ['Notification', "$http", "general
 }]);
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78790,7 +78817,8 @@ _main.app.controller("validationRegisterController", ['Notification', "$http", "
 }]);
 
 /***/ }),
-/* 44 */
+/* 45 */,
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78798,54 +78826,11 @@ _main.app.controller("validationRegisterController", ['Notification', "$http", "
 
 var _main = __webpack_require__(0);
 
-console.log("efrejheruergygu");
-_main.app.controller("AddspecialityController", ['Notification', "httpPutSpeciality", "$scope", function (Notification, httpPutSpeciality, $scope) {
-  var tThis = this;
-  $scope.specialityAdded;
-  $scope.addSpecialDescription;
-  tThis.addspec = function () {
-    if (typeof $scope.specialityAdded != "undefined") {
-      var _data = {
-        "code": "869754",
-        "name": $scope.specialityAdded,
-        "description": $scope.addSpecialDescription,
-        "picture": "src/img/DrDash"
-      };
-
-      httpPutSpeciality.addSpeciality(_data).then(function (raspuns) {
-        console.log(raspuns, "raspuns");
-        Notification.success("Speciality created");
-      });
-    } else {
-      console.log("errrrrrrrrrrrr");
-      Notification.error({
-        message: 'Could not add speciality'
-      });
-    };
-  };
-
-  tThis.addSpecialityList = function () {
-    $scope.objSpecility = {};
-    $scope.objSpecility.name = $scope.specialityAdded;
-    $scope.objSpecility.description = $scope.addSpecialDescription;
-    $scope.addSpecialityobj.push($scope.objSpecility);
-    console.log($scope.addSpecialityobj);
-  };
-}]);
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _main = __webpack_require__(0);
-
-_main.app.controller("SpecilitiesListController", ["$scope", 'httpGetService', function ($scope, httpGetService) {
+_main.app.controller("SpecilitiesListController", ["$scope", 'httpGetService', "httpDeleteService", '$mdDialog', '$location', function ($scope, httpGetService, httpDeleteService, $mdDialog, $location) {
   var tThis = this;
   tThis.specialitiesObj = [];
   tThis.rowIndex = -1;
+  $scope.specSelectedUp;
 
   httpGetService.getSpecialy().then(function (raspuns) {
     var result = raspuns.data.result;
@@ -78855,14 +78840,29 @@ _main.app.controller("SpecilitiesListController", ["$scope", 'httpGetService', f
   tThis.selectedRow = function (index) {
     tThis.rowIndex = index;
   };
-  tThis.deleteRow = function () {
-    console.log(tThis.rowIndex, "gfcugdtd");
-    tThis.specialitiesObj.splice(tThis.rowIndex, 1);
+
+  $scope.showConfirm = function (ev) {
+    // Appending dialog to document.body to cover sidenav in docs app
+    var confirm = $mdDialog.confirm().title('Would you like to delete speciality?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
+    $mdDialog.show(confirm).then(function () {
+      $scope.status = 'You decided to delete this speciality.';
+      httpDeleteService.deleteSpeciality(tThis.specialitiesObj[tThis.rowIndex].ID).then(function (raspuns) {
+        console.log(raspuns);
+      });
+      tThis.specialitiesObj.splice(tThis.rowIndex, 1);
+      tThis.rowIndex = -1;
+    }, function () {
+      $scope.status = 'You decided to keep this speciality.';
+    });
+  };
+
+  tThis.updateSpec = function () {
+    $location.path('/specialities/edit/' + tThis.specialitiesObj[tThis.rowIndex].ID);
   };
 }]);
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78885,7 +78885,7 @@ _main.app.directive("gotoPath", ["$location", function ($location) {
 }]);
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78914,6 +78914,79 @@ _main.app.directive("pwCheck", function () {
     }
   };
 });
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.factory('httpUpdateService', ['generalService', '$http', '$localStorage', function (generalService, $http, $localStorage) {
+  return {
+    updateSpeciality: function updateSpeciality(id, _data) {
+      return $http.put(generalService.requestLinks('/speciality/' + id + '?token=' + $localStorage.user.token), _data);
+    }
+  };
+}]);
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+console.log("efrejheruergygu");
+_main.app.controller("AddspecialityController", ['Notification', "httpPutService", "httpUpdateService", "$scope", "$routeParams", 'httpGetService', function (Notification, httpPutService, httpUpdateService, $scope, $routeParams, httpGetService) {
+  var tThis = this;
+  tThis.paramId = $routeParams.id;
+  $scope.specialityAdded;
+  $scope.addSpecialDescription;
+  tThis.addEditspec = function () {
+    if (typeof $scope.specialityAdded != "undefined") {
+      var _data = {
+        "Code": "869754",
+        "Name": $scope.specialityAdded,
+        "Description": $scope.addSpecialDescription,
+        "Picture": "src/img/DrDash"
+      };
+      if ($routeParams.id) {
+        httpUpdateService.updateSpeciality(tThis.paramId, _data).then(function (raspuns) {
+          console.log(raspuns, "raspuns");
+          Notification.success("Speciality Updated");
+        });
+      } else {
+        httpPutService.addSpeciality(_data).then(function (raspuns) {
+          console.log(raspuns, "raspuns");
+          Notification.success("Speciality created");
+        });
+      }
+    } else {
+      console.log("errrrrrrrrrrrr");
+      Notification.error({
+        message: 'Could not add speciality'
+      });
+    };
+  };
+  var resetDefaults = function resetDefaults() {
+    httpGetService.getSpecialityById(tThis.paramId).then(function (raspuns) {
+      var data = raspuns.data.result;
+      console.log(data, 'data');
+      $scope.specialityAdded = data.Name;
+      $scope.addSpecialDescription = data.Description;
+
+      console.log(raspuns, "jghiyfutrdtuydtfughijogfgyhuij");
+    });
+  };
+  if ($routeParams.id) {
+    resetDefaults();
+  }
+}]);
 
 /***/ })
 ],[7]);

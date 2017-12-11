@@ -21,16 +21,7 @@ app.config(function($routeProvider) {
       //   },
       // }
     })
-
-    .when("/specialitiesAdd", {
-      templateUrl: "src/views/specialitiesAdd.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
-    })
-    .when("/specialitiesList", {
+    .when("/specialities", {
       templateUrl: "src/views/specialitiesList.html",
       // resolve:{
       //   factoryResolve:function(generalService){
@@ -38,6 +29,23 @@ app.config(function($routeProvider) {
       //   },
       // }
     })
+    .when("/specialities/add", {
+      templateUrl: "src/views/specialitiesAddUpdate.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
+    .when("/specialities/edit/:id", {
+      templateUrl: "src/views/specialitiesAddUpdate.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
+
 
 
     .when('/404', {

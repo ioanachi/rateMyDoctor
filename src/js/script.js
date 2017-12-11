@@ -13,6 +13,8 @@ import './custom/controllers/mainController.js';
 
 import './custom/controllers/loginPage.js';
 import './custom/controllers/registerValidate.js';
+import './custom/controllers/specialitiesAdd.js';
+import './custom/controllers/specialitiesList.js';
 
 
 

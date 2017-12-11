@@ -1,0 +1,21 @@
+.specilityList {
+  padding: 20px;
+  margin-top: 50px;
+
+  table {
+    border: 1px solid #c3c3c3;
+    tr {
+      td {
+        padding: 10px;
+      }
+      .listBtns{
+        
+        display:none;
+        &:hover{
+          display:inline-block;
+
+        }
+      }
+    }
+  }
+}

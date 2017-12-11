@@ -7,16 +7,24 @@ import {
 
 app.controller("MainController", ["$localStorage", "$scope", "$location",  function($localStorage, $scope, $location) {
   var tThis = this;
-  tThis.user;
+  tThis.user = $localStorage.user;
   $scope.userData = function(param) {
     tThis.user = param;
   };
 
   tThis.activateLogout = function() {
     console.log("start")
-    $localStorage.user= null;
-    tThis.user=null;
+    delete $localStorage.user;
+    delete tThis.user;
     $location.path("/login");
     console.log("end");
   };
+  $scope.addSpecialityobj=[{
+    name:"",
+    description:"",
+    index:"",
+    nrOfDr:"",
+  },
+  ];
+  console.log($scope.addSpecialityobj);
 }])

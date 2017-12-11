@@ -6,6 +6,7 @@ import './custom/model/services.js';
 // import services
 import './custom/model/servicePut.js';
 import './custom/model/servicePost.js';
+import './custom/model/serviceGet.js';
 
 
 

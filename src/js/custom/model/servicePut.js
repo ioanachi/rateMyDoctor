@@ -12,7 +12,7 @@ app.factory('httpPutService', ['generalService', '$http', function(generalServic
 app.factory('httpPutSpeciality', ['generalService', '$http', function(generalService, $http) {
   return {
      addSpeciality:function(_data){
-      return $http.put(generalService.requestLinks("/specialitiesAdd"), _data);
+      return $http.put(generalService.requestLinks("/speciality"), _data);
      }
   };
 }]);

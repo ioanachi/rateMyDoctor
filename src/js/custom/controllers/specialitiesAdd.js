@@ -4,23 +4,22 @@ import {
 
 
 console.log("efrejheruergygu");
-app.controller("AddspecialityController", ["$scope", "httpPutSpeciality", "$localStorage", function($scope, httpPutSpeciality, $localStorage) {
+app.controller("AddspecialityController", ['Notification', "httpPutSpeciality", "$scope", function(Notification, httpPutSpeciality, $scope) {
   var tThis = this;
   $scope.specialityAdded;
   $scope.addSpecialDescription;
   tThis.addspec = function() {
     if (typeof $scope.specialityAdded != "undefined") {
       var _data = {
-
         "code": "869754",
-        "name": "$scope.specialityAdded",
-        "description": "$scope.addSpecialDescription",
-
+        "name": $scope.specialityAdded,
+        "description": $scope.addSpecialDescription,
+        "picture": "src/img/DrDash",
       };
-      httpPutService.addSpeciality(_data).then(function(raspuns) {
+
+      httpPutSpeciality.addSpeciality(_data).then(function(raspuns) {
         console.log(raspuns, "raspuns");
         Notification.success("Speciality created");
-        // $location.path('/login');
       });
 
     } else {

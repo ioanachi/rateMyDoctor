@@ -78544,6 +78544,8 @@ __webpack_require__(38);
 
 __webpack_require__(39);
 
+__webpack_require__(47);
+
 __webpack_require__(40);
 
 __webpack_require__(41);
@@ -78647,7 +78649,7 @@ _main.app.factory('httpPutService', ['generalService', '$http', function (genera
 _main.app.factory('httpPutSpeciality', ['generalService', '$http', function (generalService, $http) {
   return {
     addSpeciality: function addSpeciality(_data) {
-      return $http.put(generalService.requestLinks("/specialitiesAdd"), _data);
+      return $http.put(generalService.requestLinks("/speciality"), _data);
     }
   };
 }]);
@@ -78783,23 +78785,22 @@ _main.app.controller("validationRegisterController", ['Notification', "$http", "
 var _main = __webpack_require__(0);
 
 console.log("efrejheruergygu");
-_main.app.controller("AddspecialityController", ["$scope", "httpPutSpeciality", "$localStorage", function ($scope, httpPutSpeciality, $localStorage) {
+_main.app.controller("AddspecialityController", ['Notification', "httpPutSpeciality", "$scope", function (Notification, httpPutSpeciality, $scope) {
   var tThis = this;
   $scope.specialityAdded;
   $scope.addSpecialDescription;
   tThis.addspec = function () {
     if (typeof $scope.specialityAdded != "undefined") {
       var _data = {
-
         "code": "869754",
-        "name": "$scope.specialityAdded",
-        "description": "$scope.addSpecialDescription"
-
+        "name": $scope.specialityAdded,
+        "description": $scope.addSpecialDescription,
+        "picture": "src/img/DrDash"
       };
-      httpPutService.addSpeciality(_data).then(function (raspuns) {
+
+      httpPutSpeciality.addSpeciality(_data).then(function (raspuns) {
         console.log(raspuns, "raspuns");
         Notification.success("Speciality created");
-        // $location.path('/login');
       });
     } else {
       console.log("errrrrrrrrrrrr");
@@ -78827,9 +78828,11 @@ _main.app.controller("AddspecialityController", ["$scope", "httpPutSpeciality", 
 
 var _main = __webpack_require__(0);
 
-console.log("efrejheruergygu");
-_main.app.controller("SpecilitiesListController", ["$scope", function ($scope) {
+_main.app.controller("SpecilitiesListController", ["$scope", 'httpGetService', function ($scope, httpGetService) {
   var tThis = this;
+  httpGetService.getSpecialy.then(function (raspuns) {
+    console.log(raspuns);
+  });
 
   tThis.dummy = [{
     level: "one",
@@ -78901,6 +78904,23 @@ _main.app.directive("pwCheck", function () {
     }
   };
 });
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.factory('httpGetService', ['generalService', '$http', function (generalService, $http) {
+  return {
+    getSpecialy: function getSpecialy(param) {
+      return $http.get(generalService.requestLinks('/specialities'), param);
+    }
+  };
+}]);
 
 /***/ })
 ],[7]);

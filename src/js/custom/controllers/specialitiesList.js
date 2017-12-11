@@ -3,9 +3,16 @@ import {
 } from '../main.js';
 
 
-console.log("efrejheruergygu");
-app.controller("SpecilitiesListController", ["$scope", function($scope) {
+app.controller("SpecilitiesListController", ["$scope", 'httpGetService', function($scope, httpGetService) {
   var tThis=this;
+httpGetService.getSpecialy.then(function(raspuns){
+console.log(raspuns);
+
+
+
+
+
+})
 
   tThis.dummy = [{
       level: "one",

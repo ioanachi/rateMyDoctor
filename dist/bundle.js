@@ -35022,7 +35022,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".backImg {\n  background-image: url(\"/src/img/loginphoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .backImg .frontlogin {\n    background-color: rgba(255, 255, 255, 0.9);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .backImg .frontlogin button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .backImg .frontlogin md-input-container {\n      text-align: left; }\n  .backImg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .backImg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.ImgReg {\n  background-image: url(\"/src/img/RegisterPhoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-color: #e9e9e9;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .ImgReg .frontregister {\n    background-color: rgba(255, 255, 255, 0.8);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .ImgReg .frontregister button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .ImgReg .frontregister md-input-container {\n      text-align: left; }\n      .ImgReg .frontregister md-input-container input.ng-untouched.ng-invalid {\n        border-bottom: 1px solid blue; }\n      .ImgReg .frontregister md-input-container input.ng-invalid {\n        border-bottom: 1px solid red; }\n      .ImgReg .frontregister md-input-container input.ng-valid {\n        border-bottom: 1px solid green; }\n    .ImgReg .frontregister .msg-error {\n      color: #F00;\n      font-size: 14px; }\n  .ImgReg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .ImgReg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.classes {\n  min-width: 100%;\n  min-height: 680px;\n  top: 50%;\n  border: 1px solid #bbecf6;\n  justify-content: center;\n  align-items: center;\n  align-self: center;\n  display: flex;\n  left: 50%; }\n  .classes .common {\n    min-width: 300px;\n    min-height: 300px;\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    background-size: cover; }\n  .classes .hospitals {\n    background-image: url(\"/src/img/hospitalDash.jpg\"); }\n  .classes .specialities {\n    background-image: url(\"/src/img/specialityDash.jpg\"); }\n  .classes .doctors {\n    background-image: url(\"/src/img/drDash.jpg\"); }\n\n.transparent {\n  min-width: 100%;\n  min-height: 300px;\n  background-color: rgba(0, 0, 0, 0.4);\n  justify-content: center;\n  display: flex;\n  align-items: center; }\n  .transparent p {\n    color: #fff;\n    padding: 10px;\n    font-size: 16px;\n    font-weight: bold; }\n  .transparent:hover {\n    background-color: transparent;\n    cursor: pointer; }\n    .transparent:hover p {\n      background-color: rgba(0, 0, 0, 0.5); }\n\n.menu {\n  padding: 0;\n  margin: 0; }\n  .menu .menuUl {\n    margin-top: 40px;\n    display: block;\n    padding: 0 0 50px 0;\n    list-style: none; }\n    .menu .menuUl li {\n      color: #1a05c6;\n      float: left;\n      cursor: pointer;\n      padding: 10px;\n      margin: 5px;\n      font-size: 15px;\n      text-align: left; }\n      .menu .menuUl li:hover {\n        text-align: left;\n        border-bottom: 1px solid #1ed2eb; }\n        .menu .menuUl li:hover a {\n          color: inherit;\n          text-decoration: none;\n          transition: inherit; }\n    .menu .menuUl .logoutbtn {\n      float: right; }\n\n.specialAdd {\n  padding: 30px;\n  color: #016995; }\n  .specialAdd .add {\n    padding: 50px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3; }\n  .specialAdd input {\n    margin: 10px; }\n  .specialAdd em {\n    margin: 50px; }\n  .specialAdd button {\n    margin-top: 50px; }\n  .specialAdd .description {\n    padding: 50px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3; }\n\n.specilityList {\n  padding: 40px;\n  margin-top: 50px; }\n  .specilityList table {\n    padding: 40px;\n    border: 1px solid #c3c3c3; }\n    .specilityList table tr {\n      border: 1px solid #c3c3c3; }\n      .specilityList table tr button {\n        display: none;\n        padding: 0;\n        background-color: #fff;\n        margin: 2px; }\n      .specilityList table tr td {\n        padding: 20px; }\n      .specilityList table tr:hover {\n        background-color: #cbf5f7; }\n        .specilityList table tr:hover button {\n          display: inline-block;\n          background-color: #cbf5f7; }\n", ""]);
+exports.push([module.i, ".backImg {\n  background-image: url(\"/src/img/loginphoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .backImg .frontlogin {\n    background-color: rgba(255, 255, 255, 0.9);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .backImg .frontlogin button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .backImg .frontlogin md-input-container {\n      text-align: left; }\n  .backImg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .backImg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.ImgReg {\n  background-image: url(\"/src/img/RegisterPhoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-color: #e9e9e9;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .ImgReg .frontregister {\n    background-color: rgba(255, 255, 255, 0.8);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .ImgReg .frontregister button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .ImgReg .frontregister md-input-container {\n      text-align: left; }\n      .ImgReg .frontregister md-input-container input.ng-untouched.ng-invalid {\n        border-bottom: 1px solid blue; }\n      .ImgReg .frontregister md-input-container input.ng-invalid {\n        border-bottom: 1px solid red; }\n      .ImgReg .frontregister md-input-container input.ng-valid {\n        border-bottom: 1px solid green; }\n    .ImgReg .frontregister .msg-error {\n      color: #F00;\n      font-size: 14px; }\n  .ImgReg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .ImgReg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.classes {\n  min-width: 100%;\n  min-height: 680px;\n  top: 50%;\n  border: 1px solid #bbecf6;\n  justify-content: center;\n  align-items: center;\n  align-self: center;\n  display: flex;\n  left: 50%; }\n  .classes .common {\n    min-width: 300px;\n    min-height: 300px;\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    background-size: cover; }\n  .classes .hospitals {\n    background-image: url(\"/src/img/hospitalDash.jpg\"); }\n  .classes .specialities {\n    background-image: url(\"/src/img/specialityDash.jpg\"); }\n  .classes .doctors {\n    background-image: url(\"/src/img/drDash.jpg\"); }\n\n.transparent {\n  min-width: 100%;\n  min-height: 300px;\n  background-color: rgba(0, 0, 0, 0.4);\n  justify-content: center;\n  display: flex;\n  align-items: center; }\n  .transparent p {\n    color: #fff;\n    padding: 10px;\n    font-size: 16px;\n    font-weight: bold; }\n  .transparent:hover {\n    background-color: transparent;\n    cursor: pointer; }\n    .transparent:hover p {\n      background-color: rgba(0, 0, 0, 0.5); }\n\n.menu {\n  padding: 0;\n  margin: 0; }\n  .menu .menuUl {\n    margin-top: 40px;\n    display: block;\n    padding: 0 0 50px 0;\n    list-style: none; }\n    .menu .menuUl li {\n      color: #1a05c6;\n      float: left;\n      cursor: pointer;\n      padding: 10px;\n      margin: 5px;\n      font-size: 15px;\n      text-align: left; }\n      .menu .menuUl li:hover {\n        text-align: left;\n        border-bottom: 1px solid #1ed2eb; }\n        .menu .menuUl li:hover a {\n          color: inherit;\n          text-decoration: none;\n          transition: inherit; }\n    .menu .menuUl .logoutbtn {\n      float: right; }\n\n.specialAdd {\n  padding: 30px;\n  color: #016995; }\n  .specialAdd .add {\n    padding: 50px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3; }\n  .specialAdd input {\n    margin: 10px; }\n  .specialAdd em {\n    margin: 50px; }\n  .specialAdd button {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n  .specialAdd .description {\n    padding: 50px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3; }\n\n.specilityList {\n  padding: 40px;\n  margin-top: 50px; }\n  .specilityList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .specilityList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .specilityList table tr {\n      border: 1px solid #c3c3c3; }\n      .specilityList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .specilityList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .specilityList .btns {\n    float: right; }\n    .specilityList .btns .btn {\n      padding: 0;\n      background-color: #fff;\n      margin: 2px; }\n  .specilityList .active {\n    background-color: #61d7f6; }\n", ""]);
 
 // exports
 
@@ -78673,10 +78673,20 @@ _main.app.factory('httpPostService', ['generalService', '$http', function (gener
 
 /***/ }),
 /* 40 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-throw new Error("Module build failed: SyntaxError: C:/xampp/htdocs/rateMyDoctor/src/js/custom/model/serviceGet.js: Invalid left-hand side in assignment expression (8:51)\n\n\u001b[0m \u001b[90m  6 | \u001b[39m  \u001b[36mreturn\u001b[39m {\n \u001b[90m  7 | \u001b[39m     getSpecialy\u001b[33m:\u001b[39m\u001b[36mfunction\u001b[39m(){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 | \u001b[39m      \u001b[36mreturn\u001b[39m $http\u001b[33m.\u001b[39mget(generalService\u001b[33m.\u001b[39mrequestLinks(\u001b[32m'/specialities?token'\u001b[39m\u001b[33m=\u001b[39m$localStorage\u001b[33m.\u001b[39muser\u001b[33m.\u001b[39mtoken)\u001b[33m;\u001b[39m\n \u001b[90m    | \u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 | \u001b[39m     }\n \u001b[90m 10 | \u001b[39m  }\u001b[33m;\u001b[39m\n \u001b[90m 11 | \u001b[39m}])\u001b[33m;\u001b[39m\u001b[0m\n");
+
+
+var _main = __webpack_require__(0);
+
+_main.app.factory('httpGetService', ['generalService', '$http', '$localStorage', function (generalService, $http, $localStorage) {
+  return {
+    getSpecialy: function getSpecialy() {
+      return $http.get(generalService.requestLinks('/specialities?token=' + $localStorage.user.token));
+    }
+  };
+}]);
 
 /***/ }),
 /* 41 */
@@ -78695,11 +78705,9 @@ _main.app.controller("MainController", ["$localStorage", "$scope", "$location", 
   };
 
   tThis.activateLogout = function () {
-    console.log("start");
     delete $localStorage.user;
     delete tThis.user;
     $location.path("/login");
-    console.log("end");
   };
   $scope.addSpecialityobj = [{
     name: "",
@@ -78707,7 +78715,6 @@ _main.app.controller("MainController", ["$localStorage", "$scope", "$location", 
     index: "",
     nrOfDr: ""
   }];
-  console.log($scope.addSpecialityobj);
 }]);
 
 /***/ }),
@@ -78837,25 +78844,21 @@ var _main = __webpack_require__(0);
 
 _main.app.controller("SpecilitiesListController", ["$scope", 'httpGetService', function ($scope, httpGetService) {
   var tThis = this;
+  tThis.specialitiesObj = [];
+  tThis.rowIndex = -1;
+
   httpGetService.getSpecialy().then(function (raspuns) {
-    console.log(raspuns);
+    var result = raspuns.data.result;
+    tThis.specialitiesObj = result;
   });
 
-  tThis.dummy = [{
-    level: "one",
-    name: "dolor sit amet, consectetur adipiscing elit. Nulla vene",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur  felis nec, feugiat ultricies mi."
-  }, {
-    level: "two",
-
-    name: " tae nunc leo. Cras sed nisl consectetur, rhoncussapien sit amet, tempu",
-    description: "<p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, atconvallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncussapien sit amet, tempus sapien.</p><p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id anteeu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>"
-  }, {
-    level: "three",
-
-    name: "Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. ",
-    description: "<p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>"
-  }];
+  tThis.selectedRow = function (index) {
+    tThis.rowIndex = index;
+  };
+  tThis.deleteRow = function () {
+    console.log(tThis.rowIndex, "gfcugdtd");
+    tThis.specialitiesObj.splice(tThis.rowIndex, 1);
+  };
 }]);
 
 /***/ }),

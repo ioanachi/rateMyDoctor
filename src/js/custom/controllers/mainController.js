@@ -13,11 +13,9 @@ app.controller("MainController", ["$localStorage", "$scope", "$location",  funct
   };
 
   tThis.activateLogout = function() {
-    console.log("start")
     delete $localStorage.user;
     delete tThis.user;
     $location.path("/login");
-    console.log("end");
   };
   $scope.addSpecialityobj=[{
     name:"",
@@ -26,5 +24,4 @@ app.controller("MainController", ["$localStorage", "$scope", "$location",  funct
     nrOfDr:"",
   },
   ];
-  console.log($scope.addSpecialityobj);
 }])

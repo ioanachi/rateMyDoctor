@@ -78544,8 +78544,6 @@ __webpack_require__(38);
 
 __webpack_require__(39);
 
-__webpack_require__(47);
-
 __webpack_require__(40);
 
 __webpack_require__(41);
@@ -78559,6 +78557,8 @@ __webpack_require__(44);
 __webpack_require__(45);
 
 __webpack_require__(46);
+
+__webpack_require__(47);
 
 /***/ }),
 /* 36 */
@@ -78673,6 +78673,13 @@ _main.app.factory('httpPostService', ['generalService', '$http', function (gener
 
 /***/ }),
 /* 40 */
+/***/ (function(module, exports) {
+
+"use strict";
+throw new Error("Module build failed: SyntaxError: C:/xampp/htdocs/rateMyDoctor/src/js/custom/model/serviceGet.js: Invalid left-hand side in assignment expression (8:51)\n\n\u001b[0m \u001b[90m  6 | \u001b[39m  \u001b[36mreturn\u001b[39m {\n \u001b[90m  7 | \u001b[39m     getSpecialy\u001b[33m:\u001b[39m\u001b[36mfunction\u001b[39m(){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 | \u001b[39m      \u001b[36mreturn\u001b[39m $http\u001b[33m.\u001b[39mget(generalService\u001b[33m.\u001b[39mrequestLinks(\u001b[32m'/specialities?token'\u001b[39m\u001b[33m=\u001b[39m$localStorage\u001b[33m.\u001b[39muser\u001b[33m.\u001b[39mtoken)\u001b[33m;\u001b[39m\n \u001b[90m    | \u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 | \u001b[39m     }\n \u001b[90m 10 | \u001b[39m  }\u001b[33m;\u001b[39m\n \u001b[90m 11 | \u001b[39m}])\u001b[33m;\u001b[39m\u001b[0m\n");
+
+/***/ }),
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78704,7 +78711,7 @@ _main.app.controller("MainController", ["$localStorage", "$scope", "$location", 
 }]);
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78745,7 +78752,7 @@ _main.app.controller("LogvalidateController", ['Notification', "$http", "general
 }]);
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78776,7 +78783,7 @@ _main.app.controller("validationRegisterController", ['Notification', "$http", "
 }]);
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78820,7 +78827,7 @@ _main.app.controller("AddspecialityController", ['Notification', "httpPutSpecial
 }]);
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78830,7 +78837,7 @@ var _main = __webpack_require__(0);
 
 _main.app.controller("SpecilitiesListController", ["$scope", 'httpGetService', function ($scope, httpGetService) {
   var tThis = this;
-  httpGetService.getSpecialy.then(function (raspuns) {
+  httpGetService.getSpecialy().then(function (raspuns) {
     console.log(raspuns);
   });
 
@@ -78852,7 +78859,7 @@ _main.app.controller("SpecilitiesListController", ["$scope", 'httpGetService', f
 }]);
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78875,7 +78882,7 @@ _main.app.directive("gotoPath", ["$location", function ($location) {
 }]);
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78904,23 +78911,6 @@ _main.app.directive("pwCheck", function () {
     }
   };
 });
-
-/***/ }),
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _main = __webpack_require__(0);
-
-_main.app.factory('httpGetService', ['generalService', '$http', function (generalService, $http) {
-  return {
-    getSpecialy: function getSpecialy(param) {
-      return $http.get(generalService.requestLinks('/specialities'), param);
-    }
-  };
-}]);
 
 /***/ })
 ],[7]);

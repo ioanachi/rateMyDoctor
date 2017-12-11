@@ -5,14 +5,11 @@ import {
 
 app.controller("SpecilitiesListController", ["$scope", 'httpGetService', function($scope, httpGetService) {
   var tThis=this;
-httpGetService.getSpecialy.then(function(raspuns){
+httpGetService.getSpecialy().then(function(raspuns){
 console.log(raspuns);
+});
 
 
-
-
-
-})
 
   tThis.dummy = [{
       level: "one",

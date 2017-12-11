@@ -4,8 +4,8 @@ import {
 
 app.factory('httpGetService', ['generalService', '$http', function(generalService,$http) {
   return {
-     getSpecialy:function(param){
-      return $http.get(generalService.requestLinks('/specialities'), param);
+     getSpecialy:function(){
+      return $http.get(generalService.requestLinks('/specialities?token'=$localStorage.user.token);
      }
   };
 }]);

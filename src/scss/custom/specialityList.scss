@@ -1,20 +1,30 @@
 .specilityList {
-  padding: 20px;
+  padding: 40px;
   margin-top: 50px;
 
   table {
+    padding: 40px;
     border: 1px solid #c3c3c3;
-    tr {
-      td {
-        padding: 10px;
-      }
-      .listBtns{
-        
-        display:none;
-        &:hover{
-          display:inline-block;
 
-        }
+    tr {
+      border: 1px solid #c3c3c3;
+
+      button {
+        display: none;
+        padding: 0;
+        background-color: #fff;
+        margin: 2px;
+      }
+
+      td {
+        padding: 20px;
+      }
+        &:hover {
+          background-color: rgb(203, 245, 247);
+          button {
+            display: inline-block;
+            background-color: rgb(203, 245, 247);
+          }
       }
     }
   }

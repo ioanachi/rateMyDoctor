@@ -5,26 +5,46 @@
     padding: 20px;
     margin-top: 20px;
     border: 1px solid #c3c3c3;
+    min-height: 250px;
   }
 
   input {
-    margin: 10px;
-  }
-
-  .textCont {
+    margin-bottom: 20px;
     margin-top: 20px;
 
-    span {
-      font-weight: 600;
-      min-width: 50%;
-      overflow: scroll;
+    margin-left: 10px;
+    // padding: 10px;
+  }
+
+
+
+  .textCont {
+    top:5px;
+    margin:0px;
+    padding:0px;
+    float: right;
+    min-width: 50%;
+    min-height: 80px;
+
+    p {
+      float: left;
+      margin-top: 20px;
+
+      span {
+        font-weight: 600;
+        min-width: 50%;
+        overflow: scroll;
+        margin-bottom: 10px;
+
+      }
     }
   }
 
-  button {
+  .buttoninsert{
     margin-top: 50px;
     margin-left: 5px;
     padding: 5px;
+
   }
 
   .description {
@@ -32,4 +52,9 @@
     margin-top: 20px;
     border: 1px solid #c3c3c3;
   }
+}
+.addbtn{
+  left: 2px;
+  bottom: 9px;
+  margin-top:100px;
 }

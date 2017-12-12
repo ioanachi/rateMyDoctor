@@ -28,9 +28,6 @@ app.controller("AddspecialityController", ['Notification', "httpPutService","htt
           Notification.success("Speciality created");
         });
       }
-
-
-
     } else {
       console.log("errrrrrrrrrrrr");
       Notification.error({
@@ -45,6 +42,7 @@ app.controller("AddspecialityController", ['Notification', "httpPutService","htt
       console.log(data,'data');
       $scope.specialityAdded = data.Name;
       $scope.addSpecialDescription=data.Description;
+      tThis.specialBtn="Update Speciality";
 
 
       console.log(raspuns,"jghiyfutrdtuydtfughijogfgyhuij");
@@ -52,7 +50,8 @@ app.controller("AddspecialityController", ['Notification', "httpPutService","htt
   };
   if($routeParams.id){
     resetDefaults();
-  }
 
+  }
+tThis.specialBtn="Add Speciality";
 
 }]);

@@ -35022,7 +35022,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".backImg {\n  background-image: url(\"/src/img/loginphoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .backImg .frontlogin {\n    background-color: rgba(255, 255, 255, 0.9);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .backImg .frontlogin button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .backImg .frontlogin md-input-container {\n      text-align: left; }\n  .backImg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .backImg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.ImgReg {\n  background-image: url(\"/src/img/RegisterPhoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-color: #e9e9e9;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .ImgReg .frontregister {\n    background-color: rgba(255, 255, 255, 0.8);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .ImgReg .frontregister button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .ImgReg .frontregister md-input-container {\n      text-align: left; }\n      .ImgReg .frontregister md-input-container input.ng-untouched.ng-invalid {\n        border-bottom: 1px solid blue; }\n      .ImgReg .frontregister md-input-container input.ng-invalid {\n        border-bottom: 1px solid red; }\n      .ImgReg .frontregister md-input-container input.ng-valid {\n        border-bottom: 1px solid green; }\n    .ImgReg .frontregister .msg-error {\n      color: #F00;\n      font-size: 14px; }\n  .ImgReg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .ImgReg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.classes {\n  min-width: 100%;\n  min-height: 680px;\n  top: 50%;\n  border: 1px solid #bbecf6;\n  justify-content: center;\n  align-items: center;\n  align-self: center;\n  display: flex;\n  left: 50%; }\n  .classes .common {\n    min-width: 300px;\n    min-height: 300px;\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    background-size: cover; }\n  .classes .hospitals {\n    background-image: url(\"/src/img/hospitalDash.jpg\"); }\n  .classes .specialities {\n    background-image: url(\"/src/img/specialityDash.jpg\"); }\n  .classes .doctors {\n    background-image: url(\"/src/img/drDash.jpg\"); }\n\n.transparent {\n  min-width: 100%;\n  min-height: 300px;\n  background-color: rgba(0, 0, 0, 0.4);\n  justify-content: center;\n  display: flex;\n  align-items: center; }\n  .transparent p {\n    color: #fff;\n    padding: 10px;\n    font-size: 16px;\n    font-weight: bold; }\n  .transparent:hover {\n    background-color: transparent;\n    cursor: pointer; }\n    .transparent:hover p {\n      background-color: rgba(0, 0, 0, 0.5); }\n\n.menu {\n  padding: 0;\n  margin: 0; }\n  .menu .menuUl {\n    margin-top: 40px;\n    display: block;\n    padding: 0 0 50px 0;\n    list-style: none;\n    display: flex; }\n    .menu .menuUl li {\n      color: #1a05c6;\n      float: left;\n      cursor: pointer;\n      padding: 10px;\n      margin: 5px;\n      font-size: 15px;\n      text-align: left; }\n      .menu .menuUl li:hover {\n        text-align: left;\n        border-bottom: 1px solid #1ed2eb; }\n        .menu .menuUl li:hover a {\n          color: inherit;\n          text-decoration: none;\n          transition: inherit; }\n    .menu .menuUl .logoutbtn {\n      float: right; }\n\n.specialAdd {\n  color: #016995; }\n  .specialAdd .add {\n    padding: 20px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3;\n    min-height: 250px; }\n  .specialAdd input {\n    margin-bottom: 20px;\n    margin-top: 20px;\n    margin-left: 10px; }\n  .specialAdd .textCont {\n    top: 5px;\n    margin: 0px;\n    padding: 0px;\n    float: right;\n    min-width: 50%;\n    min-height: 80px; }\n    .specialAdd .textCont p {\n      float: left;\n      margin-top: 20px; }\n      .specialAdd .textCont p span {\n        font-weight: 600;\n        min-width: 50%;\n        overflow: scroll;\n        margin-bottom: 10px; }\n  .specialAdd .buttoninsert {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n  .specialAdd .description {\n    padding: 50px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3; }\n\n.addbtn {\n  left: 2px;\n  bottom: 9px;\n  margin-top: 100px; }\n\n.specilityList {\n  padding: 40px;\n  margin-top: 50px; }\n  .specilityList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .specilityList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .specilityList table tr {\n      border: 1px solid #c3c3c3; }\n      .specilityList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .specilityList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .specilityList .btns {\n    float: right; }\n    .specilityList .btns .btn {\n      padding: 0;\n      background-color: #fff;\n      margin: 2px; }\n  .specilityList .active {\n    background-color: #61d7f6; }\n\n.hospitalList {\n  padding: 40px;\n  margin-top: 50px; }\n  .hospitalList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .hospitalList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .hospitalList table tr {\n      border: 1px solid #c3c3c3; }\n      .hospitalList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .hospitalList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .hospitalList .btns {\n    float: right; }\n    .hospitalList .btns .btn {\n      padding: 0;\n      background-color: #fff;\n      margin: 2px; }\n  .hospitalList .active {\n    background-color: #61d7f6; }\n\n.hospitalAdd {\n  color: #016995; }\n  .hospitalAdd .addH {\n    padding: 20px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3;\n    min-height: 250px; }\n  .hospitalAdd .inputHosp {\n    padding: 10px;\n    align-items: center;\n    justify-content: center;\n    display: flex; }\n  .hospitalAdd input {\n    align-self: center;\n    margin-bottom: 20px;\n    margin-top: 20px;\n    margin-left: 20px; }\n  .hospitalAdd .textContHosp {\n    top: 5px;\n    margin: 0;\n    padding: 0;\n    float: right;\n    min-width: 50%;\n    min-height: 80px; }\n    .hospitalAdd .textContHosp p {\n      float: left;\n      margin-top: 20px; }\n      .hospitalAdd .textContHosp p span {\n        font-weight: 600;\n        min-width: 50%;\n        overflow: scroll;\n        margin-bottom: 10px; }\n  .hospitalAdd .buttoninsertH {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n\n.addbtnH {\n  left: 2px;\n  bottom: 9px;\n  margin-top: 100px; }\n", ""]);
+exports.push([module.i, ".backImg {\n  background-image: url(\"/src/img/loginphoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .backImg .frontlogin {\n    background-color: rgba(255, 255, 255, 0.9);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .backImg .frontlogin button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .backImg .frontlogin md-input-container {\n      text-align: left; }\n  .backImg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .backImg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.ImgReg {\n  background-image: url(\"/src/img/RegisterPhoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-color: #e9e9e9;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .ImgReg .frontregister {\n    background-color: rgba(255, 255, 255, 0.8);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .ImgReg .frontregister button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .ImgReg .frontregister md-input-container {\n      text-align: left; }\n      .ImgReg .frontregister md-input-container input.ng-untouched.ng-invalid {\n        border-bottom: 1px solid blue; }\n      .ImgReg .frontregister md-input-container input.ng-invalid {\n        border-bottom: 1px solid red; }\n      .ImgReg .frontregister md-input-container input.ng-valid {\n        border-bottom: 1px solid green; }\n    .ImgReg .frontregister .msg-error {\n      color: #F00;\n      font-size: 14px; }\n  .ImgReg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .ImgReg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.classes {\n  min-width: 100%;\n  min-height: 680px;\n  top: 50%;\n  border: 1px solid #bbecf6;\n  justify-content: center;\n  align-items: center;\n  align-self: center;\n  display: flex;\n  left: 50%; }\n  .classes .common {\n    min-width: 300px;\n    min-height: 300px;\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    background-size: cover; }\n  .classes .hospitals {\n    background-image: url(\"/src/img/hospitalDash.jpg\"); }\n  .classes .specialities {\n    background-image: url(\"/src/img/specialityDash.jpg\"); }\n  .classes .doctors {\n    background-image: url(\"/src/img/drDash.jpg\"); }\n\n.transparent {\n  min-width: 100%;\n  min-height: 300px;\n  background-color: rgba(0, 0, 0, 0.4);\n  justify-content: center;\n  display: flex;\n  align-items: center; }\n  .transparent p {\n    color: #fff;\n    padding: 10px;\n    font-size: 16px;\n    font-weight: bold; }\n  .transparent:hover {\n    background-color: transparent;\n    cursor: pointer; }\n    .transparent:hover p {\n      background-color: rgba(0, 0, 0, 0.5); }\n\n.menu {\n  padding: 0;\n  margin: 0; }\n  .menu .menuUl {\n    margin-top: 40px;\n    display: block;\n    padding: 0 0 50px 0;\n    list-style: none;\n    display: flex; }\n    .menu .menuUl li {\n      color: #1a05c6;\n      float: left;\n      cursor: pointer;\n      padding: 10px;\n      margin: 5px;\n      font-size: 15px;\n      text-align: left; }\n      .menu .menuUl li:hover {\n        text-align: left;\n        border-bottom: 1px solid #1ed2eb; }\n        .menu .menuUl li:hover a {\n          color: inherit;\n          text-decoration: none;\n          transition: inherit; }\n    .menu .menuUl .logoutbtn {\n      float: right; }\n\n.specialAdd {\n  color: #016995; }\n  .specialAdd .add {\n    padding: 20px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3;\n    min-height: 250px; }\n  .specialAdd input {\n    margin-bottom: 20px;\n    margin-top: 20px;\n    margin-left: 10px; }\n  .specialAdd .textCont {\n    top: 5px;\n    margin: 0px;\n    padding: 0px;\n    float: right;\n    min-width: 50%;\n    min-height: 80px; }\n    .specialAdd .textCont p {\n      float: left;\n      margin-top: 20px; }\n      .specialAdd .textCont p span {\n        font-weight: 600;\n        min-width: 50%;\n        overflow: scroll;\n        margin-bottom: 10px; }\n  .specialAdd .buttoninsert {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n  .specialAdd .description {\n    padding: 50px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3; }\n\n.addbtn {\n  left: 2px;\n  bottom: 9px;\n  margin-top: 100px; }\n\n.specilityList {\n  padding: 40px;\n  margin-top: 50px; }\n  .specilityList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .specilityList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .specilityList table tr {\n      border: 1px solid #c3c3c3; }\n      .specilityList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .specilityList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .specilityList .btns {\n    float: right; }\n    .specilityList .btns .btn {\n      padding: 0;\n      background-color: #fff;\n      margin: 2px; }\n  .specilityList .active {\n    background-color: #61d7f6; }\n\n.hospitalList {\n  padding: 40px;\n  margin-top: 50px; }\n  .hospitalList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .hospitalList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .hospitalList table tr {\n      border: 1px solid #c3c3c3; }\n      .hospitalList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .hospitalList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .hospitalList .btns {\n    float: right; }\n    .hospitalList .btns .btn {\n      padding: 0;\n      background-color: #fff;\n      margin: 2px; }\n  .hospitalList .active {\n    background-color: #61d7f6; }\n\n.hospitalAdd {\n  color: #016995; }\n  .hospitalAdd .addH {\n    padding: 20px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3;\n    min-height: 250px; }\n  .hospitalAdd .inputHosp {\n    padding: 10px;\n    align-items: center;\n    justify-content: center;\n    display: flex; }\n  .hospitalAdd input {\n    align-self: center;\n    margin-bottom: 20px;\n    margin-top: 20px;\n    margin-left: 20px; }\n  .hospitalAdd .textContHosp {\n    top: 5px;\n    margin: 0;\n    padding: 0;\n    float: right;\n    min-width: 50%;\n    min-height: 80px; }\n    .hospitalAdd .textContHosp p {\n      float: left;\n      margin-top: 20px; }\n      .hospitalAdd .textContHosp p span {\n        font-weight: 600;\n        min-width: 50%;\n        overflow: scroll;\n        margin-bottom: 10px; }\n  .hospitalAdd .buttoninsertH {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n\n.addbtnH {\n  left: 2px;\n  bottom: 9px;\n  margin-top: 100px; }\n\n.doctorAdd {\n  color: #016995; }\n  .doctorAdd .addDr {\n    padding: 20px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3;\n    min-height: 250px; }\n  .doctorAdd .inputDr {\n    padding: 10px;\n    align-items: center;\n    justify-content: center;\n    display: flex; }\n  .doctorAdd input {\n    align-self: center;\n    margin-bottom: 20px;\n    margin-top: 20px;\n    margin-left: 20px; }\n  .doctorAdd .textContDr {\n    top: 5px;\n    margin: 0;\n    padding: 0;\n    float: right;\n    min-width: 50%;\n    min-height: 80px; }\n    .doctorAdd .textContDr p {\n      float: left;\n      margin-top: 20px; }\n      .doctorAdd .textContDr p span {\n        font-weight: 600;\n        min-width: 50%;\n        overflow: scroll;\n        margin-bottom: 10px; }\n  .doctorAdd .buttoninsertDr {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n\n.addbtnDr {\n  left: 2px;\n  bottom: 9px;\n  margin-top: 100px; }\n\n.doctorList {\n  padding: 40px;\n  margin-top: 50px; }\n  .doctorList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .doctorList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .doctorList table tr {\n      border: 1px solid #c3c3c3; }\n      .doctorList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .doctorList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .doctorList .btnsD {\n    float: right; }\n  .doctorList .active {\n    background-color: #61d7f6; }\n", ""]);
 
 // exports
 
@@ -78560,13 +78560,17 @@ __webpack_require__(46);
 
 __webpack_require__(47);
 
-__webpack_require__(50);
-
-__webpack_require__(51);
-
 __webpack_require__(48);
 
 __webpack_require__(49);
+
+__webpack_require__(52);
+
+__webpack_require__(53);
+
+__webpack_require__(50);
+
+__webpack_require__(51);
 
 /***/ }),
 /* 36 */
@@ -78628,7 +78632,28 @@ _main.app.config(function ($routeProvider) {
     //   },
     // }
   }).when("/hospitals/edit/:id", {
-    templateUrl: "src/views/specialitiesAddUpdate.html"
+    templateUrl: "src/views/hospitalsAddUpdate.html"
+    // resolve:{
+    //   factoryResolve:function(generalService){
+    //     return generalService.isLogged();
+    //   },
+    // }
+  }).when("/doctors", {
+    templateUrl: "src/views/doctorsList.html"
+    // resolve:{
+    //   factoryResolve:function(generalService){
+    //     return generalService.isLogged();
+    //   },
+    // }
+  }).when("/doctors/add", {
+    templateUrl: "src/views/doctorsAddUpdate.html"
+    // resolve:{
+    //   factoryResolve:function(generalService){
+    //     return generalService.isLogged();
+    //   },
+    // }
+  }).when("/doctors/edit/:id", {
+    templateUrl: "src/views/doctorsAddUpdate.html"
     // resolve:{
     //   factoryResolve:function(generalService){
     //     return generalService.isLogged();
@@ -78685,7 +78710,11 @@ _main.app.factory('httpPutService', ['generalService', '$http', '$localStorage',
     },
     addHospital: function addHospital(_data) {
       return $http.put(generalService.requestLinks("/hospital" + '?token=' + $localStorage.user.token), _data);
+    },
+    addDoctor: function addDoctor(_data) {
+      return $http.put(generalService.requestLinks("/doctor" + '?token=' + $localStorage.user.token), _data);
     }
+
   };
 }]);
 
@@ -78725,6 +78754,15 @@ _main.app.factory('httpGetService', ['generalService', '$http', '$localStorage',
     },
     getHospital: function getHospital() {
       return $http.get(generalService.requestLinks('/hospitals?token=' + $localStorage.user.token));
+    },
+    getHospitalsById: function getHospitalsById(id) {
+      return $http.get(generalService.requestLinks('/hospital/' + id + '?token=' + $localStorage.user.token));
+    },
+    getDoctor: function getDoctor() {
+      return $http.get(generalService.requestLinks('/doctors?token=' + $localStorage.user.token));
+    },
+    getDoctorsById: function getDoctorsById(id) {
+      return $http.get(generalService.requestLinks('/doctor/' + id + '?token=' + $localStorage.user.token));
     }
   };
 }]);
@@ -78742,6 +78780,12 @@ _main.app.factory('httpDeleteService', ['generalService', '$http', '$localStorag
   return {
     deleteSpeciality: function deleteSpeciality(id) {
       return $http.delete(generalService.requestLinks('/speciality/' + id + '?token=' + $localStorage.user.token));
+    },
+    deleteHospital: function deleteHospital(id) {
+      return $http.delete(generalService.requestLinks('/hospital/' + id + '?token=' + $localStorage.user.token));
+    },
+    deleteDoctor: function deleteDoctor(id) {
+      return $http.delete(generalService.requestLinks('/doctor/' + id + '?token=' + $localStorage.user.token));
     }
   };
 }]);
@@ -78759,7 +78803,14 @@ _main.app.factory('httpUpdateService', ['generalService', '$http', '$localStorag
   return {
     updateSpeciality: function updateSpeciality(id, _data) {
       return $http.put(generalService.requestLinks('/speciality/' + id + '?token=' + $localStorage.user.token), _data);
+    },
+    updateHospitals: function updateHospitals(id, _data) {
+      return $http.put(generalService.requestLinks('/hospital/' + id + '?token=' + $localStorage.user.token), _data);
+    },
+    updateDoctors: function updateDoctors(id, _data) {
+      return $http.put(generalService.requestLinks('/doctor/' + id + '?token=' + $localStorage.user.token), _data);
     }
+
   };
 }]);
 
@@ -78975,97 +79026,50 @@ _main.app.controller("SpecilitiesListController", ["$scope", 'httpGetService', "
 
 var _main = __webpack_require__(0);
 
-_main.app.directive("gotoPath", ["$location", function ($location) {
-  return {
-    restrictive: "A",
-    link: function link(scope, element, attrs) {
-      element.on("click", function () {
-        console.log(attrs.gotoPath, "attrs");
-        scope.$apply(function () {
-          $location.path(attrs.gotoPath);
-        });
+_main.app.controller("HospitalsListController", ["$scope", 'httpGetService', "httpDeleteService", '$mdDialog', '$location', function ($scope, httpGetService, httpDeleteService, $mdDialog, $location) {
+  var tThis = this;
+  tThis.hospitalsObj = [];
+  tThis.rowIndex = -1;
+  $scope.specSelectedUp;
+
+  httpGetService.getHospital().then(function (raspuns) {
+    console.log(raspuns, "raspuns");
+    var result = raspuns.data.result;
+    tThis.hospitalsObj = result;
+  });
+
+  tThis.selectedRow = function (index) {
+    tThis.rowIndex = index;
+    console.log(index, "index");
+  };
+
+  $scope.showConfirm = function (ev) {
+    console.log(tThis.hospitalsObj, "tThis.hospitalsObj");
+
+    // Appending dialog to document.body to cover sidenav in docs app
+    var confirm = $mdDialog.confirm().title('Would you like to delete hospital?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
+    $mdDialog.show(confirm).then(function () {
+
+      $scope.status = 'You decided to delete this hospital.';
+
+      httpDeleteService.deleteHospital(tThis.hospitalsObj[tThis.rowIndex].ID).then(function (raspuns) {
+        console.log(raspuns);
       });
-    }
+      tThis.hospitalsObj.splice(tThis.rowIndex, 1);
+      tThis.rowIndex = -1;
+    }, function () {
+      $scope.status = 'You decided to keep this hospital.';
+    });
+  };
+
+  tThis.updateHosp = function () {
+    console.log(tThis.hospitalsObj[tThis.rowIndex].ID, "tThis.hospObj[tThis.rowIndex].ID");
+    $location.path('/hospitals/edit/' + tThis.hospitalsObj[tThis.rowIndex].ID);
   };
 }]);
 
 /***/ }),
 /* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _main = __webpack_require__(0);
-
-_main.app.directive("pwCheck", function () {
-  return {
-    require: "ngModel",
-    link: function link(scope, elem, attrs, ctrl) {
-      console.log(attrs, "attrs");
-      var firstPassword = '#' + attrs.pwCheck;
-      var firstPasswordObj = angular.element(document.querySelector(firstPassword));
-      firstPasswordObj.on('keyup', function () {
-        scope.$apply(function () {
-          console.log(firstPasswordObj.val(), elem.val());
-          ctrl.$setValidity('pwmatch', elem.val() === firstPasswordObj.val());
-        });
-      });
-      elem.on('keyup', function () {
-        scope.$apply(function () {
-          ctrl.$setValidity('pwmatch', elem.val() === firstPasswordObj.val());
-        });
-      });
-    }
-  };
-});
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _main = __webpack_require__(0);
-
-_main.app.controller("HospitalsListController", ["$scope", 'httpGetService', "httpDeleteService", '$mdDialog', '$location', function ($scope, httpGetService, httpDeleteService, $mdDialog, $location) {
-  var tThis = this;
-  tThis.specialitiesObj = [];
-  tThis.rowIndex = -1;
-  $scope.specSelectedUp;
-
-  httpGetService.getSpecialy().then(function (raspuns) {
-    var result = raspuns.data.result;
-    tThis.specialitiesObj = result;
-  });
-
-  tThis.selectedRow = function (index) {
-    tThis.rowIndex = index;
-  };
-
-  $scope.showConfirm = function (ev) {
-    // Appending dialog to document.body to cover sidenav in docs app
-    var confirm = $mdDialog.confirm().title('Would you like to delete speciality?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
-    $mdDialog.show(confirm).then(function () {
-      $scope.status = 'You decided to delete this speciality.';
-      httpDeleteService.deleteSpeciality(tThis.specialitiesObj[tThis.rowIndex].ID).then(function (raspuns) {
-        console.log(raspuns);
-      });
-      tThis.specialitiesObj.splice(tThis.rowIndex, 1);
-      tThis.rowIndex = -1;
-    }, function () {
-      $scope.status = 'You decided to keep this speciality.';
-    });
-  };
-
-  tThis.updateHosp = function () {
-    $location.path('/hospitals/edit/' + tThis.hospObj[tThis.rowIndex].ID);
-  };
-}]);
-
-/***/ }),
-/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79101,42 +79105,226 @@ _main.app.controller("AddhospitalController", ['Notification', "httpPutService",
         "Website": $scope.hospWebsite,
         "id": "src/img/DrDash"
       };
-      console.log($routeParams, 'routeParams');
 
       if ($routeParams.id) {
-        console.log($routeParams, 'routeParams');
-
-        httpUpdateService.updateSpeciality(tThis.paramId, _data).then(function (raspuns) {
-          console.log(raspuns, "raspuns");
-          Notification.success("Hsopital Updated");
+        httpUpdateService.updateHospitals(tThis.paramId, _data).then(function (raspuns) {
+          console.log(tThis.paramId, "updateeeeeeee");
+          Notification.success("Hospital Updated");
         });
       } else {
         httpPutService.addHospital(_data).then(function (raspuns) {
-          console.log(raspuns, "raspuns");
           Notification.success("Hospital created");
         });
       }
     } else {
-      console.log("errrrrrrrrrrrr");
       Notification.error({
         message: 'Could not add hospital'
       });
     };
   };
-  var resetDefaults = function resetDefaults() {
-    httpGetService.getSpecialityById(tThis.paramId).then(function (raspuns) {
-      var data = raspuns.data.result;
-      $scope.specialityAdded = data.Name;
-      $scope.addSpecialDescription = data.Description;
-      tThis.specialBtn = "Update Speciality";
 
-      console.log(raspuns, "jghiyfutrdtuydtfughijogfgyhuij");
+  var resetDefaults = function resetDefaults() {
+    httpGetService.getHospitalsById(tThis.paramId).then(function (raspuns) {
+      console.log(raspuns, "raspuns");
+      console.log(tThis.paramId, "tThis.paramId");
+
+      var data = raspuns.data.result;
+      $scope.hospName = data.Name;
+      $scope.hospCounty = data.County;
+      $scope.hospCity = data.City;
+      $scope.hospStreet = data.Street;
+      $scope.hospWebsite = data.Website;
+      $scope.hospDescription = data.Description;
+      $scope.hospPhoto = data.Photo;
+      $scope.hospCountry = data.Country;
+      tThis.hospitalBtn = "Update Hospital";
     });
   };
   if ($routeParams.id) {
     resetDefaults();
   }
-  tThis.specialBtn = "Add Speciality";
+  tThis.hospitalBtn = "Add Hospital";
+}]);
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.directive("gotoPath", ["$location", function ($location) {
+  return {
+    restrictive: "A",
+    link: function link(scope, element, attrs) {
+      element.on("click", function () {
+        console.log(attrs.gotoPath, "attrs");
+        scope.$apply(function () {
+          $location.path(attrs.gotoPath);
+        });
+      });
+    }
+  };
+}]);
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.directive("pwCheck", function () {
+  return {
+    require: "ngModel",
+    link: function link(scope, elem, attrs, ctrl) {
+      console.log(attrs, "attrs");
+      var firstPassword = '#' + attrs.pwCheck;
+      var firstPasswordObj = angular.element(document.querySelector(firstPassword));
+      firstPasswordObj.on('keyup', function () {
+        scope.$apply(function () {
+          console.log(firstPasswordObj.val(), elem.val());
+          ctrl.$setValidity('pwmatch', elem.val() === firstPasswordObj.val());
+        });
+      });
+      elem.on('keyup', function () {
+        scope.$apply(function () {
+          ctrl.$setValidity('pwmatch', elem.val() === firstPasswordObj.val());
+        });
+      });
+    }
+  };
+});
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+console.log("efrejheruergygu");
+_main.app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUpdateService", "$scope", "$routeParams", 'httpGetService', function (Notification, httpPutService, httpUpdateService, $scope, $routeParams, httpGetService) {
+  var tThis = this;
+  tThis.paramId = $routeParams.id;
+  $scope.doctorName;
+  $scope.doctorRank;
+  $scope.doctorSpeciality;
+  $scope.doctorOtherSpec;
+  $scope.doctorHospital;
+  $scope.doctorPrivate;
+  $scope.doctorDescription;
+  $scope.doctorPhoto;
+
+  tThis.addEditDr = function () {
+    console.log($scope.hospName, '$scope.hospName');
+
+    if (typeof $scope.doctorName != "undefined") {
+      var _data = {
+        "Name": $scope.doctorName,
+        "Rank": $scope.doctorRank,
+        "Speciality": $scope.doctorSpeciality,
+        "SecSpeciality": $scope.doctorOtherSpec,
+        "Hospital": $scope.doctorHospital,
+        "Private": $scope.doctorPrivate,
+        "Description": $scope.doctorDescription,
+        "Photo": $scope.doctorPhoto,
+        "id": "src/img/DrDash"
+      };
+
+      if ($routeParams.id) {
+        httpUpdateService.updateDoctors(tThis.paramId, _data).then(function (raspuns) {
+          console.log(tThis.paramId, "updateeeeeeee");
+          Notification.success("Doctor Updated");
+        });
+      } else {
+        httpPutService.addDoctor(_data).then(function (raspuns) {
+          Notification.success("Doctor added");
+        });
+      }
+    } else {
+      Notification.error({
+        message: 'Could not add doctor'
+      });
+    };
+  };
+
+  var resetDefaults = function resetDefaults() {
+    httpGetService.getHospitalsById(tThis.paramId).then(function (raspuns) {
+      console.log(raspuns, "raspuns");
+      console.log(tThis.paramId, "tThis.paramId");
+
+      var data = raspuns.data.result;
+      $scope.doctorName = data.Name;
+      $scope.doctorRank = data.Rank;
+      $scope.doctorSpeciality = data.Speciality;
+      $scope.doctorOtherSpec = data.SecSpeciality;
+      $scope.doctorHospital = data.Hospital;
+      $scope.doctorPrivate = data.Private;
+      $scope.doctorDescription = data.Description;
+      $scope.doctorPhoto = data.Photo;
+      tThis.doctorBtn = "Update Hospital";
+    });
+  };
+  if ($routeParams.id) {
+    resetDefaults();
+  }
+  tThis.doctorBtn = "Add Hospital";
+}]);
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.controller("DoctorsListController", ["$scope", 'httpGetService', "httpDeleteService", '$mdDialog', '$location', function ($scope, httpGetService, httpDeleteService, $mdDialog, $location) {
+  var tThis = this;
+  tThis.doctorsObj = [];
+  tThis.rowIndex = -1;
+  $scope.specSelectedUp;
+
+  httpGetService.getdoctor().then(function (raspuns) {
+    console.log(raspuns, "raspuns");
+    var result = raspuns.data.result;
+    tThis.doctorsObj = result;
+  });
+
+  tThis.selectedRow = function (index) {
+    tThis.rowIndex = index;
+    console.log(index, "index");
+  };
+
+  $scope.showConfirm = function (ev) {
+    // Appending dialog to document.body to cover sidenav in docs app
+    var confirm = $mdDialog.confirm().title('Would you like to delete doctor?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
+    $mdDialog.show(confirm).then(function () {
+
+      $scope.status = 'You decided to delete this doctor.';
+
+      httpDeleteService.deleteDoctor(tThis.doctorsObj[tThis.rowIndex].ID).then(function (raspuns) {
+        console.log(raspuns);
+      });
+      tThis.doctorsObj.splice(tThis.rowIndex, 1);
+      tThis.rowIndex = -1;
+    }, function () {
+      $scope.status = 'You decided to keep this hospital.';
+    });
+  };
+
+  tThis.updateHosp = function () {
+    console.log(tThis.doctorsObj[tThis.rowIndex].ID, "tThis.doctorsObj[tThis.rowIndex].ID");
+    $location.path('/doctors/edit/' + tThis.doctorsObj[tThis.rowIndex].ID);
+  };
 }]);
 
 /***/ })

@@ -1,0 +1,51 @@
+<div class="doctorAdd" ng-controller="AdddoctorController as adctrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <md-button class="md-raised buttoninsertDr" goto-path="/doctors">Back to the list</md-button>
+
+        <div class="row addDr">
+          <div class="col-sm-12">
+            <div class="col-sm-6" inputDr>
+
+              <label for="doctorName"></label>Doctor Name:
+              <input type="text" name="doctorName" ng-model="doctorName"></br>
+
+              <label for="doctorRank"></label>Rank:
+              <input type="text" name="doctorRank" ng-model="doctorRank" value="" placeholder="Rank"></br>
+
+              <label for="doctorSpeciality"></label>Speciality:
+              <input type="text" name="doctorSpeciality" ng-model="doctorSpeciality" value="" placeholder="Specialities"></br>
+
+              <label for="doctorOtherSpec"></label>Second Speciality :
+              <textarea name="doctorOtherSpec" ng-model="doctorOtherSpec" placeholder="other specialities"></textarea></br>
+
+              <label for="doctorHospital"></label>Hospital Adress:
+              <input type="text" name="doctorHospital" value="" ng-model="doctorHospital" placeholder="Hospital"></br>
+
+              <label for="doctorPrivate"></label>Private Practice:
+              <input type="text" name="doctorPrivate" value="" ng-model="doctorPrivate" placeholder="Private practice"></br>
+
+              <label for="doctorDescription"></label>Doctor's CV or Description:
+              <textarea ng-model="doctorDescription" name="doctorDescription"  placeholder="Add CV or Description" ></textarea></br>
+
+              <label for="doctorPhoto"></label> Photo:
+              <input type="text" name="doctorPhoto" value="" ng-model="doctorPhoto" placeholder="Photo (introduce URL)">
+            </div>
+
+            <div class="col-sm-6 textContDr">
+
+
+              <p>
+                <span>Doctor :</span><em> {{drName}}</em></br>
+                <span>Speciality  :</span><em> {{drDescription}}</em>
+              </p>
+            </div>
+          </div>
+          <md-button class="md-raised md-primary addbtnDr" ng-click="adrctrl.addEditDr()">{{adrctrl.doctorBtn}}</md-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

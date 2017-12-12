@@ -1,0 +1,38 @@
+<div class="doctorsList" ng-controller="DoctorsListController as dlctrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <md-button class="md-raised" goto-path="/doctors/add" >Insert Hospital</md-button>
+        <div class="btnsD" ng-show="dlctrl.rowIndex != -1" >
+        <md-button class="md-raised md-primary" ng-click="dlctrl.updateDoctor()" >Edit</md-button>
+
+
+    <md-button class="md-raised md-warn" ng-click="showConfirm($event)">Delete</md-button>
+        </div>
+
+        <table >
+          <tr>
+            <th>Picture</th>
+            <th>Name</th>
+            <th>Rank</th>
+            <th>Speciality</th>
+            <th>Second Speciality</th>
+            <th>Hospital</th>
+            <th>Private Practice</th>
+
+          </tr>
+          <tr ng-click="dlctrl.selectedRow($index)" ng-repeat="item in dlctrl.doctorsObj" ng-class="{active:$index==dlctrl.rowIndex}" >
+            <td>{{item.Photo}}</td>
+            <td>{{item.Name}}</td>
+            <td>{{item.Rank}}</td>
+            <td>{{item.Speciality}}</td>
+            <td>{{item.SecSpeciality}}</td>
+            <td>{{item.Hospital}}</td>
+            <td>{{item.Private}}</td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>

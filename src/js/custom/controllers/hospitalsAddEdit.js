@@ -4,7 +4,7 @@ import {
 
 
 console.log("efrejheruergygu");
-app.controller("AddhospitalController", ['Notification', "httpPutService","httpUpdateService", "$scope", "$routeParams", 'httpGetService', function(Notification, httpPutService,httpUpdateService, $scope, $routeParams, httpGetService) {
+app.controller("AddhospitalController", ['Notification', "httpPutService", "httpUpdateService", "$scope", "$routeParams", 'httpGetService', function(Notification, httpPutService, httpUpdateService, $scope, $routeParams, httpGetService) {
   var tThis = this;
   tThis.paramId = $routeParams.id;
   $scope.hospName;
@@ -15,10 +15,10 @@ app.controller("AddhospitalController", ['Notification', "httpPutService","httpU
   $scope.hospDescription;
   $scope.hospPhoto;
   $scope.hospCountry;
-  console.log($routeParams,'data');
+  console.log($routeParams, 'data');
 
   tThis.addEdithosp = function() {
-    console.log( $scope.hospName,'$scope.hospName');
+    console.log($scope.hospName, '$scope.hospName');
 
     if (typeof $scope.hospName != "undefined") {
       var _data = {
@@ -31,44 +31,48 @@ app.controller("AddhospitalController", ['Notification', "httpPutService","httpU
         "Website": $scope.hospWebsite,
         "id": "src/img/DrDash",
       };
-      console.log($routeParams,'routeParams');
 
-      if($routeParams.id){
-        console.log($routeParams,'routeParams');
-
-        httpUpdateService.updateSpeciality(tThis.paramId,_data).then(function(raspuns) {
-          console.log(raspuns, "raspuns");
-          Notification.success("Hsopital Updated");
+      if ($routeParams.id) {
+        httpUpdateService.updateHospitals(tThis.paramId, _data).then(function(raspuns) {
+          console.log(tThis.paramId,"updateeeeeeee");
+          Notification.success("Hospital Updated");
         });
-      }else{
+      } else {
         httpPutService.addHospital(_data).then(function(raspuns) {
-          console.log(raspuns, "raspuns");
           Notification.success("Hospital created");
         });
       }
     } else {
-      console.log("errrrrrrrrrrrr");
       Notification.error({
         message: 'Could not add hospital'
       });
 
     };
   };
+
   var resetDefaults = function() {
-    httpGetService.getSpecialityById(tThis.paramId).then(function(raspuns) {
+    httpGetService.getHospitalsById(tThis.paramId).then(function(raspuns) {
+      console.log(raspuns, "raspuns");
+      console.log(tThis.paramId, "tThis.paramId", )
+
       var data = raspuns.data.result;
-      $scope.specialityAdded = data.Name;
-      $scope.addSpecialDescription=data.Description;
-      tThis.specialBtn="Update Speciality";
+      $scope.hospName = data.Name;
+      $scope.hospCounty = data.County;
+      $scope.hospCity = data.City;
+      $scope.hospStreet = data.Street;
+      $scope.hospWebsite = data.Website;
+      $scope.hospDescription = data.Description;
+      $scope.hospPhoto = data.Photo;
+      $scope.hospCountry = data.Country;
+      tThis.hospitalBtn = "Update Hospital";
 
 
-      console.log(raspuns,"jghiyfutrdtuydtfughijogfgyhuij");
     });
   };
-  if($routeParams.id){
+  if ($routeParams.id) {
     resetDefaults();
 
   }
-tThis.specialBtn="Add Speciality";
+  tThis.hospitalBtn = "Add Hospital";
 
 }]);

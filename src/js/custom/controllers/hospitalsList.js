@@ -5,43 +5,51 @@ import {
 
 app.controller("HospitalsListController", ["$scope", 'httpGetService', "httpDeleteService", '$mdDialog', '$location', function($scope, httpGetService, httpDeleteService, $mdDialog, $location) {
   var tThis = this;
-  tThis.specialitiesObj = [];
+  tThis.hospitalsObj = [];
   tThis.rowIndex = -1;
   $scope.specSelectedUp;
 
-  httpGetService.getSpecialy().then(function(raspuns) {
+  httpGetService.getHospital().then(function(raspuns) {
+    console.log(raspuns, "raspuns");
     var result = raspuns.data.result;
-    tThis.specialitiesObj = result;
+    tThis.hospitalsObj = result;
   });
 
   tThis.selectedRow = function(index) {
     tThis.rowIndex = index;
+    console.log(index, "index");
+
 
   };
 
   $scope.showConfirm = function(ev) {
+    console.log(tThis.hospitalsObj, "tThis.hospitalsObj");
+
     // Appending dialog to document.body to cover sidenav in docs app
     var confirm = $mdDialog.confirm()
-      .title('Would you like to delete speciality?')
+      .title('Would you like to delete hospital?')
       .ariaLabel('Lucky day')
       .targetEvent(ev)
       .ok('Yes')
       .cancel('No');
     $mdDialog.show(confirm).then(function() {
-      $scope.status = 'You decided to delete this speciality.';
-      httpDeleteService.deleteSpeciality(tThis.specialitiesObj[tThis.rowIndex].ID).then(function(raspuns) {
+
+      $scope.status = 'You decided to delete this hospital.';
+
+      httpDeleteService.deleteHospital(tThis.hospitalsObj[tThis.rowIndex].ID).then(function(raspuns) {
         console.log(raspuns);
       });
-      tThis.specialitiesObj.splice(tThis.rowIndex, 1);
+      tThis.hospitalsObj.splice(tThis.rowIndex, 1);
       tThis.rowIndex = -1;
     }, function() {
-      $scope.status = 'You decided to keep this speciality.';
+      $scope.status = 'You decided to keep this hospital.';
     });
   };
 
 
   tThis.updateHosp = function() {
-      $location.path('/hospitals/edit/'+tThis.hospObj[tThis.rowIndex].ID);
+    console.log(tThis.hospitalsObj[tThis.rowIndex].ID, "tThis.hospObj[tThis.rowIndex].ID");
+      $location.path('/hospitals/edit/'+tThis.hospitalsObj[tThis.rowIndex].ID);
   };
 
 

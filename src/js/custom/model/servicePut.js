@@ -12,7 +12,10 @@ app.factory('httpPutService', ['generalService', '$http','$localStorage', functi
    },
     addHospital:function(_data){
       return $http.put(generalService.requestLinks("/hospital"+'?token='+$localStorage.user.token), _data);
+    },
+    addDoctor:function(_data){
+      return $http.put(generalService.requestLinks("/doctor"+'?token='+$localStorage.user.token), _data);
+    },
 
-    }
   };
 }]);

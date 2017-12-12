@@ -13,5 +13,14 @@ app.factory('httpGetService', ['generalService', '$http', '$localStorage', funct
     getHospital:function(){
      return $http.get(generalService.requestLinks('/hospitals?token='+$localStorage.user.token));
    },
+   getHospitalsById:function(id){
+     return $http.get(generalService.requestLinks('/hospital/'+id+'?token='+$localStorage.user.token));
+   },
+   getDoctor:function(){
+    return $http.get(generalService.requestLinks('/doctors?token='+$localStorage.user.token));
+  },
+  getDoctorsById:function(id){
+    return $http.get(generalService.requestLinks('/doctor/'+id+'?token='+$localStorage.user.token));
+  },
   };
 }]);

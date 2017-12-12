@@ -62,7 +62,7 @@ app.config(function($routeProvider) {
       // }
     })
     .when("/hospitals/edit/:id", {
-      templateUrl: "src/views/specialitiesAddUpdate.html",
+      templateUrl: "src/views/hospitalsAddUpdate.html",
       // resolve:{
       //   factoryResolve:function(generalService){
       //     return generalService.isLogged();
@@ -71,7 +71,30 @@ app.config(function($routeProvider) {
     })
 
 
-
+    .when("/doctors", {
+      templateUrl: "src/views/doctorsList.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
+    .when("/doctors/add", {
+      templateUrl: "src/views/doctorsAddUpdate.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
+    .when("/doctors/edit/:id", {
+      templateUrl: "src/views/doctorsAddUpdate.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
 
 
     .when('/404', {

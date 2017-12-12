@@ -6,6 +6,12 @@ app.factory('httpDeleteService', ['generalService', '$http', '$localStorage', fu
   return {
      deleteSpeciality:function(id){
       return $http.delete(generalService.requestLinks('/speciality/'+id+'?token='+$localStorage.user.token));
-     }
+    },
+     deleteHospital:function(id){
+      return $http.delete(generalService.requestLinks('/hospital/'+id+'?token='+$localStorage.user.token));
+    },
+    deleteDoctor:function(id){
+     return $http.delete(generalService.requestLinks('/doctor/'+id+'?token='+$localStorage.user.token));
+   },
   };
 }]);

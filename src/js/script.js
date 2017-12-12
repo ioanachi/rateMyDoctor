@@ -20,6 +20,8 @@ import './custom/controllers/specialitiesAddEdit.js';
 import './custom/controllers/specialitiesList.js';
 import './custom/controllers/hospitalsList.js';
 import './custom/controllers/hospitalsAddEdit.js';
+import './custom/controllers/doctorsAddEdit.js';
+import './custom/controllers/doctorsList.js';
 
 
 

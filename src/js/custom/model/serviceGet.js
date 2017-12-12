@@ -9,6 +9,9 @@ app.factory('httpGetService', ['generalService', '$http', '$localStorage', funct
     },
     getSpecialityById:function(id){
       return $http.get(generalService.requestLinks('/speciality/'+id+'?token='+$localStorage.user.token));
-    }
+    },
+    getHospital:function(){
+     return $http.get(generalService.requestLinks('/hospitals?token='+$localStorage.user.token));
+   },
   };
 }]);

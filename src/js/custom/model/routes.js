@@ -45,6 +45,32 @@ app.config(function($routeProvider) {
       //   },
       // }
     })
+    .when("/hospitals", {
+      templateUrl: "src/views/hospitalsList.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
+    .when("/hospitals/add", {
+      templateUrl: "src/views/hospitalsAddUpdate.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
+    .when("/hospitals/edit/:id", {
+      templateUrl: "src/views/specialitiesAddUpdate.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
+
+
 
 
 

@@ -18,6 +18,8 @@ import './custom/controllers/loginPage.js';
 import './custom/controllers/registerValidate.js';
 import './custom/controllers/specialitiesAddEdit.js';
 import './custom/controllers/specialitiesList.js';
+import './custom/controllers/hospitalsList.js';
+import './custom/controllers/hospitalsAddEdit.js';
 
 
 

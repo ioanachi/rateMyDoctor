@@ -8,8 +8,10 @@
     display: block;
     padding: 0 0 50px 0;
     list-style: none;
+    display: flex;
 
     li {
+
       color: rgb(26, 5, 198);
       float: left;
       cursor: pointer;

@@ -9,6 +9,10 @@ app.factory('httpPutService', ['generalService', '$http','$localStorage', functi
     },
     addSpeciality:function(_data){
      return $http.put(generalService.requestLinks("/speciality"+'?token='+$localStorage.user.token), _data);
+   },
+    addHospital:function(_data){
+      return $http.put(generalService.requestLinks("/hospital"+'?token='+$localStorage.user.token), _data);
+
     }
   };
 }]);

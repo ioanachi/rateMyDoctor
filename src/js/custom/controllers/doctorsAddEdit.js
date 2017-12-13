@@ -9,7 +9,7 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
   $scope.doctorName;
   $scope.doctorPrivate;
   $scope.doctorDescription;
-  $scope.doctorPhoto;
+  $scope.doctorPicture;
   tThis.specialityDr;
   $scope.idSpeciality;
   tThis.hospitalDr;
@@ -50,7 +50,7 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
         "CV": $scope.doctorDescription,
         "Picture": $scope.doctorPicture,
       };
-
+      console.log(_data.Rank_ID,"hgtftrfyuhruat000000000000000000000000000000000000000000");
       if ($routeParams.id) {
         httpUpdateService.updateDoctors(tThis.paramId, _data).then(function(raspuns) {
           Notification.success("Doctor Updated");
@@ -75,7 +75,7 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
 
       var data = raspuns.data.result;
       $scope.doctorName = data.Name;
-       $scope.idRank = data.Rank_ID;
+      $scope.idRank = data.Rank_ID;
       $scope.idSpeciality = data.Speciality_ID;
       $scope.idHospital = data.Hospital_ID;
       $scope.doctorPrivate = data.PrivatePractice;

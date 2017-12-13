@@ -79201,7 +79201,7 @@ _main.app.controller("AdddoctorController", ['Notification', "httpPutService", "
   $scope.doctorName;
   $scope.doctorPrivate;
   $scope.doctorDescription;
-  $scope.doctorPhoto;
+  $scope.doctorPicture;
   tThis.specialityDr;
   $scope.idSpeciality;
   tThis.hospitalDr;
@@ -79240,7 +79240,7 @@ _main.app.controller("AdddoctorController", ['Notification', "httpPutService", "
         "CV": $scope.doctorDescription,
         "Picture": $scope.doctorPicture
       };
-
+      console.log(_data.Rank_ID, "hgtftrfyuhruat000000000000000000000000000000000000000000");
       if ($routeParams.id) {
         httpUpdateService.updateDoctors(tThis.paramId, _data).then(function (raspuns) {
           Notification.success("Doctor Updated");

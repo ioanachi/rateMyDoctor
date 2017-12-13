@@ -9,7 +9,7 @@ app.controller("DoctorsListController", ["$scope", 'httpGetService', "httpDelete
   tThis.rowIndex = -1;
   $scope.specSelectedUp;
 
-  httpGetService.getdoctor().then(function(raspuns) {
+  httpGetService.getDoctors().then(function(raspuns) {
     console.log(raspuns, "raspuns");
     var result = raspuns.data.result;
     tThis.doctorsObj = result;
@@ -43,7 +43,7 @@ app.controller("DoctorsListController", ["$scope", 'httpGetService', "httpDelete
   };
 
 
-  tThis.updateHosp = function() {
+  tThis.updateDoctor = function() {
     console.log(tThis.doctorsObj[tThis.rowIndex].ID, "tThis.doctorsObj[tThis.rowIndex].ID");
       $location.path('/doctors/edit/'+tThis.doctorsObj[tThis.rowIndex].ID);
   };

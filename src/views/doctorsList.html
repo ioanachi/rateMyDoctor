@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <md-button class="md-raised" goto-path="/doctors/add" >Insert Hospital</md-button>
+        <md-button class="md-raised" goto-path="/doctors/add" >Insert Doctor</md-button>
         <div class="btnsD" ng-show="dlctrl.rowIndex != -1" >
         <md-button class="md-raised md-primary" ng-click="dlctrl.updateDoctor()" >Edit</md-button>
 
@@ -22,7 +22,7 @@
 
           </tr>
           <tr ng-click="dlctrl.selectedRow($index)" ng-repeat="item in dlctrl.doctorsObj" ng-class="{active:$index==dlctrl.rowIndex}" >
-            <td>{{item.Photo}}</td>
+            <td>{{item.Picture}}</td>
             <td>{{item.Name}}</td>
             <td>{{item.Rank}}</td>
             <td>{{item.Speciality}}</td>

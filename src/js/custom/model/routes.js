@@ -69,8 +69,6 @@ app.config(function($routeProvider) {
       //   },
       // }
     })
-
-
     .when("/doctors", {
       templateUrl: "src/views/doctorsList.html",
       // resolve:{
@@ -95,7 +93,30 @@ app.config(function($routeProvider) {
       //   },
       // }
     })
-
+    .when("/rank", {
+      templateUrl: "src/views/rankList.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
+    .when("/rank/add", {
+      templateUrl: "src/views/rankAddUpdate.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
+    .when("/rank/edit/:id", {
+      templateUrl: "src/views/rankAddUpdate.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
 
     .when('/404', {
       templateUrl: "src/views/404.html"

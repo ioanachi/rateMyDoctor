@@ -3,7 +3,6 @@ import {
 } from '../main.js';
 
 
-console.log("efrejheruergygu");
 app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUpdateService", "$scope", "$routeParams", 'httpGetService', function(Notification, httpPutService, httpUpdateService, $scope, $routeParams, httpGetService) {
   var tThis = this;
   tThis.paramId = $routeParams.id;
@@ -22,14 +21,14 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
     if (typeof $scope.doctorName != "undefined") {
       var _data = {
         "Name": $scope.doctorName,
-        "Rank": $scope.doctorRank,
-        "Speciality": $scope.doctorSpeciality,
-        "SecSpeciality": $scope.doctorOtherSpec,
-        "Hospital": $scope.doctorHospital,
-        "Private": $scope.doctorPrivate,
-        "Description": $scope.doctorDescription,
-        "Photo": $scope.doctorPhoto,
-        "id": "src/img/DrDash",
+        "Rank_ID": $scope.doctorRank,
+        // "Speciality": $scope.doctorSpeciality,
+        // "SecSpeciality": $scope.doctorOtherSpec,
+        // "Hospital": $scope.doctorHospital,
+        "PrivatePractice": $scope.doctorPrivate,
+        "CV": $scope.doctorDescription,
+        "Picture": $scope.doctorPicture,
+        // "id": "src/img/DrDash"
       };
 
       if ($routeParams.id) {
@@ -51,20 +50,20 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
   };
 
   var resetDefaults = function() {
-    httpGetService.getHospitalsById(tThis.paramId).then(function(raspuns) {
+    httpGetService.getDoctorsById(tThis.paramId).then(function(raspuns) {
       console.log(raspuns, "raspuns");
       console.log(tThis.paramId, "tThis.paramId", )
 
       var data = raspuns.data.result;
       $scope.doctorName = data.Name;
-      $scope.doctorRank = data.Rank;
-      $scope.doctorSpeciality = data.Speciality;
-      $scope.doctorOtherSpec = data.SecSpeciality;
-      $scope.doctorHospital = data.Hospital;
-      $scope.doctorPrivate = data.Private;
-      $scope.doctorDescription = data.Description;
-      $scope.doctorPhoto = data.Photo;
-      tThis.doctorBtn = "Update Hospital";
+      $scope.doctorRank = data.Rank_ID;
+      // $scope.doctorSpeciality = data.Speciality;
+      // $scope.doctorOtherSpec = data.SecSpeciality;
+      // $scope.doctorHospital = data.Hospital;
+      $scope.doctorPrivate = data.PrivatePractice;
+      $scope.doctorDescription = data.CV;
+      $scope.doctorPicture = data.Picture;
+      tThis.doctorBtn = "Update Doctor";
 
 
     });
@@ -73,6 +72,6 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
     resetDefaults();
 
   }
-  tThis.doctorBtn = "Add Hospital";
+  tThis.doctorBtn = "Add Doctor";
 
 }]);

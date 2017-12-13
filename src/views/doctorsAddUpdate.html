@@ -12,16 +12,13 @@
               <label for="doctorName"></label>Doctor Name:
               <input type="text" name="doctorName" ng-model="doctorName"></br>
 
-              <select class="" name="">
+              <select  ng-model="idSpeciality" ng-options="item.id as item.Name for item in adctrl.specialityDr">
+              </select></br>
 
+              <select ng-model="idHospital" ng-options="item2.id as item2.Name for item2 in adctrl.hospitalDr" name="">
+              </select></br>
+              <select ng-model="idRank" ng-options="item3.id as item3.Name for item3 in adctrl.rankDr" name="">
               </select>
-
-              <label for="doctorRank"></label>Rank:
-              <input type="text" name="doctorRank" ng-model="doctorRank" value="" placeholder="Rank"></br>
-              <select class="specialitiesDr" name="">
-
-              </select>
-
               <!-- <label for="doctorSpeciality"></label>Speciality: -->
               <!-- <input type="text" name="doctorSpeciality" ng-model="doctorSpeciality" value="" placeholder="Specialities"></br> -->
 
@@ -35,7 +32,7 @@
               <input type="text" name="doctorPrivate" value="" ng-model="doctorPrivate" placeholder="Private practice"></br>
 
               <label for="doctorDescription"></label>Doctor's CV
-              <textarea ng-model="doctorDescription" name="doctorDescription"  placeholder="Add CV or Description" ></textarea></br>
+              <textarea ng-model="doctorDescription" name="doctorDescription" placeholder="Add CV or Description"></textarea></br>
 
               <label for="doctorPicture"></label> Photo:
               <input type="text" name="doctorPicture" value="" ng-model="doctorPicture" placeholder="Photo (introduce URL)">

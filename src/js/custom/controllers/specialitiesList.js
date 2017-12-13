@@ -3,15 +3,17 @@ import {
 } from '../main.js';
 
 
-app.controller("SpecilitiesListController", ["$scope", 'httpGetService', "httpDeleteService", '$mdDialog', '$location', function($scope, httpGetService, httpDeleteService, $mdDialog, $location) {
+app.controller("SpecialitiesListController", ["$scope", '$localStorage', 'httpGetService', "httpDeleteService", '$mdDialog', '$location', function($scope, $localStorage, httpGetService, httpDeleteService, $mdDialog, $location) {
   var tThis = this;
-  tThis.specialitiesObj = [];
+  $scope.specialitiesObj = [];
   tThis.rowIndex = -1;
   $scope.specSelectedUp;
 
   httpGetService.getSpecialy().then(function(raspuns) {
     var result = raspuns.data.result;
-    tThis.specialitiesObj = result;
+    $scope.specialitiesObj = result;
+$localStorage.speciality = result;
+
   });
 
   tThis.selectedRow = function(index) {
@@ -29,10 +31,9 @@ app.controller("SpecilitiesListController", ["$scope", 'httpGetService', "httpDe
       .cancel('No');
     $mdDialog.show(confirm).then(function() {
       $scope.status = 'You decided to delete this speciality.';
-      httpDeleteService.deleteSpeciality(tThis.specialitiesObj[tThis.rowIndex].ID).then(function(raspuns) {
-        console.log(raspuns);
+      httpDeleteService.deleteSpeciality($scope.specialitiesObj[tThis.rowIndex].ID).then(function(raspuns) {
       });
-      tThis.specialitiesObj.splice(tThis.rowIndex, 1);
+      $scope.specialitiesObj.splice(tThis.rowIndex, 1);
       tThis.rowIndex = -1;
     }, function() {
       $scope.status = 'You decided to keep this speciality.';
@@ -41,7 +42,7 @@ app.controller("SpecilitiesListController", ["$scope", 'httpGetService', "httpDe
 
 
   tThis.updateSpec = function() {
-      $location.path('/specialities/edit/'+tThis.specialitiesObj[tThis.rowIndex].ID);
+      $location.path('/specialities/edit/'+$scope.specialitiesObj[tThis.rowIndex].ID);
   };
 
 

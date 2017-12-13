@@ -1,4 +1,4 @@
-<div class="specilityList" ng-controller="SpecilitiesListController as slctrl">
+<div class="specilityList" ng-controller="SpecialitiesListController as slctrl">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -16,7 +16,7 @@
             <th>Description</th>
             <th>Number of doctors</th>
           </tr>
-          <tr ng-click="slctrl.selectedRow($index)" ng-repeat="item in slctrl.specialitiesObj" ng-class="{active:$index==slctrl.rowIndex}" >
+          <tr ng-click="slctrl.selectedRow($index)" ng-repeat="item in specialitiesObj" ng-class="{active:$index==slctrl.rowIndex}" >
             <td>{{item.Name}}</td>
             <td>{{item.Description}}</td>
             <td>{{item.Picture}}</td>

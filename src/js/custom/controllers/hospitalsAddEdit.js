@@ -17,6 +17,7 @@ app.controller("AddhospitalController", ['Notification', "httpPutService", "http
   $scope.hospCountry;
   console.log($routeParams, 'data');
 
+tThis.countries=['Romania', "SUA", 'Italia'];
   tThis.addEdithosp = function() {
     console.log($scope.hospName, '$scope.hospName');
 

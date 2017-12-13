@@ -79022,15 +79022,16 @@ _main.app.controller("AddspecialityController", ['Notification', "httpPutService
 
 var _main = __webpack_require__(0);
 
-_main.app.controller("SpecilitiesListController", ["$scope", 'httpGetService', "httpDeleteService", '$mdDialog', '$location', function ($scope, httpGetService, httpDeleteService, $mdDialog, $location) {
+_main.app.controller("SpecialitiesListController", ["$scope", '$localStorage', 'httpGetService', "httpDeleteService", '$mdDialog', '$location', function ($scope, $localStorage, httpGetService, httpDeleteService, $mdDialog, $location) {
   var tThis = this;
-  tThis.specialitiesObj = [];
+  $scope.specialitiesObj = [];
   tThis.rowIndex = -1;
   $scope.specSelectedUp;
 
   httpGetService.getSpecialy().then(function (raspuns) {
     var result = raspuns.data.result;
-    tThis.specialitiesObj = result;
+    $scope.specialitiesObj = result;
+    $localStorage.speciality = result;
   });
 
   tThis.selectedRow = function (index) {
@@ -79042,10 +79043,8 @@ _main.app.controller("SpecilitiesListController", ["$scope", 'httpGetService', "
     var confirm = $mdDialog.confirm().title('Would you like to delete speciality?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
     $mdDialog.show(confirm).then(function () {
       $scope.status = 'You decided to delete this speciality.';
-      httpDeleteService.deleteSpeciality(tThis.specialitiesObj[tThis.rowIndex].ID).then(function (raspuns) {
-        console.log(raspuns);
-      });
-      tThis.specialitiesObj.splice(tThis.rowIndex, 1);
+      httpDeleteService.deleteSpeciality($scope.specialitiesObj[tThis.rowIndex].ID).then(function (raspuns) {});
+      $scope.specialitiesObj.splice(tThis.rowIndex, 1);
       tThis.rowIndex = -1;
     }, function () {
       $scope.status = 'You decided to keep this speciality.';
@@ -79053,7 +79052,7 @@ _main.app.controller("SpecilitiesListController", ["$scope", 'httpGetService', "
   };
 
   tThis.updateSpec = function () {
-    $location.path('/specialities/edit/' + tThis.specialitiesObj[tThis.rowIndex].ID);
+    $location.path('/specialities/edit/' + $scope.specialitiesObj[tThis.rowIndex].ID);
   };
 }]);
 
@@ -79131,6 +79130,7 @@ _main.app.controller("AddhospitalController", ['Notification', "httpPutService",
   $scope.hospCountry;
   console.log($routeParams, 'data');
 
+  tThis.countries = ['Romania', "SUA", 'Italia'];
   tThis.addEdithosp = function () {
     console.log($scope.hospName, '$scope.hospName');
 
@@ -79195,37 +79195,54 @@ _main.app.controller("AddhospitalController", ['Notification', "httpPutService",
 
 var _main = __webpack_require__(0);
 
-_main.app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUpdateService", "$scope", "$routeParams", 'httpGetService', function (Notification, httpPutService, httpUpdateService, $scope, $routeParams, httpGetService) {
+_main.app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUpdateService", "$scope", "$routeParams", '$localStorage', 'httpGetService', function (Notification, httpPutService, httpUpdateService, $scope, $routeParams, $localStorage, httpGetService) {
   var tThis = this;
   tThis.paramId = $routeParams.id;
   $scope.doctorName;
-  $scope.doctorRank;
-  $scope.doctorSpeciality;
-  $scope.doctorOtherSpec;
-  $scope.doctorHospital;
   $scope.doctorPrivate;
   $scope.doctorDescription;
   $scope.doctorPhoto;
+  tThis.specialityDr;
+  $scope.idSpeciality;
+  tThis.hospitalDr;
+  $scope.idHospital;
+  tThis.rankDr;
+  $scope.idRank;
+
+  httpGetService.getSpecialy().then(function (raspuns) {
+    var result = raspuns.data.result;
+    tThis.specialityDr = result;
+    console.log(result, "result");
+    console.log(tThis.specialityDr, "tThis.specialityDr");
+  });
+  httpGetService.getHospital().then(function (date) {
+    var result2 = date.data.result;
+    tThis.hospitalDr = result2;
+    console.log(result2, "result2");
+    console.log(tThis.hospitalDr, "tThis.hospitalDr");
+    console.log($scope.idHospital, "$scope.idHospital");
+  });
+  httpGetService.getRank().then(function (rezultat) {
+    var result3 = rezultat.data.result;
+    tThis.rankDr = result3;
+    console.log(result3, "result3");
+    console.log($scope.idRank, "$scope.idRank");
+  });
 
   tThis.addEditDr = function () {
-    console.log($scope.hospName, '$scope.hospName');
-
     if (typeof $scope.doctorName != "undefined") {
       var _data = {
         "Name": $scope.doctorName,
-        "Rank_ID": $scope.doctorRank,
-        // "Speciality": $scope.doctorSpeciality,
-        // "SecSpeciality": $scope.doctorOtherSpec,
-        // "Hospital": $scope.doctorHospital,
+        "Rank_ID": $scope.idRank,
+        "Speciality_ID": $scope.idSpeciality,
+        "Hospital_ID": $scope.idHospital,
         "PrivatePractice": $scope.doctorPrivate,
         "CV": $scope.doctorDescription,
         "Picture": $scope.doctorPicture
-        // "id": "src/img/DrDash"
       };
 
       if ($routeParams.id) {
         httpUpdateService.updateDoctors(tThis.paramId, _data).then(function (raspuns) {
-          console.log(tThis.paramId, "updateeeeeeee");
           Notification.success("Doctor Updated");
         });
       } else {
@@ -79247,13 +79264,13 @@ _main.app.controller("AdddoctorController", ['Notification', "httpPutService", "
 
       var data = raspuns.data.result;
       $scope.doctorName = data.Name;
-      $scope.doctorRank = data.Rank_ID;
-      // $scope.doctorSpeciality = data.Speciality;
-      // $scope.doctorOtherSpec = data.SecSpeciality;
-      // $scope.doctorHospital = data.Hospital;
+      $scope.idRank = data.Rank_ID;
+      $scope.idSpeciality = data.Speciality_ID;
+      $scope.idHospital = data.Hospital_ID;
       $scope.doctorPrivate = data.PrivatePractice;
       $scope.doctorDescription = data.CV;
       $scope.doctorPicture = data.Picture;
+
       tThis.doctorBtn = "Update Doctor";
     });
   };

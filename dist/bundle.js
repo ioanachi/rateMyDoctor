@@ -78568,13 +78568,13 @@ __webpack_require__(50);
 
 __webpack_require__(51);
 
-__webpack_require__(54);
-
-__webpack_require__(55);
-
 __webpack_require__(52);
 
 __webpack_require__(53);
+
+__webpack_require__(54);
+
+__webpack_require__(55);
 
 /***/ }),
 /* 36 */
@@ -78738,8 +78738,10 @@ _main.app.factory('httpPutService', ['generalService', '$http', '$localStorage',
     },
     addDoctor: function addDoctor(_data) {
       return $http.put(generalService.requestLinks("/doctor" + '?token=' + $localStorage.user.token), _data);
+    },
+    addRank: function addRank(_data) {
+      return $http.put(generalService.requestLinks("/rank" + '?token=' + $localStorage.user.token), _data);
     }
-
   };
 }]);
 
@@ -78788,7 +78790,14 @@ _main.app.factory('httpGetService', ['generalService', '$http', '$localStorage',
     },
     getDoctorsById: function getDoctorsById(id) {
       return $http.get(generalService.requestLinks('/doctor/' + id + '?token=' + $localStorage.user.token));
+    },
+    getRank: function getRank() {
+      return $http.get(generalService.requestLinks('/ranks?token=' + $localStorage.user.token));
+    },
+    getRankById: function getRankById(id) {
+      return $http.get(generalService.requestLinks('/rank/' + id + '?token=' + $localStorage.user.token));
     }
+
   };
 }]);
 
@@ -78811,6 +78820,9 @@ _main.app.factory('httpDeleteService', ['generalService', '$http', '$localStorag
     },
     deleteDoctor: function deleteDoctor(id) {
       return $http.delete(generalService.requestLinks('/doctor/' + id + '?token=' + $localStorage.user.token));
+    },
+    deleteRank: function deleteRank(id) {
+      return $http.delete(generalService.requestLinks('/rank/' + id + '?token=' + $localStorage.user.token));
     }
   };
 }]);
@@ -78834,6 +78846,9 @@ _main.app.factory('httpUpdateService', ['generalService', '$http', '$localStorag
     },
     updateDoctors: function updateDoctors(id, _data) {
       return $http.put(generalService.requestLinks('/doctor/' + id + '?token=' + $localStorage.user.token), _data);
+    },
+    updateRank: function updateRank(id, _data) {
+      return $http.put(generalService.requestLinks('/rank/' + id + '?token=' + $localStorage.user.token), _data);
     }
 
   };
@@ -79306,6 +79321,111 @@ _main.app.controller("DoctorsListController", ["$scope", 'httpGetService', "http
 
 var _main = __webpack_require__(0);
 
+_main.app.controller("RankListController", ["$scope", 'httpGetService', "httpDeleteService", '$mdDialog', '$location', function ($scope, httpGetService, httpDeleteService, $mdDialog, $location) {
+  var tThis = this;
+  tThis.rankObj = [];
+  tThis.rowIndex = -1;
+
+  httpGetService.getRank().then(function (raspuns) {
+    console.log(raspuns, "raspuns");
+    var result = raspuns.data.result;
+    tThis.rankObj = result;
+  });
+
+  tThis.selectedRow = function (index) {
+    tThis.rowIndex = index;
+    console.log(index, "index");
+  };
+
+  $scope.showConfirm = function (ev) {
+    // Appending dialog to document.body to cover sidenav in docs app
+    var confirm = $mdDialog.confirm().title('Would you like to delete rank?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
+    $mdDialog.show(confirm).then(function () {
+
+      $scope.status = 'You decided to delete this rank.';
+
+      httpDeleteService.deleteRank(tThis.rankObj[tThis.rowIndex].ID).then(function (raspuns) {
+        console.log(raspuns);
+      });
+      tThis.rankObj.splice(tThis.rowIndex, 1);
+      tThis.rowIndex = -1;
+    }, function () {
+      $scope.status = 'You decided to keep this rank.';
+    });
+  };
+
+  tThis.updateRank = function () {
+    console.log(tThis.rankObj[tThis.rowIndex].ID, "tThis.rankObj[tThis.rowIndex].ID");
+    $location.path('/rank/edit/' + tThis.rankObj[tThis.rowIndex].ID);
+  };
+}]);
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.controller("AddrankController", ['Notification', "httpPutService", "httpUpdateService", "$scope", "$routeParams", 'httpGetService', function (Notification, httpPutService, httpUpdateService, $scope, $routeParams, httpGetService) {
+  var tThis = this;
+  tThis.paramId = $routeParams.id;
+  $scope.rankName;
+  $scope.rankDescription;
+
+  tThis.addEditRank = function () {
+    console.log($scope.rankName, '$scope.hospName');
+
+    if (typeof $scope.rankName != "undefined") {
+      var _data = {
+        "Name": $scope.rankName,
+        "Description": $scope.rankDescription,
+        "id": "src/img/DrDash"
+      };
+
+      if ($routeParams.id) {
+        httpUpdateService.updateRank(tThis.paramId, _data).then(function (raspuns) {
+          Notification.success("Rank Updated");
+        });
+      } else {
+        httpPutService.addRank(_data).then(function (raspuns) {
+          Notification.success("Rank added");
+        });
+      }
+    } else {
+      Notification.error({
+        message: 'Could not add rank'
+      });
+    };
+  };
+
+  var resetDefaults = function resetDefaults() {
+    httpGetService.getRankById(tThis.paramId).then(function (raspuns) {
+      console.log(raspuns, "raspuns");
+
+      var data = raspuns.data.result;
+      $scope.rankName = data.Name;
+      $scope.rankDescription = data.Description;
+      tThis.rankBtn = "Update Rank";
+    });
+  };
+  if ($routeParams.id) {
+    resetDefaults();
+  }
+  tThis.rankBtn = "Add Rank";
+}]);
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
 _main.app.directive("gotoPath", ["$location", function ($location) {
   return {
     restrictive: "A",
@@ -79321,7 +79441,7 @@ _main.app.directive("gotoPath", ["$location", function ($location) {
 }]);
 
 /***/ }),
-/* 53 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79350,147 +79470,6 @@ _main.app.directive("pwCheck", function () {
     }
   };
 });
-
-/***/ }),
-/* 54 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _main = __webpack_require__(0);
-
-_main.app.controller("RankListController", ["$scope", 'httpGetService', "httpDeleteService", '$mdDialog', '$location', function ($scope, httpGetService, httpDeleteService, $mdDialog, $location) {
-  var tThis = this;
-  // tThis.doctorsObj = [];
-  // tThis.rowIndex = -1;
-  // $scope.specSelectedUp;
-  //
-  // httpGetService.getDoctors().then(function(raspuns) {
-  //   console.log(raspuns, "raspuns");
-  //   var result = raspuns.data.result;
-  //   tThis.doctorsObj = result;
-  // });
-  //
-  // tThis.selectedRow = function(index) {
-  //   tThis.rowIndex = index;
-  //   console.log(index, "index");
-  // };
-  //
-  // $scope.showConfirm = function(ev) {
-  //   // Appending dialog to document.body to cover sidenav in docs app
-  //   var confirm = $mdDialog.confirm()
-  //     .title('Would you like to delete doctor?')
-  //     .ariaLabel('Lucky day')
-  //     .targetEvent(ev)
-  //     .ok('Yes')
-  //     .cancel('No');
-  //   $mdDialog.show(confirm).then(function() {
-  //
-  //     $scope.status = 'You decided to delete this doctor.';
-  //
-  //     httpDeleteService.deleteDoctor(tThis.doctorsObj[tThis.rowIndex].ID).then(function(raspuns) {
-  //       console.log(raspuns);
-  //     });
-  //     tThis.doctorsObj.splice(tThis.rowIndex, 1);
-  //     tThis.rowIndex = -1;
-  //   }, function() {
-  //     $scope.status = 'You decided to keep this hospital.';
-  //   });
-  // };
-  //
-  //
-  // tThis.updateDoctor = function() {
-  //   console.log(tThis.doctorsObj[tThis.rowIndex].ID, "tThis.doctorsObj[tThis.rowIndex].ID");
-  //     $location.path('/doctors/edit/'+tThis.doctorsObj[tThis.rowIndex].ID);
-  // };
-  //
-  //
-  //
-  //
-}]);
-
-/***/ }),
-/* 55 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _main = __webpack_require__(0);
-
-_main.app.controller("AddRankController", ['Notification', "httpPutService", "httpUpdateService", "$scope", "$routeParams", 'httpGetService', function (Notification, httpPutService, httpUpdateService, $scope, $routeParams, httpGetService) {
-  // var tThis = this;
-  // tThis.paramId = $routeParams.id;
-  // $scope.doctorName;
-  // $scope.doctorRank;
-  // $scope.doctorSpeciality;
-  // $scope.doctorOtherSpec;
-  // $scope.doctorHospital;
-  // $scope.doctorPrivate;
-  // $scope.doctorDescription;
-  // $scope.doctorPhoto;
-  //
-  // tThis.addEditDr = function() {
-  //   console.log($scope.hospName, '$scope.hospName');
-  //
-  //   if (typeof $scope.doctorName != "undefined") {
-  //     var _data = {
-  //       "Name": $scope.doctorName,
-  //       "Rank_ID": $scope.doctorRank,
-  //       // "Speciality": $scope.doctorSpeciality,
-  //       // "SecSpeciality": $scope.doctorOtherSpec,
-  //       // "Hospital": $scope.doctorHospital,
-  //       "PrivatePractice": $scope.doctorPrivate,
-  //       "CV": $scope.doctorDescription,
-  //       "Picture": $scope.doctorPicture,
-  //       // "id": "src/img/DrDash"
-  //     };
-  //
-  //     if ($routeParams.id) {
-  //       httpUpdateService.updateDoctors(tThis.paramId, _data).then(function(raspuns) {
-  //         console.log(tThis.paramId,"updateeeeeeee");
-  //         Notification.success("Doctor Updated");
-  //       });
-  //     } else {
-  //       httpPutService.addDoctor(_data).then(function(raspuns) {
-  //         Notification.success("Doctor added");
-  //       });
-  //     }
-  //   } else {
-  //     Notification.error({
-  //       message: 'Could not add doctor'
-  //     });
-  //
-  //   };
-  // };
-  //
-  // var resetDefaults = function() {
-  //   httpGetService.getDoctorsById(tThis.paramId).then(function(raspuns) {
-  //     console.log(raspuns, "raspuns");
-  //     console.log(tThis.paramId, "tThis.paramId", )
-  //
-  //     var data = raspuns.data.result;
-  //     $scope.doctorName = data.Name;
-  //     $scope.doctorRank = data.Rank_ID;
-  //     // $scope.doctorSpeciality = data.Speciality;
-  //     // $scope.doctorOtherSpec = data.SecSpeciality;
-  //     // $scope.doctorHospital = data.Hospital;
-  //     $scope.doctorPrivate = data.PrivatePractice;
-  //     $scope.doctorDescription = data.CV;
-  //     $scope.doctorPicture = data.Picture;
-  //     tThis.doctorBtn = "Update Doctor";
-  //
-  //
-  //   });
-  // };
-  // if ($routeParams.id) {
-  //   resetDefaults();
-  //
-  // }
-  // tThis.doctorBtn = "Add Doctor";
-
-}]);
 
 /***/ })
 ],[7]);

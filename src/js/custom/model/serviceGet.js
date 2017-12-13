@@ -22,5 +22,13 @@ app.factory('httpGetService', ['generalService', '$http', '$localStorage', funct
     getDoctorsById: function(id) {
       return $http.get(generalService.requestLinks('/doctor/' + id + '?token=' + $localStorage.user.token));
     },
+    getRank: function() {
+      return $http.get(generalService.requestLinks('/ranks?token=' + $localStorage.user.token));
+    },
+    getRankById: function(id) {
+      return $http.get(generalService.requestLinks('/rank/' + id + '?token=' + $localStorage.user.token));
+    },
+
+
   };
 }]);

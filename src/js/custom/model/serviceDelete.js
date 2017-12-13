@@ -13,5 +13,8 @@ app.factory('httpDeleteService', ['generalService', '$http', '$localStorage', fu
     deleteDoctor:function(id){
      return $http.delete(generalService.requestLinks('/doctor/'+id+'?token='+$localStorage.user.token));
    },
+   deleteRank:function(id){
+    return $http.delete(generalService.requestLinks('/rank/'+id+'?token='+$localStorage.user.token));
+  },
   };
 }]);

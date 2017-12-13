@@ -10,14 +10,15 @@ app.controller("DoctorsListController", ["$scope", 'httpGetService', "httpDelete
   $scope.specSelectedUp;
 
   httpGetService.getDoctors().then(function(raspuns) {
-    console.log(raspuns, "raspuns");
     var result = raspuns.data.result;
     tThis.doctorsObj = result;
+    console.log(tThis.doctorsObj, "raspuns=========================");
+
   });
 
   tThis.selectedRow = function(index) {
     tThis.rowIndex = index;
-    console.log(index, "index");
+    console.log(index, "index77777777777777777777777");
   };
 
   $scope.showConfirm = function(ev) {

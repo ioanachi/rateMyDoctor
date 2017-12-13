@@ -20,21 +20,16 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
   httpGetService.getSpecialy().then(function(raspuns) {
     var result = raspuns.data.result;
     tThis.specialityDr = result;
-    console.log(result, "result")
-    console.log(tThis.specialityDr, "tThis.specialityDr")
   });
   httpGetService.getHospital().then(function(date) {
     var result2 = date.data.result;
     tThis.hospitalDr = result2;
-    console.log(result2, "result2")
-    console.log(tThis.hospitalDr, "tThis.hospitalDr")
-    console.log($scope.idHospital, "$scope.idHospital")
 
   });
   httpGetService.getRank().then(function(rezultat) {
     var result3 = rezultat.data.result;
     tThis.rankDr = result3;
-    console.log(result3, "result3")
+    console.log(result3, "result3333333333333333333333333333")
     console.log($scope.idRank, "$scope.idRank")
   });
 
@@ -48,9 +43,9 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
         "Hospital_ID": $scope.idHospital,
         "PrivatePractice": $scope.doctorPrivate,
         "CV": $scope.doctorDescription,
-        "Picture": $scope.doctorPicture,
+        "Picture": $scope.doctorPicture
       };
-      console.log(_data.Rank_ID,"hgtftrfyuhruat000000000000000000000000000000000000000000");
+      console.log(_data, "hgtftrfyuhruat000000000000000000000000000000000000000000");
       if ($routeParams.id) {
         httpUpdateService.updateDoctors(tThis.paramId, _data).then(function(raspuns) {
           Notification.success("Doctor Updated");
@@ -83,7 +78,7 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
       $scope.doctorPicture = data.Picture;
 
       tThis.doctorBtn = "Update Doctor";
-
+      console.log(data, "999999999999999999999999999999999999999999999999999999999");
 
     });
   };

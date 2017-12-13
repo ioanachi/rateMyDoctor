@@ -16,19 +16,19 @@
             <th>Name</th>
             <th>Rank</th>
             <th>Speciality</th>
-            <th>Second Speciality</th>
             <th>Hospital</th>
             <th>Private Practice</th>
+            <th>Description</th>
 
           </tr>
           <tr ng-click="dlctrl.selectedRow($index)" ng-repeat="item in dlctrl.doctorsObj" ng-class="{active:$index==dlctrl.rowIndex}" >
             <td>{{item.Picture}}</td>
             <td>{{item.Name}}</td>
-            <td>{{item.Rank}}</td>
-            <td>{{item.Speciality}}</td>
-            <td>{{item.SecSpeciality}}</td>
-            <td>{{item.Hospital}}</td>
-            <td>{{item.Private}}</td>
+            <td>{{item.Rank_ID}}</td>
+            <td>{{item.Speciality_ID}}</td>
+            <td>{{item.Hospital_ID}}</td>
+            <td>{{item.PrivatePractice}}</td>
+            <td>{{item.CV}}</td>
           </tr>
         </table>
 

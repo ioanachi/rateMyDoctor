@@ -78572,11 +78572,11 @@ __webpack_require__(52);
 
 __webpack_require__(53);
 
-__webpack_require__(56);
-
 __webpack_require__(54);
 
 __webpack_require__(55);
+
+__webpack_require__(56);
 
 /***/ }),
 /* 36 */
@@ -79475,6 +79475,25 @@ _main.app.controller("AddrankController", ['Notification', "httpPutService", "ht
 
 var _main = __webpack_require__(0);
 
+console.log("run");
+
+_main.app.controller("FrontController", ["$localStorage", "$scope", function ($localStorage, $scope) {
+  var tThis = this;
+  tThis.user;
+  $scope.userData = function (param) {
+    tThis.user = param;
+  };
+}]);
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
 _main.app.directive("gotoPath", ["$location", function ($location) {
   return {
     restrictive: "A",
@@ -79490,7 +79509,7 @@ _main.app.directive("gotoPath", ["$location", function ($location) {
 }]);
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79519,25 +79538,6 @@ _main.app.directive("pwCheck", function () {
     }
   };
 });
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _main = __webpack_require__(0);
-
-console.log("run");
-
-_main.app.controller("FrontController", ["$localStorage", "$scope", function ($localStorage, $scope) {
-  var tThis = this;
-  tThis.user;
-  $scope.userData = function (param) {
-    tThis.user = param;
-  };
-}]);
 
 /***/ })
 ],[7]);

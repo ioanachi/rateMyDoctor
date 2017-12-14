@@ -117,6 +117,14 @@ app.config(function($routeProvider) {
       //   },
       // }
     })
+    .when("/frontPage", {
+      templateUrl: "src/views/frontPage.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
 
     .when('/404', {
       templateUrl: "src/views/404.html"

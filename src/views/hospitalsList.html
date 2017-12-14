@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-12">
         <h3>Hospitals</h3>
-        
+
         <md-button class="md-raised" goto-path="/hospitals/add" >Insert Hospital</md-button>
         <div class="btns" ng-show="hlctrl.rowIndex != -1" >
         <md-button class="md-raised md-primary" ng-click="hlctrl.updateHosp()" >Edit</md-button>
@@ -27,8 +27,8 @@
             <td>{{item.Name}}</td>
             <td>{{item.Adress}}</td>
             <td>{{item.Description}}</td>
-            <td>{{item.Doctors}}</td>
-            <td>{{item.Specialities}}</td>
+            <td>{{item.doctorsNr}}</td>
+            <td>{{item.specialitiesNr}}</td>
           </tr>
         </table>
 

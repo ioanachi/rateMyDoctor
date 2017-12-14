@@ -11,8 +11,9 @@ app.controller("SpecialitiesListController", ["$scope", '$localStorage', 'httpGe
 
   httpGetService.getSpecialy().then(function(raspuns) {
     var result = raspuns.data.result;
+    console.log(result, "specccccccccccccccccccccccccccccccccccc");
     $scope.specialitiesObj = result;
-$localStorage.speciality = result;
+    $localStorage.speciality = result;
 
   });
 
@@ -31,8 +32,7 @@ $localStorage.speciality = result;
       .cancel('No');
     $mdDialog.show(confirm).then(function() {
       $scope.status = 'You decided to delete this speciality.';
-      httpDeleteService.deleteSpeciality($scope.specialitiesObj[tThis.rowIndex].ID).then(function(raspuns) {
-      });
+      httpDeleteService.deleteSpeciality($scope.specialitiesObj[tThis.rowIndex].ID).then(function(raspuns) {});
       $scope.specialitiesObj.splice(tThis.rowIndex, 1);
       tThis.rowIndex = -1;
     }, function() {
@@ -42,7 +42,7 @@ $localStorage.speciality = result;
 
 
   tThis.updateSpec = function() {
-      $location.path('/specialities/edit/'+$scope.specialitiesObj[tThis.rowIndex].ID);
+    $location.path('/specialities/edit/' + $scope.specialitiesObj[tThis.rowIndex].ID);
   };
 
 

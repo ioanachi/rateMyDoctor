@@ -25,9 +25,9 @@
           <tr ng-click="dlctrl.selectedRow($index)" ng-repeat="item in dlctrl.doctorsObj" ng-class="{active:$index==dlctrl.rowIndex}" >
             <td>{{item.Picture}}</td>
             <td>{{item.Name}}</td>
-            <td>{{item.Rank_ID}}</td>
-            <td>{{item.Speciality_ID}}</td>
-            <td>{{item.Hospital_ID}}</td>
+            <td>{{item.RankName}}</td>
+            <td>{{item.SpecialityName}}</td>
+            <td>{{item.HospitalName}}</td>
             <td>{{item.PrivatePractice}}</td>
             <td>{{item.CV}}</td>
           </tr>

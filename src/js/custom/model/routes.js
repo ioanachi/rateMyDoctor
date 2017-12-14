@@ -117,7 +117,7 @@ app.config(function($routeProvider) {
       //   },
       // }
     })
-    .when("/frontPage", {
+    .when("/front", {
       templateUrl: "src/views/frontPage.html",
       // resolve:{
       //   factoryResolve:function(generalService){

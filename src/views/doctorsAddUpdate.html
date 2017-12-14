@@ -12,12 +12,12 @@
               <label for="doctorName"></label>Doctor Name:
               <input type="text" name="doctorName" ng-model="doctorName"></br>
 
-              <select ng-model="idSpeciality" ng-options="item.id as item.Name for item in adctrl.specialityDr">
+              <select ng-model="idSpeciality" ng-options="item.ID as item.Name for item in adctrl.specialityDr">
               </select></br>
 
-              <select ng-model="idHospital" ng-options="item2.id as item2.Name for item2 in adctrl.hospitalDr" name="">
+              <select ng-model="idHospital" ng-options="item2.ID as item2.Name for item2 in adctrl.hospitalDr" name="">
               </select></br>
-              <select ng-model="idRank" ng-options="item3.id as item3.Name for item3 in adctrl.rankDr track by item3.ID" name="">
+              <select ng-model="idRank" ng-options="item3.ID as item3.Name for item3 in adctrl.rankDr" name="">
               </select></br>
 
               <label for="doctorPrivate"></label>Private Practice:
@@ -35,7 +35,6 @@
 
               <p>
                 <span>Doctor :</span><em> {{doctorName}}</em></br>
-                <!-- <span>Speciality  :</span><em> {{drDescription}}</em> -->
               </p>
             </div>
           </div>

@@ -79444,8 +79444,8 @@ _main.app.directive("gotoPath", ["$location", function ($location) {
     restrictive: "A",
     link: function link(scope, element, attrs) {
       element.on("click", function () {
-        console.log(attrs.gotoPath, "attrs");
         scope.$apply(function () {
+          console.log(attrs.gotoPath, "attrs");
           $location.path(attrs.gotoPath);
         });
       });

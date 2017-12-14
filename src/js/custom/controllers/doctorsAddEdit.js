@@ -18,6 +18,7 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
   $scope.idRank;
 
   httpGetService.getSpecialy().then(function(raspuns) {
+    console.log(raspuns, "====================================")
     var result = raspuns.data.result;
     tThis.specialityDr = result;
   });

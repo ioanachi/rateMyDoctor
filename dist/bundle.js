@@ -79117,7 +79117,7 @@ _main.app.controller("HospitalsListController", ["$scope", 'httpGetService', "ht
 var _main = __webpack_require__(0);
 
 console.log("efrejheruergygu");
-_main.app.controller("AddhospitalController", ['Notification', "httpPutService", "httpUpdateService", "$scope", "$routeParams", 'httpGetService', function (Notification, httpPutService, httpUpdateService, $scope, $routeParams, httpGetService) {
+_main.app.controller("AddhospitalController", ['Notification', "$http", "httpPutService", "httpUpdateService", "$scope", "$routeParams", 'httpGetService', function (Notification, $http, httpPutService, httpUpdateService, $scope, $routeParams, httpGetService) {
   var tThis = this;
   tThis.paramId = $routeParams.id;
   $scope.hospName;
@@ -79128,11 +79128,30 @@ _main.app.controller("AddhospitalController", ['Notification', "httpPutService",
   $scope.hospDescription;
   $scope.hospPhoto;
   $scope.hospCountry;
-  console.log($routeParams, 'data');
+  tThis.country2 = [];
 
+  $http.get('./src/js/custom/controllers/countries.txt').then(function (response) {
+    var country = response.data;
+    country = country.split("\n");
+    country.forEach(function (item) {
+      var countries = item.split("</li>");
+      var countr = [];
+      countr.push(countries[0]);
+
+      countr.forEach(function (item2) {
+        var countryies = item2.split("<li>");
+        tThis.country2.push(countryies[1]);
+        return tThis.country2;
+      });
+      return tThis.country2;
+    });
+    return tThis.country2;
+  });
+
+  console.log(tThis.country3);
   tThis.countries = ['Romania', "SUA", 'Italia'];
+
   tThis.addEdithosp = function () {
-    console.log($scope.hospName, '$scope.hospName');
 
     if (typeof $scope.hospName != "undefined") {
       var _data = {
@@ -79165,9 +79184,6 @@ _main.app.controller("AddhospitalController", ['Notification', "httpPutService",
 
   var resetDefaults = function resetDefaults() {
     httpGetService.getHospitalsById(tThis.paramId).then(function (raspuns) {
-      console.log(raspuns, "raspuns");
-      console.log(tThis.paramId, "tThis.paramId");
-
       var data = raspuns.data.result;
       $scope.hospName = data.Name;
       $scope.hospCounty = data.County;
@@ -79182,7 +79198,7 @@ _main.app.controller("AddhospitalController", ['Notification', "httpPutService",
   };
   if ($routeParams.id) {
     resetDefaults();
-  }
+  };
   tThis.hospitalBtn = "Add Hospital";
 }]);
 
@@ -79210,6 +79226,7 @@ _main.app.controller("AdddoctorController", ['Notification', "httpPutService", "
   $scope.idRank;
 
   httpGetService.getSpecialy().then(function (raspuns) {
+    console.log(raspuns, "====================================");
     var result = raspuns.data.result;
     tThis.specialityDr = result;
   });
@@ -79294,7 +79311,7 @@ _main.app.controller("DoctorsListController", ["$scope", 'httpGetService', "http
   httpGetService.getDoctors().then(function (raspuns) {
     var result = raspuns.data.result;
     tThis.doctorsObj = result;
-    console.log(tThis.doctorsObj, "raspuns=========================");
+    console.log(raspuns, "raspuns=========================");
   });
 
   tThis.selectedRow = function (index) {

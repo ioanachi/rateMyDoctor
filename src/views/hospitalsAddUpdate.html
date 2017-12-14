@@ -16,9 +16,12 @@
               <input type="text" name="hospCountry" ng-model="hospCountry" value="" placeholder="County"></br>
 
               <label for="hospCounty"></label>Hospital County:
+              <select class="" name="" ng-option="item in ahctrl.country3">
+              <option >{{item}}</option>
+              </select>
               <input type="text" name="hospCounty" ng-model="hospCounty" value="" placeholder="County"></br>
 
-              <label for="hospCity"></label>Hospital Adress:
+              <label for="hospCity"></label>Hospital City:
               <input type="text" name="hospCity" value="" ng-model="hospCity" placeholder="City"></br>
 
               <label for="hospStreet"></label>Hospital Adress:

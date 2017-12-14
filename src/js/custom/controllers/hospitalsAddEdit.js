@@ -4,7 +4,7 @@ import {
 
 
 console.log("efrejheruergygu");
-app.controller("AddhospitalController", ['Notification', "httpPutService", "httpUpdateService", "$scope", "$routeParams", 'httpGetService', function(Notification, httpPutService, httpUpdateService, $scope, $routeParams, httpGetService) {
+app.controller("AddhospitalController", ['Notification', "$http", "httpPutService", "httpUpdateService", "$scope", "$routeParams", 'httpGetService', function(Notification, $http, httpPutService, httpUpdateService, $scope, $routeParams, httpGetService) {
   var tThis = this;
   tThis.paramId = $routeParams.id;
   $scope.hospName;
@@ -15,11 +15,33 @@ app.controller("AddhospitalController", ['Notification', "httpPutService", "http
   $scope.hospDescription;
   $scope.hospPhoto;
   $scope.hospCountry;
-  console.log($routeParams, 'data');
+  tThis.country2 = [];
 
-tThis.countries=['Romania', "SUA", 'Italia'];
+    $http.get('./src/js/custom/controllers/countries.txt').then(function(response) {
+      var country = response.data;
+      country = country.split("\n");
+      country.forEach(function(item) {
+        var countries = item.split("</li>");
+        var countr = [];
+        countr.push(countries[0]);
+
+          countr.forEach(function(item2) {
+          var countryies=item2.split("<li>")
+            tThis.country2.push(countryies[1]);
+            return tThis.country2;
+          });
+          return tThis.country2;
+        });
+        return tThis.country2;
+      });
+
+console.log(tThis.country3);
+  tThis.countries = ['Romania', "SUA", 'Italia'];
+
+
+
+
   tThis.addEdithosp = function() {
-    console.log($scope.hospName, '$scope.hospName');
 
     if (typeof $scope.hospName != "undefined") {
       var _data = {
@@ -35,7 +57,7 @@ tThis.countries=['Romania', "SUA", 'Italia'];
 
       if ($routeParams.id) {
         httpUpdateService.updateHospitals(tThis.paramId, _data).then(function(raspuns) {
-          console.log(tThis.paramId,"updateeeeeeee");
+          console.log(tThis.paramId, "updateeeeeeee");
           Notification.success("Hospital Updated");
         });
       } else {
@@ -53,9 +75,6 @@ tThis.countries=['Romania', "SUA", 'Italia'];
 
   var resetDefaults = function() {
     httpGetService.getHospitalsById(tThis.paramId).then(function(raspuns) {
-      console.log(raspuns, "raspuns");
-      console.log(tThis.paramId, "tThis.paramId", )
-
       var data = raspuns.data.result;
       $scope.hospName = data.Name;
       $scope.hospCounty = data.County;
@@ -66,14 +85,10 @@ tThis.countries=['Romania', "SUA", 'Italia'];
       $scope.hospPhoto = data.Photo;
       $scope.hospCountry = data.Country;
       tThis.hospitalBtn = "Update Hospital";
-
-
     });
   };
   if ($routeParams.id) {
     resetDefaults();
-
-  }
+  };
   tThis.hospitalBtn = "Add Hospital";
-
 }]);

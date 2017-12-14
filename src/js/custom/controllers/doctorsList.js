@@ -12,7 +12,7 @@ app.controller("DoctorsListController", ["$scope", 'httpGetService', "httpDelete
   httpGetService.getDoctors().then(function(raspuns) {
     var result = raspuns.data.result;
     tThis.doctorsObj = result;
-    console.log(tThis.doctorsObj, "raspuns=========================");
+    console.log(raspuns, "raspuns=========================");
 
   });
 

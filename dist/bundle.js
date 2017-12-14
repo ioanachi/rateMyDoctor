@@ -79129,26 +79129,31 @@ _main.app.controller("AddhospitalController", ['Notification', "$http", "httpPut
   $scope.hospPhoto;
   $scope.hospCountry;
   tThis.country2 = [];
-
   $http.get('./src/js/custom/controllers/countries.txt').then(function (response) {
     var country = response.data;
     country = country.split("\n");
-    country.forEach(function (item) {
+    country.forEach(function (item, index) {
+      console.log(index);
       var countries = item.split("</li>");
       var countr = [];
       countr.push(countries[0]);
+      countr.forEach(function (item2, i) {
+        var countryies = {
+          idunic: i,
+          tara: item2.split("<li>")[1]
+        };
 
-      countr.forEach(function (item2) {
-        var countryies = item2.split("<li>");
-        tThis.country2.push(countryies[1]);
-        return tThis.country2;
+        tThis.country2.push(countryies);
       });
+
+      return tThis.country2;
+
       return tThis.country2;
     });
+
     return tThis.country2;
   });
 
-  console.log(tThis.country3);
   tThis.countries = ['Romania', "SUA", 'Italia'];
 
   tThis.addEdithosp = function () {

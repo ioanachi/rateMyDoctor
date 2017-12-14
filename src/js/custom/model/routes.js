@@ -125,6 +125,33 @@ app.config(function($routeProvider) {
       //   },
       // }
     })
+    .when("/frontHospitalsList", {
+      templateUrl: "src/views/frontHospitalsList.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
+    .when("/frontSpecialitiesList", {
+      templateUrl: "src/views/frontSpecialitiesList.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
+    .when("/frontDoctorsList", {
+      templateUrl: "src/views/frontDoctorsList.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
+
+
+
 
     .when('/404', {
       templateUrl: "src/views/404.html"

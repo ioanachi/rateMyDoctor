@@ -1,0 +1,34 @@
+<div class="whole">
+  <div class="menu">
+
+    <ul class="menuUl">
+      <li goto-path="/front">Home</li>
+      <li goto-path="frontSpecialitiesList">Specialities</li>
+      <li goto-path='/frontHospitalsList'>Hospitals</li>
+      <li goto-path='/frontDoctorsList'>Doctors</li>
+    </ul>
+
+  </div>
+  <div class="container bigscreen" ng-controller="FrontController as fpctrl">
+    <div class="specfrontP" goto-path="frontSpecialitiesList">
+      <div class="transparent">
+        <p>Specialities</p>
+
+      </div>
+    </div>
+    <div class="centerbox">
+      <div>
+        <div class="drfrontP" goto-path="frontDoctorsList">
+          <div class="transparent">
+            <p>Doctors</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hospfontP" goto-path="frontHospitalsList">
+      <div class="transparent">
+        <p>Hospitals</p>
+      </div>
+    </div>
+  </div>
+</div>

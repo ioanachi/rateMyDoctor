@@ -8,6 +8,7 @@ app.factory('httpUpdateService', ['generalService', '$http', '$localStorage', fu
       return $http.put(generalService.requestLinks('/speciality/' + id + '?token=' + $localStorage.user.token), _data);
     },
     updateHospitals: function(id, _data) {
+      console.log(_data);
       return $http.put(generalService.requestLinks('/hospital/' + id + '?token=' + $localStorage.user.token), _data);
     },
     updateDoctors: function(id, _data) {

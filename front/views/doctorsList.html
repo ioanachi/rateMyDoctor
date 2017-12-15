@@ -1,10 +1,17 @@
-<div class="doctorsList" ng-controller="FrontDoctorsListController as fdlctrl">
+<div class="doctorsList" ng-controller="DoctorsListController as dlctrl">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <h3>Doctors</h3>
+        <md-button class="md-raised" goto-path="/doctors/add" >Insert Doctor</md-button>
+        <div class="btnsD" ng-show="dlctrl.rowIndex != -1" >
+        <md-button class="md-raised md-primary" ng-click="dlctrl.updateDoctor()" >Edit</md-button>
 
-        <table>
+
+    <md-button class="md-raised md-warn" ng-click="showConfirm($event)">Delete</md-button>
+        </div>
+
+        <table >
           <tr>
             <th>Picture</th>
             <th>Name</th>
@@ -13,10 +20,9 @@
             <th>Hospital</th>
             <th>Private Practice</th>
             <th>Description</th>
-            <th>Rating</th>
-            <th>Reviews</th>
+
           </tr>
-          <tr ng-click="fdlctrl.selectedRow($index)" ng-repeat="item in fdlctrl.frontdoctorsObj" ng-class="{active:$index==fdlctrl.rowIndex}">
+          <tr ng-click="dlctrl.selectedRow($index)" ng-repeat="item in dlctrl.doctorsObj" ng-class="{active:$index==dlctrl.rowIndex}" >
             <td>{{item.Picture}}</td>
             <td>{{item.Name}}</td>
             <td>{{item.RankName}}</td>
@@ -24,9 +30,6 @@
             <td>{{item.HospitalName}}</td>
             <td>{{item.PrivatePractice}}</td>
             <td>{{item.CV}}</td>
-            <th>Rating</th>
-            <th>Reviews</th>
-
           </tr>
         </table>
 

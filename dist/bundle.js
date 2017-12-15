@@ -78576,6 +78576,10 @@ __webpack_require__(54);
 
 __webpack_require__(55);
 
+__webpack_require__(58);
+
+__webpack_require__(59);
+
 __webpack_require__(56);
 
 __webpack_require__(57);
@@ -78829,11 +78833,17 @@ _main.app.factory('httpGetService', ['generalService', '$http', '$localStorage',
     getRankById: function getRankById(id) {
       return $http.get(generalService.requestLinks('/rank/' + id + '?token=' + $localStorage.user.token));
     },
-    // getFrontSpecbyHospitalById: function(id) {
-    //   return $http.get(generalService.requestLinks('/front/specialitiesByHospital/' + id));
-    // },
+    getFrontSpecbyHospitalById: function getFrontSpecbyHospitalById(id) {
+      return $http.get(generalService.requestLinks('/front/specialitiesByHospital/' + id));
+    },
     getFrontHosp: function getFrontHosp() {
       return $http.get(generalService.requestLinks('/front/hospitals'));
+    },
+    getAllDr: function getAllDr() {
+      return $http.get(generalService.requestLinks('/front/doctors'));
+    },
+    getAllSpec: function getAllSpec() {
+      return $http.get(generalService.requestLinks('/front/specialities'));
     }
 
   };
@@ -78880,6 +78890,7 @@ _main.app.factory('httpUpdateService', ['generalService', '$http', '$localStorag
       return $http.put(generalService.requestLinks('/speciality/' + id + '?token=' + $localStorage.user.token), _data);
     },
     updateHospitals: function updateHospitals(id, _data) {
+      console.log(_data);
       return $http.put(generalService.requestLinks('/hospital/' + id + '?token=' + $localStorage.user.token), _data);
     },
     updateDoctors: function updateDoctors(id, _data) {
@@ -79172,7 +79183,6 @@ _main.app.controller("AddhospitalController", ['Notification', "$http", "httpPut
     var country = response.data;
     country = country.split("\n");
     country.forEach(function (item, index) {
-      console.log(index);
       var countries = item.split("</li>");
       var countr = [];
       countr.push(countries[0]);
@@ -79186,12 +79196,10 @@ _main.app.controller("AddhospitalController", ['Notification', "$http", "httpPut
 
       return tThis.country2;
     });
-    console.log(tThis.country2);
 
     return tThis.country2;
   });
   $scope.countrUnic;
-  console.log($scope.countrUnic, "iuyufyugu");
 
   tThis.countries = ['Romania', "SUA", 'Italia'];
 
@@ -79201,7 +79209,7 @@ _main.app.controller("AddhospitalController", ['Notification', "$http", "httpPut
       var _data = {
         "Name": $scope.hospName,
         "Description": $scope.hospDescription,
-        "Country": $scope.hospCountry,
+        "Country": $scope.countrUnic,
         "County": $scope.hospCounty,
         "City": $scope.hospCity,
         "Street": $scope.hospStreet,
@@ -79210,12 +79218,14 @@ _main.app.controller("AddhospitalController", ['Notification', "$http", "httpPut
       };
 
       if ($routeParams.id) {
+
         httpUpdateService.updateHospitals(tThis.paramId, _data).then(function (raspuns) {
-          console.log(tThis.paramId, "updateeeeeeee");
           Notification.success("Hospital Updated");
         });
       } else {
         httpPutService.addHospital(_data).then(function (raspuns) {
+          console.log(raspuns, "raspuns");
+
           Notification.success("Hospital created");
         });
       }
@@ -79523,6 +79533,7 @@ _main.app.controller("FrontHospListController", ["$scope", 'httpGetService', '$m
   var tThis = this;
   tThis.frontHospitalsObj = [];
   tThis.rowIndex = -1;
+  tThis.idHosp;
 
   httpGetService.getFrontHosp().then(function (raspuns) {
     console.log(raspuns, "raspunsNNlllllllllllllllllllll");
@@ -79530,27 +79541,16 @@ _main.app.controller("FrontHospListController", ["$scope", 'httpGetService', '$m
     tThis.frontHospitalsObj = result;
   });
 
-  tThis.selectedRow = function (index) {
+  tThis.selectedRowSH = function (index) {
     tThis.rowIndex = index;
     console.log(index, "index");
+    tThis.idHosp = tThis.frontHospitalsObj[tThis.rowIndex].ID;
+    console.log(tThis.idHosp, "idHosp");
   };
-
-  $scope.showConfirm = function (ev) {
-    console.log(tThis.hospitalsObj, "tThis.hospitalsObj");
-
-    // Appending dialog to document.body to cover sidenav in docs app
-    var confirm = $mdDialog.confirm().title('Would you like to delete hospital?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
-    $mdDialog.show(confirm).then(function () {
-
-      $scope.status = 'You decided to delete this hospital.';
-
-      httpDeleteService.deleteHospital(tThis.hospitalsObj[tThis.rowIndex].ID).then(function (raspuns) {
-        console.log(raspuns);
-      });
-      tThis.hospitalsObj.splice(tThis.rowIndex, 1);
-      tThis.rowIndex = -1;
-    }, function () {
-      $scope.status = 'You decided to keep this hospital.';
+  tThis.getspecialitySH = function (index) {
+    httpGetService.getFrontSpecbyHospitalById(tThis.idHosp).then(function (raspuns) {
+      console.log(raspuns, "sarahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+      $location.path('/frontHospitalsList/' + tThis.idHosp);
     });
   };
 
@@ -79613,6 +79613,90 @@ _main.app.directive("pwCheck", function () {
     }
   };
 });
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.controller("FrontDoctorsListController", ["$scope", 'httpGetService', "httpDeleteService", '$mdDialog', '$location', function ($scope, httpGetService, httpDeleteService, $mdDialog, $location) {
+  var tThis = this;
+  tThis.frontdoctorsObj = [];
+  tThis.rowIndex = -1;
+
+  httpGetService.getAllDr().then(function (raspuns) {
+    var result = raspuns.data.result;
+    tThis.frontdoctorsObj = result;
+    console.log(raspuns, "raspuns SImplu");
+  });
+
+  tThis.selectedRow = function (index) {
+    tThis.rowIndex = index;
+  };
+
+  $scope.showConfirm = function (ev) {
+    // Appending dialog to document.body to cover sidenav in docs app
+    var confirm = $mdDialog.confirm().title('Would you like to delete doctor?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
+    $mdDialog.show(confirm).then(function () {
+
+      $scope.status = 'You decided to delete this doctor.';
+
+      httpDeleteService.deleteDoctor(tThis.doctorsObj[tThis.rowIndex].ID).then(function (raspuns) {
+        console.log(raspuns);
+      });
+      tThis.doctorsObj.splice(tThis.rowIndex, 1);
+      tThis.rowIndex = -1;
+    }, function () {
+      $scope.status = 'You decided to keep this hospital.';
+    });
+  };
+
+  tThis.updateDoctor = function () {
+    console.log(tThis.doctorsObj[tThis.rowIndex].ID, "tThis.doctorsObj[tThis.rowIndex].ID");
+    $location.path('/doctors/edit/' + tThis.doctorsObj[tThis.rowIndex].ID);
+  };
+}]);
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.controller("FrontSpecialitiesController", ["$scope", '$localStorage', 'httpGetService', '$mdDialog', '$location', function ($scope, $localStorage, httpGetService, $mdDialog, $location) {
+  var tThis = this;
+  $scope.frontSpecialitiesObj = [];
+
+  httpGetService.getAllSpec().then(function (raspuns) {
+    var result = raspuns.data.result;
+    console.log(result, "specccccccccccccccccccccccccccccccccccc");
+    $scope.specialitiesObj = result;
+  });
+
+  $scope.showConfirm = function (ev) {
+    // Appending dialog to document.body to cover sidenav in docs app
+    var confirm = $mdDialog.confirm().title('Would you like to delete speciality?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
+    $mdDialog.show(confirm).then(function () {
+      $scope.status = 'You decided to delete this speciality.';
+      httpDeleteService.deleteSpeciality($scope.specialitiesObj[tThis.rowIndex].ID).then(function (raspuns) {});
+      $scope.specialitiesObj.splice(tThis.rowIndex, 1);
+      tThis.rowIndex = -1;
+    }, function () {
+      $scope.status = 'You decided to keep this speciality.';
+    });
+  };
+
+  tThis.updateSpec = function () {
+    $location.path('/specialities/edit/' + $scope.specialitiesObj[tThis.rowIndex].ID);
+  };
+}]);
 
 /***/ })
 ],[7]);

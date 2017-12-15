@@ -20,7 +20,6 @@ app.controller("AddhospitalController", ['Notification', "$http", "httpPutServic
       var country = response.data;
       country = country.split("\n");
       country.forEach(function(item, index) {
-        console.log(index);
         var countries = item.split("</li>");
         var countr = [];
         countr.push(countries[0]);
@@ -34,15 +33,13 @@ app.controller("AddhospitalController", ['Notification', "$http", "httpPutServic
 
         return tThis.country2;
       });
-      console.log(tThis.country2);
 
       return tThis.country2;
 
     });
     $scope.countrUnic;
-    console.log($scope.countrUnic, "iuyufyugu");
 
-    
+
 
 
   tThis.countries = ['Romania', "SUA", 'Italia'];
@@ -56,7 +53,7 @@ app.controller("AddhospitalController", ['Notification', "$http", "httpPutServic
       var _data = {
         "Name": $scope.hospName,
         "Description": $scope.hospDescription,
-        "Country": $scope.hospCountry,
+        "Country": $scope.countrUnic,
         "County": $scope.hospCounty,
         "City": $scope.hospCity,
         "Street": $scope.hospStreet,
@@ -65,12 +62,14 @@ app.controller("AddhospitalController", ['Notification', "$http", "httpPutServic
       };
 
       if ($routeParams.id) {
+
         httpUpdateService.updateHospitals(tThis.paramId, _data).then(function(raspuns) {
-          console.log(tThis.paramId, "updateeeeeeee");
           Notification.success("Hospital Updated");
         });
       } else {
         httpPutService.addHospital(_data).then(function(raspuns) {
+          console.log(raspuns,"raspuns");
+
           Notification.success("Hospital created");
         });
       }

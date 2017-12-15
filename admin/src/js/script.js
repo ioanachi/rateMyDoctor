@@ -24,10 +24,6 @@ import './custom/controllers/doctorsAddEdit.js';
 import './custom/controllers/doctorsList.js';
 import './custom/controllers/rankList.js';
 import './custom/controllers/rankAddEdit.js';
-import './custom/controllers/frontPage.js';
-import './custom/controllers/frontHospitalsList.js';
-import './custom/controllers/frontDoctorsList.js';
-import './custom/controllers/frontSpecialitiesList.js';
 
 
 

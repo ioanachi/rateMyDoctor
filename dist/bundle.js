@@ -78574,6 +78574,8 @@ __webpack_require__(53);
 
 __webpack_require__(54);
 
+__webpack_require__(57);
+
 __webpack_require__(55);
 
 __webpack_require__(56);
@@ -78826,6 +78828,12 @@ _main.app.factory('httpGetService', ['generalService', '$http', '$localStorage',
     },
     getRankById: function getRankById(id) {
       return $http.get(generalService.requestLinks('/rank/' + id + '?token=' + $localStorage.user.token));
+    },
+    // getFrontSpecbyHospitalById: function(id) {
+    //   return $http.get(generalService.requestLinks('/front/specialitiesByHospital/' + id));
+    // },
+    getFrontHosp: function getFrontHosp() {
+      return $http.get(generalService.requestLinks('/front/hospitals'));
     }
 
   };
@@ -79160,34 +79168,30 @@ _main.app.controller("AddhospitalController", ['Notification', "$http", "httpPut
   $scope.hospPhoto;
   $scope.hospCountry;
   tThis.country2 = [];
-  // $http.get('./src/js/custom/controllers/countries.txt').then(function(response) {
-  //   var country = response.data;
-  //   country = country.split("\n");
-  //   country.forEach(function(item, index) {
-  //     console.log(index);
-  //     var countries = item.split("</li>");
-  //     var countr = [];
-  //     countr.push(countries[0]);
-  //     countr.forEach(function(item2, i) {
-  //       var countryies = {
-  //         idunic: index,
-  //         tara: item2.split("<li>")[1]
-  //       };
-  //       tThis.country2.push(countryies);
-  //     });
-  //
-  //     return tThis.country2;
-  //   });
-  //   console.log(tThis.country2);
-  //
-  //   return tThis.country2;
-  //
-  // });
-  // $scope.countrUnic;
-  // console.log($scope.countrUnic, "iuyufyugu");
-  //
-  //
+  $http.get('./src/js/custom/controllers/countries.txt').then(function (response) {
+    var country = response.data;
+    country = country.split("\n");
+    country.forEach(function (item, index) {
+      console.log(index);
+      var countries = item.split("</li>");
+      var countr = [];
+      countr.push(countries[0]);
+      countr.forEach(function (item2, i) {
+        var countryies = {
+          idunic: index,
+          tara: item2.split("<li>")[1]
+        };
+        tThis.country2.push(countryies);
+      });
 
+      return tThis.country2;
+    });
+    console.log(tThis.country2);
+
+    return tThis.country2;
+  });
+  $scope.countrUnic;
+  console.log($scope.countrUnic, "iuyufyugu");
 
   tThis.countries = ['Romania', "SUA", 'Italia'];
 
@@ -79559,6 +79563,57 @@ _main.app.directive("pwCheck", function () {
     }
   };
 });
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.controller("FrontHospListController", ["$scope", 'httpGetService', '$mdDialog', '$location', function ($scope, httpGetService, $mdDialog, $location) {
+  var tThis = this;
+  tThis.frontHospitalsObj = [];
+  tThis.rowIndex = -1;
+  $scope.specSelectedUp;
+
+  httpGetService.getFrontHosp().then(function (raspuns) {
+    console.log(raspuns, "raspunsNNlllllllllllllllllllll");
+    var result = raspuns.data.result;
+    tThis.frontHospitalsObj = result;
+  });
+
+  tThis.selectedRow = function (index) {
+    tThis.rowIndex = index;
+    console.log(index, "index");
+  };
+
+  $scope.showConfirm = function (ev) {
+    console.log(tThis.hospitalsObj, "tThis.hospitalsObj");
+
+    // Appending dialog to document.body to cover sidenav in docs app
+    var confirm = $mdDialog.confirm().title('Would you like to delete hospital?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
+    $mdDialog.show(confirm).then(function () {
+
+      $scope.status = 'You decided to delete this hospital.';
+
+      httpDeleteService.deleteHospital(tThis.hospitalsObj[tThis.rowIndex].ID).then(function (raspuns) {
+        console.log(raspuns);
+      });
+      tThis.hospitalsObj.splice(tThis.rowIndex, 1);
+      tThis.rowIndex = -1;
+    }, function () {
+      $scope.status = 'You decided to keep this hospital.';
+    });
+  };
+
+  tThis.updateHosp = function () {
+    console.log(tThis.hospitalsObj[tThis.rowIndex].ID, "tThis.hospObj[tThis.rowIndex].ID");
+    $location.path('/hospitals/edit/' + tThis.hospitalsObj[tThis.rowIndex].ID);
+  };
+}]);
 
 /***/ })
 ],[7]);

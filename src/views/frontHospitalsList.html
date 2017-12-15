@@ -1,4 +1,4 @@
-<div class="hospitalList" ng-controller="HospitalsListController as hlctrl">
+<div class="hospitalList" ng-controller="FrontHospListController as fhlctrl">
   <div class="container">
     <div class="row">
         <h3>Hospitals</h3>
@@ -16,12 +16,15 @@
             <th>Number of specialities</th>
 
           </tr>
-          <tr ng-click="hlctrl.selectedRow($index)" ng-repeat="item in hlctrl.hospitalsObj" ng-class="{active:$index==hlctrl.rowIndex}" >
+          <tr ng-click="fhlctrl.selectedRow($index)" ng-repeat="item in fhlctrl.frontHospitalsObj" ng-class="{active:$index==fhlctrl.rowIndex}" >
             <td>{{item.Picture}}</td>
             <td>{{item.Name}}</td>
-            <td>{{item.Adress}}</td>
+            <td>{{item.Country+" " +item.Street}}</td>
             <td>{{item.Description}}</td>
             <td>{{item.doctorsNr}}</td>
+            <td>{{item.specialitiesNr}}</td>
+            <td>{{item.specialitiesNr}}</td>
+            <td>{{item.specialitiesNr}}</td>
             <td>{{item.specialitiesNr}}</td>
           </tr>
         </table>

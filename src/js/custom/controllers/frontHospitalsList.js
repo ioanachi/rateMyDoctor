@@ -7,12 +7,12 @@ app.controller("FrontHospListController", ["$scope", 'httpGetService', '$mdDialo
   var tThis = this;
   tThis.frontHospitalsObj = [];
   tThis.rowIndex = -1;
-  $scope.specSelectedUp;
 
   httpGetService.getFrontHosp().then(function(raspuns) {
     console.log(raspuns, "raspunsNNlllllllllllllllllllll");
     var result = raspuns.data.result;
     tThis.frontHospitalsObj = result;
+
   });
 
   tThis.selectedRow = function(index) {

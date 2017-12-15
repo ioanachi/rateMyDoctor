@@ -78574,11 +78574,11 @@ __webpack_require__(53);
 
 __webpack_require__(54);
 
-__webpack_require__(57);
-
 __webpack_require__(55);
 
 __webpack_require__(56);
+
+__webpack_require__(57);
 
 /***/ }),
 /* 36 */
@@ -79519,65 +79519,10 @@ _main.app.controller("FrontController", ["$localStorage", "$scope", function ($l
 
 var _main = __webpack_require__(0);
 
-_main.app.directive("gotoPath", ["$location", function ($location) {
-  return {
-    restrictive: "A",
-    link: function link(scope, element, attrs) {
-      element.on("click", function () {
-        scope.$apply(function () {
-          console.log(attrs.gotoPath, "attrs");
-          $location.path(attrs.gotoPath);
-        });
-      });
-    }
-  };
-}]);
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _main = __webpack_require__(0);
-
-_main.app.directive("pwCheck", function () {
-  return {
-    require: "ngModel",
-    link: function link(scope, elem, attrs, ctrl) {
-      console.log(attrs, "attrs");
-      var firstPassword = '#' + attrs.pwCheck;
-      var firstPasswordObj = angular.element(document.querySelector(firstPassword));
-      firstPasswordObj.on('keyup', function () {
-        scope.$apply(function () {
-          console.log(firstPasswordObj.val(), elem.val());
-          ctrl.$setValidity('pwmatch', elem.val() === firstPasswordObj.val());
-        });
-      });
-      elem.on('keyup', function () {
-        scope.$apply(function () {
-          ctrl.$setValidity('pwmatch', elem.val() === firstPasswordObj.val());
-        });
-      });
-    }
-  };
-});
-
-/***/ }),
-/* 57 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _main = __webpack_require__(0);
-
 _main.app.controller("FrontHospListController", ["$scope", 'httpGetService', '$mdDialog', '$location', function ($scope, httpGetService, $mdDialog, $location) {
   var tThis = this;
   tThis.frontHospitalsObj = [];
   tThis.rowIndex = -1;
-  $scope.specSelectedUp;
 
   httpGetService.getFrontHosp().then(function (raspuns) {
     console.log(raspuns, "raspunsNNlllllllllllllllllllll");
@@ -79614,6 +79559,60 @@ _main.app.controller("FrontHospListController", ["$scope", 'httpGetService', '$m
     $location.path('/hospitals/edit/' + tThis.hospitalsObj[tThis.rowIndex].ID);
   };
 }]);
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.directive("gotoPath", ["$location", function ($location) {
+  return {
+    restrictive: "A",
+    link: function link(scope, element, attrs) {
+      element.on("click", function () {
+        scope.$apply(function () {
+          console.log(attrs.gotoPath, "attrs");
+          $location.path(attrs.gotoPath);
+        });
+      });
+    }
+  };
+}]);
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.directive("pwCheck", function () {
+  return {
+    require: "ngModel",
+    link: function link(scope, elem, attrs, ctrl) {
+      console.log(attrs, "attrs");
+      var firstPassword = '#' + attrs.pwCheck;
+      var firstPasswordObj = angular.element(document.querySelector(firstPassword));
+      firstPasswordObj.on('keyup', function () {
+        scope.$apply(function () {
+          console.log(firstPasswordObj.val(), elem.val());
+          ctrl.$setValidity('pwmatch', elem.val() === firstPasswordObj.val());
+        });
+      });
+      elem.on('keyup', function () {
+        scope.$apply(function () {
+          ctrl.$setValidity('pwmatch', elem.val() === firstPasswordObj.val());
+        });
+      });
+    }
+  };
+});
 
 /***/ })
 ],[7]);

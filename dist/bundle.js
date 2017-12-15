@@ -35022,7 +35022,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".backImg {\n  background-image: url(\"/src/img/loginphoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .backImg .frontlogin {\n    background-color: rgba(255, 255, 255, 0.9);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .backImg .frontlogin button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .backImg .frontlogin md-input-container {\n      text-align: left; }\n  .backImg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .backImg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.ImgReg {\n  background-image: url(\"/src/img/RegisterPhoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-color: #e9e9e9;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .ImgReg .frontregister {\n    background-color: rgba(255, 255, 255, 0.8);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .ImgReg .frontregister button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .ImgReg .frontregister md-input-container {\n      text-align: left; }\n      .ImgReg .frontregister md-input-container input.ng-untouched.ng-invalid {\n        border-bottom: 1px solid blue; }\n      .ImgReg .frontregister md-input-container input.ng-invalid {\n        border-bottom: 1px solid red; }\n      .ImgReg .frontregister md-input-container input.ng-valid {\n        border-bottom: 1px solid green; }\n    .ImgReg .frontregister .msg-error {\n      color: #F00;\n      font-size: 14px; }\n  .ImgReg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .ImgReg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.classes {\n  min-width: 100%;\n  min-height: 680px;\n  top: 50%;\n  border: 1px solid #bbecf6;\n  justify-content: center;\n  align-items: center;\n  align-self: center;\n  display: flex;\n  left: 50%; }\n  .classes .common {\n    min-width: 300px;\n    min-height: 300px;\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    background-size: cover; }\n  .classes .hospitals {\n    background-image: url(\"/src/img/hospitalDash.jpg\"); }\n  .classes .specialities {\n    background-image: url(\"/src/img/specialityDash.jpg\"); }\n  .classes .doctors {\n    background-image: url(\"/src/img/drDash.jpg\"); }\n\n.transparent {\n  min-width: 100%;\n  min-height: 300px;\n  background-color: rgba(0, 0, 0, 0.4);\n  justify-content: center;\n  display: flex;\n  align-items: center; }\n  .transparent p {\n    color: #fff;\n    padding: 10px;\n    font-size: 16px;\n    font-weight: bold; }\n  .transparent:hover {\n    background-color: transparent;\n    cursor: pointer; }\n    .transparent:hover p {\n      background-color: rgba(0, 0, 0, 0.5); }\n\n.menu {\n  padding: 0;\n  margin: 0; }\n  .menu .menuUl {\n    margin-top: 40px;\n    display: block;\n    padding: 0 0 50px 0;\n    list-style: none;\n    display: flex; }\n    .menu .menuUl li {\n      color: #1a05c6;\n      float: left;\n      cursor: pointer;\n      padding: 10px;\n      margin: 5px;\n      font-size: 15px;\n      text-align: left; }\n      .menu .menuUl li:hover {\n        text-align: left;\n        border-bottom: 1px solid #1ed2eb; }\n        .menu .menuUl li:hover a {\n          color: inherit;\n          text-decoration: none;\n          transition: inherit; }\n    .menu .menuUl .logoutbtn {\n      float: right; }\n\n.specialAdd {\n  color: #016995; }\n  .specialAdd .add {\n    padding: 20px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3;\n    min-height: 250px; }\n  .specialAdd input {\n    margin-bottom: 20px;\n    margin-top: 20px;\n    margin-left: 10px; }\n  .specialAdd .textCont {\n    top: 5px;\n    margin: 0px;\n    padding: 0px;\n    float: right;\n    min-width: 50%;\n    min-height: 80px; }\n    .specialAdd .textCont p {\n      float: left;\n      margin-top: 20px; }\n      .specialAdd .textCont p span {\n        font-weight: 600;\n        min-width: 50%;\n        overflow: scroll;\n        margin-bottom: 10px; }\n  .specialAdd .buttoninsert {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n  .specialAdd .description {\n    padding: 50px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3; }\n\n.addbtn {\n  left: 2px;\n  bottom: 9px;\n  margin-top: 100px; }\n\n.specilityList {\n  padding: 40px;\n  margin-top: 50px; }\n  .specilityList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .specilityList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .specilityList table tr {\n      border: 1px solid #c3c3c3; }\n      .specilityList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .specilityList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .specilityList .btns {\n    float: right; }\n    .specilityList .btns .btn {\n      padding: 0;\n      background-color: #fff;\n      margin: 2px; }\n  .specilityList .active {\n    background-color: #61d7f6; }\n\n.hospitalList {\n  padding: 40px;\n  margin-top: 50px; }\n  .hospitalList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .hospitalList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .hospitalList table tr {\n      border: 1px solid #c3c3c3; }\n      .hospitalList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .hospitalList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .hospitalList .btns {\n    float: right; }\n    .hospitalList .btns .btn {\n      padding: 0;\n      background-color: #fff;\n      margin: 2px; }\n  .hospitalList .active {\n    background-color: #61d7f6; }\n\n.hospitalAdd {\n  color: #016995; }\n  .hospitalAdd .addH {\n    padding: 20px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3;\n    min-height: 250px; }\n  .hospitalAdd .inputHosp {\n    padding: 10px;\n    align-items: center;\n    justify-content: center;\n    display: flex; }\n  .hospitalAdd input {\n    align-self: center;\n    margin-bottom: 20px;\n    margin-top: 20px;\n    margin-left: 20px; }\n  .hospitalAdd .textContHosp {\n    top: 5px;\n    margin: 0;\n    padding: 0;\n    float: right;\n    min-width: 50%;\n    min-height: 80px; }\n    .hospitalAdd .textContHosp p {\n      float: left;\n      margin-top: 20px; }\n      .hospitalAdd .textContHosp p span {\n        font-weight: 600;\n        min-width: 50%;\n        overflow: scroll;\n        margin-bottom: 10px; }\n  .hospitalAdd .buttoninsertH {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n\n.addbtnH {\n  left: 2px;\n  bottom: 9px;\n  margin-top: 100px; }\n\n.doctorAdd {\n  color: #016995; }\n  .doctorAdd .addDr {\n    padding: 20px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3;\n    min-height: 250px; }\n  .doctorAdd .inputDr {\n    padding: 10px;\n    align-items: center;\n    justify-content: center;\n    display: flex; }\n  .doctorAdd input {\n    align-self: center;\n    margin-bottom: 20px;\n    margin-top: 20px;\n    margin-left: 20px; }\n  .doctorAdd .textContDr {\n    top: 5px;\n    margin: 0;\n    padding: 0;\n    float: right;\n    min-width: 50%;\n    min-height: 80px; }\n    .doctorAdd .textContDr p {\n      float: left;\n      margin-top: 20px; }\n      .doctorAdd .textContDr p span {\n        font-weight: 600;\n        min-width: 50%;\n        overflow: scroll;\n        margin-bottom: 10px; }\n  .doctorAdd .buttoninsertDr {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n\n.addbtnDr {\n  left: 2px;\n  bottom: 9px;\n  margin-top: 100px; }\n\n.doctorsList {\n  padding: 40px;\n  margin-top: 50px; }\n  .doctorsList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .doctorsList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .doctorsList table tr {\n      border: 1px solid #c3c3c3; }\n      .doctorsList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .doctorsList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .doctorsList .btnsD {\n    float: right; }\n  .doctorsList .active {\n    background-color: #61d7f6; }\n\n.rankList {\n  padding: 40px;\n  margin-top: 50px; }\n  .rankList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .rankList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .rankList table tr {\n      border: 1px solid #c3c3c3; }\n      .rankList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .rankList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .rankList .btnsR {\n    float: right; }\n  .rankList .active {\n    background-color: #61d7f6; }\n\n.rankAdd {\n  color: #016995; }\n  .rankAdd .addR {\n    padding: 20px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3;\n    min-height: 250px; }\n  .rankAdd .inputDr {\n    padding: 10px;\n    align-items: center;\n    justify-content: center;\n    display: flex; }\n  .rankAdd input {\n    align-self: center;\n    margin-bottom: 20px;\n    margin-top: 20px;\n    margin-left: 20px; }\n  .rankAdd .textContR {\n    top: 5px;\n    margin: 0;\n    padding: 0;\n    float: right;\n    min-width: 50%;\n    min-height: 80px; }\n    .rankAdd .textContR p {\n      float: left;\n      margin-top: 20px; }\n      .rankAdd .textContR p span {\n        font-weight: 600;\n        min-width: 50%;\n        overflow: scroll;\n        margin-bottom: 10px; }\n  .rankAdd .buttoninsertR {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n\n.addbtnR {\n  left: 2px;\n  bottom: 9px;\n  margin-top: 100px; }\n\n.bigscreen {\n  padding: 0px;\n  min-height: 680px;\n  border: 1px solid #bbecf6;\n  justify-content: center;\n  display: flex;\n  flex-direction: row; }\n  .bigscreen .centerbox {\n    position: absolute;\n    min-width: 300px;\n    height: 300px;\n    align-self: center;\n    align-items: center; }\n  .bigscreen .hospfontP {\n    background-image: url(\"/src/img/hospitalDash.jpg\");\n    bottom: 5px;\n    min-width: 300px;\n    min-height: 300px;\n    align-self: flex-end;\n    background-size: cover;\n    align-items: center; }\n  .bigscreen .specfrontP {\n    background-image: url(\"/src/img/specialityDash.jpg\");\n    min-width: 300px;\n    min-height: 300px;\n    align-self: flex-start;\n    margin-right: auto;\n    background-size: cover;\n    justify-content: center;\n    display: flex;\n    align-items: center; }\n  .bigscreen .drfrontP {\n    width: 300px;\n    min-height: 300px;\n    background-image: url(\"/src/img/drDash.jpg\");\n    bottom: 5px;\n    background-size: cover;\n    align-items: center;\n    justify-content: center;\n    display: flex;\n    align-items: center; }\n\n.transparent {\n  min-width: 100%;\n  min-height: 300px;\n  background-color: rgba(0, 0, 0, 0.4);\n  justify-content: center;\n  display: flex;\n  align-items: center; }\n  .transparent p {\n    color: #fff;\n    padding: 10px;\n    font-size: 16px;\n    font-weight: bold; }\n  .transparent:hover {\n    background-color: transparent;\n    cursor: pointer; }\n    .transparent:hover p {\n      background-color: rgba(0, 0, 0, 0.5); }\n", ""]);
+exports.push([module.i, ".backImg {\n  background-image: url(\"/src/img/loginphoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .backImg .frontlogin {\n    background-color: rgba(255, 255, 255, 0.9);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .backImg .frontlogin button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .backImg .frontlogin md-input-container {\n      text-align: left; }\n  .backImg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .backImg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.ImgReg {\n  background-image: url(\"/src/img/RegisterPhoto.jpg\");\n  background-repeat: no-repeat;\n  background-attachment: scroll;\n  background-size: cover;\n  background-color: #e9e9e9;\n  background-position: center;\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  min-width: 100%;\n  min-height: 100%; }\n  .ImgReg .frontregister {\n    background-color: rgba(255, 255, 255, 0.8);\n    border: 1px solid #cccccc;\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    min-width: 400px;\n    min-height: 300px;\n    padding: 20px; }\n    .ImgReg .frontregister button {\n      margin: 16px;\n      padding: 6px;\n      min-width: 184px;\n      min-height: 45px;\n      background-color: #0b74c1;\n      border: 0;\n      color: white; }\n    .ImgReg .frontregister md-input-container {\n      text-align: left; }\n      .ImgReg .frontregister md-input-container input.ng-untouched.ng-invalid {\n        border-bottom: 1px solid blue; }\n      .ImgReg .frontregister md-input-container input.ng-invalid {\n        border-bottom: 1px solid red; }\n      .ImgReg .frontregister md-input-container input.ng-valid {\n        border-bottom: 1px solid green; }\n    .ImgReg .frontregister .msg-error {\n      color: #F00;\n      font-size: 14px; }\n  .ImgReg .other {\n    min-width: 5%;\n    min-height: 10px;\n    padding: 10px; }\n    .ImgReg .other span:hover {\n      padding: 5px;\n      border-bottom: 1px solid #9fd3ed;\n      cursor: pointer; }\n\n.classes {\n  min-width: 100%;\n  min-height: 680px;\n  top: 50%;\n  border: 1px solid #bbecf6;\n  justify-content: center;\n  align-items: center;\n  align-self: center;\n  display: flex;\n  left: 50%; }\n  .classes .common {\n    min-width: 300px;\n    min-height: 300px;\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    background-size: cover; }\n  .classes .hospitals {\n    background-image: url(\"/src/img/hospitalDash.jpg\"); }\n  .classes .specialities {\n    background-image: url(\"/src/img/specialityDash.jpg\"); }\n  .classes .doctors {\n    background-image: url(\"/src/img/drDash.jpg\"); }\n\n.transparent {\n  min-width: 100%;\n  min-height: 300px;\n  background-color: rgba(0, 0, 0, 0.4);\n  justify-content: center;\n  display: flex;\n  align-items: center; }\n  .transparent p {\n    color: #fff;\n    padding: 10px;\n    font-size: 16px;\n    font-weight: bold; }\n  .transparent:hover {\n    background-color: transparent;\n    cursor: pointer; }\n    .transparent:hover p {\n      background-color: rgba(0, 0, 0, 0.5); }\n\n.menu {\n  padding: 0;\n  margin: 0; }\n  .menu .menuUl {\n    margin-top: 40px;\n    display: block;\n    padding: 0 0 50px 0;\n    list-style: none;\n    display: flex; }\n    .menu .menuUl li {\n      color: #1a05c6;\n      float: left;\n      cursor: pointer;\n      padding: 10px;\n      margin: 5px;\n      font-size: 15px;\n      text-align: left; }\n      .menu .menuUl li:hover {\n        text-align: left;\n        border-bottom: 1px solid #1ed2eb; }\n    .menu .menuUl .logoutbtn {\n      float: right; }\n\n.specialAdd {\n  color: #016995; }\n  .specialAdd .add {\n    padding: 20px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3;\n    min-height: 250px; }\n  .specialAdd input {\n    margin-bottom: 20px;\n    margin-top: 20px;\n    margin-left: 10px; }\n  .specialAdd .textCont {\n    top: 5px;\n    margin: 0px;\n    padding: 0px;\n    float: right;\n    min-width: 50%;\n    min-height: 80px; }\n    .specialAdd .textCont p {\n      float: left;\n      margin-top: 20px; }\n      .specialAdd .textCont p span {\n        font-weight: 600;\n        min-width: 50%;\n        overflow: scroll;\n        margin-bottom: 10px; }\n  .specialAdd .buttoninsert {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n  .specialAdd .description {\n    padding: 50px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3; }\n\n.addbtn {\n  left: 2px;\n  bottom: 9px;\n  margin-top: 100px; }\n\n.specilityList {\n  padding: 40px;\n  margin-top: 50px; }\n  .specilityList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .specilityList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .specilityList table tr {\n      border: 1px solid #c3c3c3; }\n      .specilityList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .specilityList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .specilityList .btns {\n    float: right; }\n    .specilityList .btns .btn {\n      padding: 0;\n      background-color: #fff;\n      margin: 2px; }\n  .specilityList .active {\n    background-color: #61d7f6; }\n\n.hospitalList {\n  padding: 40px;\n  margin-top: 50px; }\n  .hospitalList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .hospitalList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .hospitalList table tr {\n      border: 1px solid #c3c3c3; }\n      .hospitalList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .hospitalList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .hospitalList .btns {\n    float: right; }\n    .hospitalList .btns .btn {\n      padding: 0;\n      background-color: #fff;\n      margin: 2px; }\n  .hospitalList .active {\n    background-color: #61d7f6; }\n\n.hospitalAdd {\n  color: #016995; }\n  .hospitalAdd .addH {\n    padding: 20px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3;\n    min-height: 250px; }\n  .hospitalAdd .inputHosp {\n    padding: 10px;\n    align-items: center;\n    justify-content: center;\n    display: flex; }\n  .hospitalAdd input {\n    align-self: center;\n    margin-bottom: 20px;\n    margin-top: 20px;\n    margin-left: 20px; }\n  .hospitalAdd .textContHosp {\n    top: 5px;\n    margin: 0;\n    padding: 0;\n    float: right;\n    min-width: 50%;\n    min-height: 80px; }\n    .hospitalAdd .textContHosp p {\n      float: left;\n      margin-top: 20px; }\n      .hospitalAdd .textContHosp p span {\n        font-weight: 600;\n        min-width: 50%;\n        overflow: scroll;\n        margin-bottom: 10px; }\n  .hospitalAdd .buttoninsertH {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n\n.addbtnH {\n  left: 2px;\n  bottom: 9px;\n  margin-top: 100px; }\n\n.doctorAdd {\n  color: #016995; }\n  .doctorAdd .addDr {\n    padding: 20px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3;\n    min-height: 250px; }\n  .doctorAdd .inputDr {\n    padding: 10px;\n    align-items: center;\n    justify-content: center;\n    display: flex; }\n  .doctorAdd input {\n    align-self: center;\n    margin-bottom: 20px;\n    margin-top: 20px;\n    margin-left: 20px; }\n  .doctorAdd .textContDr {\n    top: 5px;\n    margin: 0;\n    padding: 0;\n    float: right;\n    min-width: 50%;\n    min-height: 80px; }\n    .doctorAdd .textContDr p {\n      float: left;\n      margin-top: 20px; }\n      .doctorAdd .textContDr p span {\n        font-weight: 600;\n        min-width: 50%;\n        overflow: scroll;\n        margin-bottom: 10px; }\n  .doctorAdd .buttoninsertDr {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n\n.addbtnDr {\n  left: 2px;\n  bottom: 9px;\n  margin-top: 100px; }\n\n.doctorsList {\n  padding: 40px;\n  margin-top: 50px; }\n  .doctorsList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .doctorsList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .doctorsList table tr {\n      border: 1px solid #c3c3c3; }\n      .doctorsList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .doctorsList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .doctorsList .btnsD {\n    float: right; }\n  .doctorsList .active {\n    background-color: #61d7f6; }\n\n.rankList {\n  padding: 40px;\n  margin-top: 50px; }\n  .rankList table {\n    min-width: 100%;\n    padding: 40px;\n    border: 1px solid #c3c3c3;\n    margin-top: 20px; }\n    .rankList table tr th {\n      background-color: #49a6e9;\n      padding: 10px;\n      color: #fff;\n      text-align: center; }\n    .rankList table tr {\n      border: 1px solid #c3c3c3; }\n      .rankList table tr td {\n        padding: 20px;\n        text-align: center; }\n      .rankList table tr:hover {\n        background-color: #61d7f6;\n        cursor: pointer; }\n  .rankList .btnsR {\n    float: right; }\n  .rankList .active {\n    background-color: #61d7f6; }\n\n.rankAdd {\n  color: #016995; }\n  .rankAdd .addR {\n    padding: 20px;\n    margin-top: 20px;\n    border: 1px solid #c3c3c3;\n    min-height: 250px; }\n  .rankAdd .inputDr {\n    padding: 10px;\n    align-items: center;\n    justify-content: center;\n    display: flex; }\n  .rankAdd input {\n    align-self: center;\n    margin-bottom: 20px;\n    margin-top: 20px;\n    margin-left: 20px; }\n  .rankAdd .textContR {\n    top: 5px;\n    margin: 0;\n    padding: 0;\n    float: right;\n    min-width: 50%;\n    min-height: 80px; }\n    .rankAdd .textContR p {\n      float: left;\n      margin-top: 20px; }\n      .rankAdd .textContR p span {\n        font-weight: 600;\n        min-width: 50%;\n        overflow: scroll;\n        margin-bottom: 10px; }\n  .rankAdd .buttoninsertR {\n    margin-top: 50px;\n    margin-left: 5px;\n    padding: 5px; }\n\n.addbtnR {\n  left: 2px;\n  bottom: 9px;\n  margin-top: 100px; }\n\n.whole {\n  min-width: 100%;\n  min-height: 100%; }\n  .whole .bigscreen {\n    padding: 0;\n    min-height: 600px;\n    border: 1px solid #bbecf6;\n    justify-content: center;\n    display: flex;\n    align-self: center;\n    flex-direction: row; }\n    .whole .bigscreen .centerbox {\n      position: absolute;\n      min-width: 280px;\n      height: 280px;\n      align-self: center;\n      align-items: center; }\n    .whole .bigscreen .hospfontP {\n      background-image: url(\"/src/img/hospitalDash.jpg\");\n      bottom: 5px;\n      min-width: 280px;\n      min-height: 280px;\n      align-self: flex-end;\n      background-size: cover;\n      align-items: center; }\n    .whole .bigscreen .specfrontP {\n      background-image: url(\"/src/img/specialityDash.jpg\");\n      min-width: 280px;\n      min-height: 280px;\n      align-self: flex-start;\n      margin-right: auto;\n      background-size: cover;\n      justify-content: center;\n      display: flex;\n      align-items: center; }\n    .whole .bigscreen .drfrontP {\n      width: 280px;\n      min-height: 280px;\n      background-image: url(\"/src/img/drDash.jpg\");\n      bottom: 5px;\n      background-size: cover;\n      align-items: center;\n      justify-content: center;\n      display: flex;\n      align-items: center; }\n  .whole .transparent {\n    min-width: 100%;\n    min-height: 300px;\n    background-color: rgba(0, 0, 0, 0.4);\n    justify-content: center;\n    display: flex;\n    align-items: center; }\n    .whole .transparent p {\n      color: #fff;\n      padding: 10px;\n      font-size: 16px;\n      font-weight: bold; }\n    .whole .transparent:hover {\n      background-color: transparent;\n      cursor: pointer; }\n      .whole .transparent:hover p {\n        background-color: rgba(0, 0, 0, 0.5); }\n  .whole .menu {\n    margin-top: 1%;\n    padding: 0;\n    margin: 0; }\n    .whole .menu .menuUl {\n      margin-top: 0px;\n      margin-left: 19%;\n      display: block;\n      padding: 0 0 50px 0;\n      list-style: none;\n      display: flex; }\n      .whole .menu .menuUl li {\n        margin-top: 50px;\n        color: #1a05c6;\n        float: left;\n        cursor: pointer;\n        padding: 10px;\n        margin: 5px;\n        font-size: 15px;\n        text-align: left;\n        font-size: 16px; }\n        .whole .menu .menuUl li:hover {\n          text-align: left;\n          border-bottom: 1px solid #1ed2eb; }\n      .whole .menu .menuUl .logoutbtn {\n        float: right; }\n", ""]);
 
 // exports
 
@@ -78578,6 +78578,8 @@ __webpack_require__(55);
 
 __webpack_require__(56);
 
+__webpack_require__(57);
+
 /***/ }),
 /* 36 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -78686,8 +78688,29 @@ _main.app.config(function ($routeProvider) {
     //     return generalService.isLogged();
     //   },
     // }
-  }).when("/frontPage", {
+  }).when("/front", {
     templateUrl: "src/views/frontPage.html"
+    // resolve:{
+    //   factoryResolve:function(generalService){
+    //     return generalService.isLogged();
+    //   },
+    // }
+  }).when("/frontHospitalsList", {
+    templateUrl: "src/views/frontHospitalsList.html"
+    // resolve:{
+    //   factoryResolve:function(generalService){
+    //     return generalService.isLogged();
+    //   },
+    // }
+  }).when("/frontSpecialitiesList", {
+    templateUrl: "src/views/frontSpecialitiesList.html"
+    // resolve:{
+    //   factoryResolve:function(generalService){
+    //     return generalService.isLogged();
+    //   },
+    // }
+  }).when("/frontDoctorsList", {
+    templateUrl: "src/views/frontDoctorsList.html"
     // resolve:{
     //   factoryResolve:function(generalService){
     //     return generalService.isLogged();
@@ -78805,6 +78828,12 @@ _main.app.factory('httpGetService', ['generalService', '$http', '$localStorage',
     },
     getRankById: function getRankById(id) {
       return $http.get(generalService.requestLinks('/rank/' + id + '?token=' + $localStorage.user.token));
+    },
+    // getFrontSpecbyHospitalById: function(id) {
+    //   return $http.get(generalService.requestLinks('/front/specialitiesByHospital/' + id));
+    // },
+    getFrontHosp: function getFrontHosp() {
+      return $http.get(generalService.requestLinks('/front/hospitals'));
     }
 
   };
@@ -79139,34 +79168,30 @@ _main.app.controller("AddhospitalController", ['Notification', "$http", "httpPut
   $scope.hospPhoto;
   $scope.hospCountry;
   tThis.country2 = [];
-  // $http.get('./src/js/custom/controllers/countries.txt').then(function(response) {
-  //   var country = response.data;
-  //   country = country.split("\n");
-  //   country.forEach(function(item, index) {
-  //     console.log(index);
-  //     var countries = item.split("</li>");
-  //     var countr = [];
-  //     countr.push(countries[0]);
-  //     countr.forEach(function(item2, i) {
-  //       var countryies = {
-  //         idunic: index,
-  //         tara: item2.split("<li>")[1]
-  //       };
-  //       tThis.country2.push(countryies);
-  //     });
-  //
-  //     return tThis.country2;
-  //   });
-  //   console.log(tThis.country2);
-  //
-  //   return tThis.country2;
-  //
-  // });
-  // $scope.countrUnic;
-  // console.log($scope.countrUnic, "iuyufyugu");
-  //
-  //
+  $http.get('./src/js/custom/controllers/countries.txt').then(function (response) {
+    var country = response.data;
+    country = country.split("\n");
+    country.forEach(function (item, index) {
+      console.log(index);
+      var countries = item.split("</li>");
+      var countr = [];
+      countr.push(countries[0]);
+      countr.forEach(function (item2, i) {
+        var countryies = {
+          idunic: index,
+          tara: item2.split("<li>")[1]
+        };
+        tThis.country2.push(countryies);
+      });
 
+      return tThis.country2;
+    });
+    console.log(tThis.country2);
+
+    return tThis.country2;
+  });
+  $scope.countrUnic;
+  console.log($scope.countrUnic, "iuyufyugu");
 
   tThis.countries = ['Romania', "SUA", 'Italia'];
 
@@ -79494,6 +79519,56 @@ _main.app.controller("FrontController", ["$localStorage", "$scope", function ($l
 
 var _main = __webpack_require__(0);
 
+_main.app.controller("FrontHospListController", ["$scope", 'httpGetService', '$mdDialog', '$location', function ($scope, httpGetService, $mdDialog, $location) {
+  var tThis = this;
+  tThis.frontHospitalsObj = [];
+  tThis.rowIndex = -1;
+
+  httpGetService.getFrontHosp().then(function (raspuns) {
+    console.log(raspuns, "raspunsNNlllllllllllllllllllll");
+    var result = raspuns.data.result;
+    tThis.frontHospitalsObj = result;
+  });
+
+  tThis.selectedRow = function (index) {
+    tThis.rowIndex = index;
+    console.log(index, "index");
+  };
+
+  $scope.showConfirm = function (ev) {
+    console.log(tThis.hospitalsObj, "tThis.hospitalsObj");
+
+    // Appending dialog to document.body to cover sidenav in docs app
+    var confirm = $mdDialog.confirm().title('Would you like to delete hospital?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
+    $mdDialog.show(confirm).then(function () {
+
+      $scope.status = 'You decided to delete this hospital.';
+
+      httpDeleteService.deleteHospital(tThis.hospitalsObj[tThis.rowIndex].ID).then(function (raspuns) {
+        console.log(raspuns);
+      });
+      tThis.hospitalsObj.splice(tThis.rowIndex, 1);
+      tThis.rowIndex = -1;
+    }, function () {
+      $scope.status = 'You decided to keep this hospital.';
+    });
+  };
+
+  tThis.updateHosp = function () {
+    console.log(tThis.hospitalsObj[tThis.rowIndex].ID, "tThis.hospObj[tThis.rowIndex].ID");
+    $location.path('/hospitals/edit/' + tThis.hospitalsObj[tThis.rowIndex].ID);
+  };
+}]);
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
 _main.app.directive("gotoPath", ["$location", function ($location) {
   return {
     restrictive: "A",
@@ -79509,7 +79584,7 @@ _main.app.directive("gotoPath", ["$location", function ($location) {
 }]);
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

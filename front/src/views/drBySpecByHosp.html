@@ -11,13 +11,17 @@
             <th>Picture</th>
             <th>Name</th>
             <th>Description</th>
-            <th>Number of doctors</th>
+            <th>Description</th>
+            <th>Reviews Number</th>
+            <th>Rating</th>
           </tr>
           <tr ng-click="dshlctrl.selectedRow($index)" ng-repeat="item in frontSpecByHospObj" ng-class="{active:$index==fsbyhlctrl.rowIndex}" >
             <td>{{item.Picture}}</td>
             <td>{{item.Name}}</td>
             <td>{{item.Description}}</td>
             <td>{{item.doctorsNr}}</td>
+            <td>{{item.Reviews}}</td>
+            <td>{{item.ReviewsNr}}</td>
           </tr>
         </table>
 

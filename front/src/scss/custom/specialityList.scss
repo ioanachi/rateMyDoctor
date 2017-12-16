@@ -25,6 +25,12 @@
       td {
         padding: 20px;
         text-align: center;
+        &:nth-child(3){
+          &:hover {
+            background-color: #3226b9;
+            color: white;
+          }
+        }
       }
       &:hover{
         background-color: rgb(97, 215, 246);
@@ -34,7 +40,7 @@
   }
 .btns{
   float: right;
-  
+
   .btn {
     padding: 0;
     background-color: #fff;

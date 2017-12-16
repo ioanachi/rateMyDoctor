@@ -64,7 +64,15 @@ app.config(function($routeProvider) {
       //   },
       // }
     })
-    
+    .when("/drBySpec/:id", {
+      templateUrl: "src/views/drBySpec.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
+
 
     .when('/404', {
       templateUrl: "src/views/404.html"

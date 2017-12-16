@@ -18,6 +18,7 @@ import './custom/controllers/frontSpecialitiesList.js';
 import './custom/controllers/frontSpecByHosp.js';
 import './custom/controllers/drBySpecByHosp.js';
 import './custom/controllers/drByHosp.js';
+import './custom/controllers/drBySpec.js';
 
 
 

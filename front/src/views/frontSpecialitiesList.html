@@ -12,10 +12,10 @@
             <th>Description</th>
             <th>Number of doctors</th>
           </tr>
-          <tr ng-click="fslctrl.selectedRow($index)" ng-repeat="item in specialitiesObj" ng-class="{active:$index==fslctrl.rowIndex}" >
+          <tr ng-click="fslctrl.selectedRowSD($index,false)" ng-repeat="item in specialitiesObj" ng-class="{active:$index==fslctrl.rowIndex}" >
             <td>{{item.Name}}</td>
             <td>{{item.Description}}</td>
-            <td>{{item.doctorsNr}}</td>
+            <td  goto-path="/drBySpec/{{fslctrl.selectedRowSD($index,true)}}">{{item.doctorsNr}}</td>
           </tr>
         </table>
 

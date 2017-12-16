@@ -30,11 +30,11 @@ app.controller("DoctorsListController", ["$scope", 'httpGetService', "httpDelete
       .ok('Yes')
       .cancel('No');
     $mdDialog.show(confirm).then(function() {
+      console.log(tThis.doctorsObj, "tThis.doctorsObjtThis.doctorsObjtThis.doctorsObj");
 
       $scope.status = 'You decided to delete this doctor.';
 
-      httpDeleteService.deleteDoctor(tThis.doctorsObj[tThis.rowIndex].ID).then(function(raspuns) {
-        console.log(raspuns);
+      httpDeleteService.deleteDoctor(tThis.doctorsObj[tThis.rowIndex].dID).then(function(raspuns) {
       });
       tThis.doctorsObj.splice(tThis.rowIndex, 1);
       tThis.rowIndex = -1;
@@ -45,8 +45,7 @@ app.controller("DoctorsListController", ["$scope", 'httpGetService', "httpDelete
 
 
   tThis.updateDoctor = function() {
-    console.log(tThis.doctorsObj[tThis.rowIndex].ID, "tThis.doctorsObj[tThis.rowIndex].ID");
-      $location.path('/doctors/edit/'+tThis.doctorsObj[tThis.rowIndex].ID);
+      $location.path('/doctors/edit/'+tThis.doctorsObj[tThis.rowIndex].dID);
   };
 
 

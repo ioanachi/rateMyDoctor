@@ -7,7 +7,6 @@ app.controller("HospitalsListController", ["$scope", 'httpGetService', "httpDele
   var tThis = this;
   tThis.hospitalsObj = [];
   tThis.rowIndex = -1;
-  $scope.specSelectedUp;
 
   httpGetService.getHospital().then(function(raspuns) {
     console.log(raspuns, "raspunsNN");
@@ -33,11 +32,11 @@ app.controller("HospitalsListController", ["$scope", 'httpGetService', "httpDele
       .ok('Yes')
       .cancel('No');
     $mdDialog.show(confirm).then(function() {
+      console.log(tThis.hospitalsObj,"enter");
 
       $scope.status = 'You decided to delete this hospital.';
-
-      httpDeleteService.deleteHospital(tThis.hospitalsObj[tThis.rowIndex].ID).then(function(raspuns) {
-        console.log(raspuns);
+      httpDeleteService.deleteHospital(tThis.hospitalsObj[tThis.rowIndex].hID).then(function(raspuns) {
+        console.log(raspuns, "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbs");
       });
       tThis.hospitalsObj.splice(tThis.rowIndex, 1);
       tThis.rowIndex = -1;
@@ -48,8 +47,7 @@ app.controller("HospitalsListController", ["$scope", 'httpGetService', "httpDele
 
 
   tThis.updateHosp = function() {
-    console.log(tThis.hospitalsObj[tThis.rowIndex].ID, "tThis.hospObj[tThis.rowIndex].ID");
-      $location.path('/hospitals/edit/'+tThis.hospitalsObj[tThis.rowIndex].ID);
+      $location.path('/hospitals/edit/'+tThis.hospitalsObj[tThis.rowIndex].hID);
   };
 
 

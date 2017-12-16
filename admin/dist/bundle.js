@@ -15,6 +15,88 @@ exports.app = app;
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -373,93 +455,11 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(10);
 module.exports = angular;
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
-
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
-
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
-
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
-
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
-
-	return [content].join('\n');
-}
-
-// Adapted from convert-source-map (MIT)
-function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-	return '/*# ' + data + ' */';
-}
 
 
 /***/ }),
@@ -500,7 +500,7 @@ module.exports = __webpack_require__(8);
 
 __webpack_require__(9);
 
-__webpack_require__(2);
+__webpack_require__(3);
 
 __webpack_require__(11);
 
@@ -34743,7 +34743,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
+var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -34763,7 +34763,7 @@ if(false) {
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(undefined);
+exports = module.exports = __webpack_require__(1)(undefined);
 // imports
 
 
@@ -34907,7 +34907,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
+var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -34927,7 +34927,7 @@ if(false) {
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(undefined);
+exports = module.exports = __webpack_require__(1)(undefined);
 // imports
 
 
@@ -34952,7 +34952,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
+var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -34972,7 +34972,7 @@ if(false) {
 /* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(undefined);
+exports = module.exports = __webpack_require__(1)(undefined);
 // imports
 
 
@@ -34997,7 +34997,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
+var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -35017,7 +35017,7 @@ if(false) {
 /* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(undefined);
+exports = module.exports = __webpack_require__(1)(undefined);
 // imports
 
 
@@ -41596,7 +41596,7 @@ function ngMessageDirectiveFactory() {
 /***/ (function(module, exports, __webpack_require__) {
 
 // Should already be required, here for clarity
-__webpack_require__(2);
+__webpack_require__(3);
 
 // Load Angular and dependent libs
 __webpack_require__(5);
@@ -78012,7 +78012,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   'use strict';
 
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(2)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(3)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -78572,9 +78572,9 @@ __webpack_require__(52);
 
 __webpack_require__(53);
 
-__webpack_require__(56);
+__webpack_require__(54);
 
-__webpack_require__(57);
+__webpack_require__(55);
 
 /***/ }),
 /* 36 */
@@ -79071,7 +79071,6 @@ _main.app.controller("SpecialitiesListController", ["$scope", '$localStorage', '
 
   httpGetService.getSpecialy().then(function (raspuns) {
     var result = raspuns.data.result;
-    console.log(result, "specccccccccccccccccccccccccccccccccccc");
     $scope.specialitiesObj = result;
     $localStorage.speciality = result;
   });
@@ -79084,8 +79083,9 @@ _main.app.controller("SpecialitiesListController", ["$scope", '$localStorage', '
     // Appending dialog to document.body to cover sidenav in docs app
     var confirm = $mdDialog.confirm().title('Would you like to delete speciality?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
     $mdDialog.show(confirm).then(function () {
+
       $scope.status = 'You decided to delete this speciality.';
-      httpDeleteService.deleteSpeciality($scope.specialitiesObj[tThis.rowIndex].ID).then(function (raspuns) {});
+      httpDeleteService.deleteSpeciality($scope.specialitiesObj[tThis.rowIndex].sID).then(function (raspuns) {});
       $scope.specialitiesObj.splice(tThis.rowIndex, 1);
       tThis.rowIndex = -1;
     }, function () {
@@ -79094,7 +79094,7 @@ _main.app.controller("SpecialitiesListController", ["$scope", '$localStorage', '
   };
 
   tThis.updateSpec = function () {
-    $location.path('/specialities/edit/' + $scope.specialitiesObj[tThis.rowIndex].ID);
+    $location.path('/specialities/edit/' + $scope.specialitiesObj[tThis.rowIndex].sID);
   };
 }]);
 
@@ -79111,7 +79111,6 @@ _main.app.controller("HospitalsListController", ["$scope", 'httpGetService', "ht
   var tThis = this;
   tThis.hospitalsObj = [];
   tThis.rowIndex = -1;
-  $scope.specSelectedUp;
 
   httpGetService.getHospital().then(function (raspuns) {
     console.log(raspuns, "raspunsNN");
@@ -79130,11 +79129,11 @@ _main.app.controller("HospitalsListController", ["$scope", 'httpGetService', "ht
     // Appending dialog to document.body to cover sidenav in docs app
     var confirm = $mdDialog.confirm().title('Would you like to delete hospital?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
     $mdDialog.show(confirm).then(function () {
+      console.log(tThis.hospitalsObj, "enter");
 
       $scope.status = 'You decided to delete this hospital.';
-
-      httpDeleteService.deleteHospital(tThis.hospitalsObj[tThis.rowIndex].ID).then(function (raspuns) {
-        console.log(raspuns);
+      httpDeleteService.deleteHospital(tThis.hospitalsObj[tThis.rowIndex].hID).then(function (raspuns) {
+        console.log(raspuns, "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbs");
       });
       tThis.hospitalsObj.splice(tThis.rowIndex, 1);
       tThis.rowIndex = -1;
@@ -79144,8 +79143,7 @@ _main.app.controller("HospitalsListController", ["$scope", 'httpGetService', "ht
   };
 
   tThis.updateHosp = function () {
-    console.log(tThis.hospitalsObj[tThis.rowIndex].ID, "tThis.hospObj[tThis.rowIndex].ID");
-    $location.path('/hospitals/edit/' + tThis.hospitalsObj[tThis.rowIndex].ID);
+    $location.path('/hospitals/edit/' + tThis.hospitalsObj[tThis.rowIndex].hID);
   };
 }]);
 
@@ -79369,12 +79367,11 @@ _main.app.controller("DoctorsListController", ["$scope", 'httpGetService', "http
     // Appending dialog to document.body to cover sidenav in docs app
     var confirm = $mdDialog.confirm().title('Would you like to delete doctor?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
     $mdDialog.show(confirm).then(function () {
+      console.log(tThis.doctorsObj, "tThis.doctorsObjtThis.doctorsObjtThis.doctorsObj");
 
       $scope.status = 'You decided to delete this doctor.';
 
-      httpDeleteService.deleteDoctor(tThis.doctorsObj[tThis.rowIndex].ID).then(function (raspuns) {
-        console.log(raspuns);
-      });
+      httpDeleteService.deleteDoctor(tThis.doctorsObj[tThis.rowIndex].dID).then(function (raspuns) {});
       tThis.doctorsObj.splice(tThis.rowIndex, 1);
       tThis.rowIndex = -1;
     }, function () {
@@ -79383,8 +79380,7 @@ _main.app.controller("DoctorsListController", ["$scope", 'httpGetService', "http
   };
 
   tThis.updateDoctor = function () {
-    console.log(tThis.doctorsObj[tThis.rowIndex].ID, "tThis.doctorsObj[tThis.rowIndex].ID");
-    $location.path('/doctors/edit/' + tThis.doctorsObj[tThis.rowIndex].ID);
+    $location.path('/doctors/edit/' + tThis.doctorsObj[tThis.rowIndex].dID);
   };
 }]);
 
@@ -79494,9 +79490,7 @@ _main.app.controller("AddrankController", ['Notification', "httpPutService", "ht
 }]);
 
 /***/ }),
-/* 54 */,
-/* 55 */,
-/* 56 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79519,7 +79513,7 @@ _main.app.directive("gotoPath", ["$location", function ($location) {
 }]);
 
 /***/ }),
-/* 57 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

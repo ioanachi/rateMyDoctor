@@ -71,6 +71,14 @@ app.controller("AddhospitalController", ['Notification', "$http", "httpPutServic
           console.log(raspuns,"raspuns");
 
           Notification.success("Hospital created");
+          $scope.hospName = "";
+          $scope.hospCounty = "";
+          $scope.hospCity = "";
+          $scope.hospStreet ="";
+          $scope.hospWebsite = "";
+          $scope.hospDescription = "";
+          $scope.hospPhoto = "";
+          $scope.hospCountry = "";
         });
       }
     } else {

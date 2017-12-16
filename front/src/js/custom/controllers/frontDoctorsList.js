@@ -3,7 +3,7 @@ import {
 } from '../main.js';
 
 
-app.controller("FrontDoctorsListController", ["$scope", 'httpGetService', "httpDeleteService", '$mdDialog', '$location', function($scope, httpGetService, httpDeleteService, $mdDialog, $location) {
+app.controller("FrontDoctorsListController", ["$scope", 'httpGetService',  '$location', function($scope, httpGetService, $location) {
   var tThis = this;
   tThis.frontdoctorsObj = [];
   tThis.rowIndex = -1;

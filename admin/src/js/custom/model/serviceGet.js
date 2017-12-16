@@ -28,7 +28,7 @@ app.factory('httpGetService', ['generalService', '$http', '$localStorage', funct
     getRankById: function(id) {
       return $http.get(generalService.requestLinks('/rank/' + id + '?token=' + $localStorage.user.token));
     },
-    getFrontSpecbyHospitalById: function(id) {
+    getSpecByHosp: function(id) {
       return $http.get(generalService.requestLinks('/front/specialitiesByHospital/' + id));
     },
     getFrontHosp: function() {

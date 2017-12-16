@@ -40,7 +40,14 @@ app.config(function($routeProvider) {
       //   },
       // }
     })
-
+    .when("/frontSpecByHosp/:id", {
+      templateUrl: "src/views/frontSpecByHosp.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
 
 
 

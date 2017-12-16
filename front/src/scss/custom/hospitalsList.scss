@@ -8,9 +8,7 @@
     border: 1px solid #c3c3c3;
     margin-top: 20px;
 
-
     tr {
-
       th {
         background-color: rgb(73, 166, 233);
         padding: 10px;
@@ -25,25 +23,34 @@
       td {
         padding: 20px;
         text-align: center;
+
+        &:nth-child(5),
+        &:nth-child(6) {
+          &:hover {
+            background-color: #3226b9;
+            color: white;
+          }
+        }
       }
-      &:hover{
+
+      &:hover {
         background-color: rgb(97, 215, 246);
         cursor: pointer;
       }
     }
   }
-.btns{
-  float: right;
 
-  .btn {
-    padding: 0;
-    background-color: #fff;
-    margin: 2px;
+  .btns {
+    float: right;
+
+    .btn {
+      padding: 0;
+      background-color: #fff;
+      margin: 2px;
+    }
   }
-}
 
-  .active{
+  .active {
     background-color: rgb(97, 215, 246);
-
   }
 }

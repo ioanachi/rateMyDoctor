@@ -13,13 +13,13 @@
             <th>Number of specialities</th>
 
           </tr>
-          <tr ng-click="fhlctrl.selectedRowSH($index)" ng-repeat="item in fhlctrl.frontHospitalsObj" ng-class="{active:$index==fhlctrl.rowIndex}" >
+          <tr ng-click="fhlctrl.selectedRowSH($index, false)" ng-repeat="item in fhlctrl.frontHospitalsObj" ng-class="{active:$index==fhlctrl.rowIndex}" >
             <td>{{item.Picture}}</td>
             <td>{{item.Name}}</td>
             <td>{{item.Country+" " +item.County +" "+item.City+" "+item.Street+" "+item.Website}}</td>
             <td>{{item.Description}}</td>
             <td ng-click="">{{item.DoctorsNr}}</td>
-            <td ng-click="fhlctrl.getspecialitySH($index)">{{item.SpecialityNr}}</td>
+            <td goto-path="/frontSpecByHosp/{{fhlctrl.selectedRowSH($index, true)}}">{{item.SpecialityNr}}</td>
           </tr>
         </table>
 

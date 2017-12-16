@@ -17,26 +17,18 @@ app.controller("FrontHospListController", ["$scope", 'httpGetService', '$mdDialo
 
 
 
-  tThis.selectedRowSH = function(index) {
-    tThis.rowIndex = index;
-    console.log(index, "index");
-    tThis.idHosp = tThis.frontHospitalsObj[tThis.rowIndex].ID;
-    console.log(tThis.idHosp, "idHosp");
-
+  tThis.selectedRowSH = function(index, isDirective) {
+    if (!isDirective) {
+      tThis.rowIndex = index;
+    }
+      return tThis.frontHospitalsObj[index].hID;
   };
-  tThis.getspecialitySH = function(index) {
-    httpGetService.getFrontSpecbyHospitalById(tThis.idHosp).then(function(raspuns) {
-      console.log(raspuns, "sarahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
-      $location.path('/frontHospitalsList/' + tThis.idHosp);
-    });
-  }
 
 
 
-  tThis.updateHosp = function() {
-    console.log(tThis.hospitalsObj[tThis.rowIndex].ID, "tThis.hospObj[tThis.rowIndex].ID");
-    $location.path('/hospitals/edit/' + tThis.hospitalsObj[tThis.rowIndex].ID);
-  };
+
+
+
 
 
 

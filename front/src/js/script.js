@@ -15,6 +15,7 @@ import './custom/controllers/frontPage.js';
 import './custom/controllers/frontHospitalsList.js';
 import './custom/controllers/frontDoctorsList.js';
 import './custom/controllers/frontSpecialitiesList.js';
+import './custom/controllers/frontSpecByHosp.js';
 
 
 

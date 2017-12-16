@@ -48,7 +48,14 @@ app.config(function($routeProvider) {
       //   },
       // }
     })
-
+    .when("/drBySpecByHosp/:idh/:ids", {
+      templateUrl: "src/views/drBySpecByHosp.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
 
 
     .when('/404', {

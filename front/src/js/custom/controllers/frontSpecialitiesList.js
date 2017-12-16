@@ -9,20 +9,11 @@ app.controller("FrontSpecialitiesController", ["$scope", '$localStorage', 'httpG
 
   httpGetService.getAllSpec().then(function(raspuns) {
     var result = raspuns.data.result;
-    console.log(result, "specccccccccccccccccccccccccccccccccccc");
     $scope.specialitiesObj = result;
 
   });
 
-
-  
-
-  tThis.updateSpec = function() {
-    $location.path('/specialities/edit/' + $scope.specialitiesObj[tThis.rowIndex].ID);
+  tThis.selectedRow = function(index) {
+    tThis.rowIndex = index;
   };
-
-
-
-
-
 }]);

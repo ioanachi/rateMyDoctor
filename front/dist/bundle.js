@@ -78560,11 +78560,13 @@ __webpack_require__(46);
 
 __webpack_require__(47);
 
-__webpack_require__(51);
-
 __webpack_require__(48);
 
+__webpack_require__(51);
+
 __webpack_require__(49);
+
+__webpack_require__(50);
 
 /***/ }),
 /* 36 */
@@ -78630,6 +78632,13 @@ _main.app.config(function ($routeProvider) {
     // }
   }).when("/drBySpec/:id", {
     templateUrl: "src/views/drBySpec.html"
+    // resolve:{
+    //   factoryResolve:function(generalService){
+    //     return generalService.isLogged();
+    //   },
+    // }
+  }).when("/hospBySpec/:id", {
+    templateUrl: "src/views/hospBySpec.html"
     // resolve:{
     //   factoryResolve:function(generalService){
     //     return generalService.isLogged();
@@ -78766,8 +78775,10 @@ _main.app.factory('httpGetService', ['generalService', '$http', '$localStorage',
     },
     getDrBySpec: function getDrBySpec(id) {
       return $http.get(generalService.requestLinks('/front/doctorsBySpeciality/' + id));
+    },
+    getHospBySpec: function getHospBySpec(id) {
+      return $http.get(generalService.requestLinks('/front/hospitalBySpeciality/' + id));
     }
-
   };
 }]);
 
@@ -78990,6 +79001,32 @@ _main.app.controller("DrHospController", ["$scope", '$localStorage', 'httpGetSer
 
 var _main = __webpack_require__(0);
 
+_main.app.controller("DrSpecController", ["$scope", '$localStorage', 'httpGetService', '$mdDialog', '$location', '$routeParams', function ($scope, $localStorage, httpGetService, $mdDialog, $location, $routeParams) {
+  var tThis = this;
+  $scope.drBySpecObj = [];
+  console.log($routeParams, "$routeParams");
+  tThis.paramIdF = $routeParams.id;
+
+  httpGetService.getDrBySpec(tThis.paramIdF).then(function (raspuns) {
+    var result = raspuns.data.result;
+    console.log(result, "1");
+    $scope.drBySpecObj = result;
+  });
+
+  tThis.selectedRowDh = function (index, isDirective) {
+    tThis.rowIndex = index;
+  };
+}]);
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
 _main.app.directive("gotoPath", ["$location", function ($location) {
   return {
     restrictive: "A",
@@ -79005,7 +79042,7 @@ _main.app.directive("gotoPath", ["$location", function ($location) {
 }]);
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79036,7 +79073,6 @@ _main.app.directive("pwCheck", function () {
 });
 
 /***/ }),
-/* 50 */,
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -79045,19 +79081,19 @@ _main.app.directive("pwCheck", function () {
 
 var _main = __webpack_require__(0);
 
-_main.app.controller("DrHospController", ["$scope", '$localStorage', 'httpGetService', '$mdDialog', '$location', '$routeParams', function ($scope, $localStorage, httpGetService, $mdDialog, $location, $routeParams) {
+_main.app.controller("HospBySpecController", ["$scope", '$localStorage', 'httpGetService', '$mdDialog', '$location', '$routeParams', function ($scope, $localStorage, httpGetService, $mdDialog, $location, $routeParams) {
   var tThis = this;
-  $scope.drByHospObj = [];
+  $scope.hospBySpecObj = [];
   console.log($routeParams, "$routeParams");
   tThis.paramIdF = $routeParams.id;
 
-  httpGetService.getDrBySpec(tThis.paramIdF).then(function (raspuns) {
+  httpGetService.getHospBySpec(tThis.paramIdF).then(function (raspuns) {
     var result = raspuns.data.result;
     console.log(result, "1");
-    $scope.drByHospObj = result;
+    $scope.hospBySpecObj = result;
   });
 
-  tThis.selectedRowDh = function (index, isDirective) {
+  tThis.selectedRowHS = function (index, isDirective) {
     tThis.rowIndex = index;
   };
 }]);

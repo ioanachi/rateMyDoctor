@@ -72,6 +72,15 @@ app.config(function($routeProvider) {
       //   },
       // }
     })
+    .when("/hospBySpec/:id", {
+      templateUrl: "src/views/hospBySpec.html",
+      // resolve:{
+      //   factoryResolve:function(generalService){
+      //     return generalService.isLogged();
+      //   },
+      // }
+    })
+
 
 
     .when('/404', {

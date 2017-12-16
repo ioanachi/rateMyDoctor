@@ -25,6 +25,8 @@ app.controller("AddspecialityController", ['Notification', "httpPutService","htt
       }else{
         httpPutService.addSpeciality(_data).then(function(raspuns) {
           console.log(raspuns, "raspuns");
+          $scope.specialityAdded = "";
+          $scope.addSpecialDescription="";
           Notification.success("Speciality created");
         });
       }

@@ -530,7 +530,7 @@ __webpack_require__(35);
 /* 9 */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\r\n<html ng-app=\"myApp\">\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title></title>\r\n</head>\r\n\r\n<body ng-controller=\"MainController as mnctrl\">\r\n\r\n\r\n\r\n  <div ng-show=\"mnctrl.user\" ng-include=\"'./src/views/menu.html'\"></div>\r\n  <!-- <div ng-include=\"'./src/views/menu.html'\"></div> -->\r\n  <ng-view></ng-view>\r\n\r\n  <script src=\"./dist/commons.js\"></script>\r\n  <script src=\"./dist/bundle.js\"></script>\r\n</body>\r\n\r\n</html>\r\n";
+module.exports = "<!DOCTYPE html>\r\n<html ng-app=\"myApp\">\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title>Rate My Doctor Adminstrator</title>\r\n</head>\r\n\r\n<body ng-controller=\"MainController as mnctrl\">\r\n\r\n\r\n\r\n  <div ng-show=\"mnctrl.user\" ng-include=\"'./src/views/menu.html'\"></div>\r\n  <!-- <div ng-include=\"'./src/views/menu.html'\"></div> -->\r\n  <ng-view></ng-view>\r\n\r\n  <script src=\"./dist/commons.js\"></script>\r\n  <script src=\"./dist/bundle.js\"></script>\r\n</body>\r\n\r\n</html>\r\n";
 
 /***/ }),
 /* 10 */
@@ -79027,6 +79027,8 @@ _main.app.controller("AddspecialityController", ['Notification', "httpPutService
       } else {
         httpPutService.addSpeciality(_data).then(function (raspuns) {
           console.log(raspuns, "raspuns");
+          $scope.specialityAdded = "";
+          $scope.addSpecialDescription = "";
           Notification.success("Speciality created");
         });
       }
@@ -79217,6 +79219,14 @@ _main.app.controller("AddhospitalController", ['Notification', "$http", "httpPut
           console.log(raspuns, "raspuns");
 
           Notification.success("Hospital created");
+          $scope.hospName = "";
+          $scope.hospCounty = "";
+          $scope.hospCity = "";
+          $scope.hospStreet = "";
+          $scope.hospWebsite = "";
+          $scope.hospDescription = "";
+          $scope.hospPhoto = "";
+          $scope.hospCountry = "";
         });
       }
     } else {
@@ -79303,6 +79313,14 @@ _main.app.controller("AdddoctorController", ['Notification', "httpPutService", "
         });
       } else {
         httpPutService.addDoctor(_data).then(function (raspuns) {
+          $scope.doctorName = "";
+          $scope.idRank = "";
+          $scope.idSpeciality = "";
+          $scope.idHospital = "";
+          $scope.doctorPrivate = "";
+          $scope.doctorDescription = "";
+          $scope.doctorPicture = "";
+
           Notification.success("Doctor added");
         });
       }

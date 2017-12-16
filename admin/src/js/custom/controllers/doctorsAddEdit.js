@@ -18,7 +18,6 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
   $scope.idRank;
 
   httpGetService.getSpecialy().then(function(raspuns) {
-    console.log(raspuns, "====================================")
     var result = raspuns.data.result;
     tThis.specialityDr = result;
   });
@@ -30,8 +29,6 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
   httpGetService.getRank().then(function(rezultat) {
     var result3 = rezultat.data.result;
     tThis.rankDr = result3;
-    console.log(result3, "result3333333333333333333333333333")
-    console.log($scope.idRank, "$scope.idRank")
   });
 
 
@@ -46,13 +43,20 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
         "CV": $scope.doctorDescription,
         "Picture": $scope.doctorPicture
       };
-      console.log(_data, "hgtftrfyuhruat000000000000000000000000000000000000000000");
       if ($routeParams.id) {
         httpUpdateService.updateDoctors(tThis.paramId, _data).then(function(raspuns) {
           Notification.success("Doctor Updated");
         });
       } else {
         httpPutService.addDoctor(_data).then(function(raspuns) {
+          $scope.doctorName = "";
+          $scope.idRank = "";
+          $scope.idSpeciality = "";
+          $scope.idHospital = "";
+          $scope.doctorPrivate = "";
+          $scope.doctorDescription = "";
+          $scope.doctorPicture = "";
+
           Notification.success("Doctor added");
         });
       }
@@ -66,8 +70,6 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
 
   var resetDefaults = function() {
     httpGetService.getDoctorsById(tThis.paramId).then(function(raspuns) {
-      console.log(raspuns, "raspuns");
-      console.log(tThis.paramId, "tThis.paramId", )
 
       var data = raspuns.data.result;
       $scope.doctorName = data.Name;
@@ -79,7 +81,6 @@ app.controller("AdddoctorController", ['Notification', "httpPutService", "httpUp
       $scope.doctorPicture = data.Picture;
 
       tThis.doctorBtn = "Update Doctor";
-      console.log(data, "999999999999999999999999999999999999999999999999999999999");
 
     });
   };

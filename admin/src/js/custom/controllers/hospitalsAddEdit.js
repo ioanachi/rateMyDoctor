@@ -3,7 +3,6 @@ import {
 } from '../main.js';
 
 
-console.log("efrejheruergygu");
 app.controller("AddhospitalController", ['Notification', "$http", "httpPutService", "httpUpdateService", "$scope", "$routeParams", 'httpGetService', function(Notification, $http, httpPutService, httpUpdateService, $scope, $routeParams, httpGetService) {
   var tThis = this;
   tThis.paramId = $routeParams.id;
@@ -16,28 +15,29 @@ app.controller("AddhospitalController", ['Notification', "$http", "httpPutServic
   $scope.hospPhoto;
   $scope.hospCountry;
   tThis.country2 = [];
-    $http.get('./src/js/custom/controllers/countries.txt').then(function(response) {
-      var country = response.data;
-      country = country.split("\n");
-      country.forEach(function(item, index) {
-        var countries = item.split("</li>");
-        var countr = [];
-        countr.push(countries[0]);
-        countr.forEach(function(item2, i) {
-          var countryies = {
-            idunic: index,
-            tara: item2.split("<li>")[1]
-          };
-          tThis.country2.push(countryies);
-        });
-
-        return tThis.country2;
+  
+  $http.get('./src/js/custom/controllers/countries.txt').then(function(response) {
+    var country = response.data;
+    country = country.split("\n");
+    country.forEach(function(item, index) {
+      var countries = item.split("</li>");
+      var countr = [];
+      countr.push(countries[0]);
+      countr.forEach(function(item2, i) {
+        var countryies = {
+          idunic: index,
+          tara: item2.split("<li>")[1]
+        };
+        tThis.country2.push(countryies);
       });
 
       return tThis.country2;
-
     });
-    $scope.countrUnic;
+
+    return tThis.country2;
+
+  });
+  $scope.countrUnic;
 
 
 
@@ -68,17 +68,17 @@ app.controller("AddhospitalController", ['Notification', "$http", "httpPutServic
         });
       } else {
         httpPutService.addHospital(_data).then(function(raspuns) {
-          console.log(raspuns,"raspuns");
 
           Notification.success("Hospital created");
           $scope.hospName = "";
           $scope.hospCounty = "";
           $scope.hospCity = "";
-          $scope.hospStreet ="";
+          $scope.hospStreet = "";
           $scope.hospWebsite = "";
           $scope.hospDescription = "";
           $scope.hospPhoto = "";
           $scope.hospCountry = "";
+
         });
       }
     } else {

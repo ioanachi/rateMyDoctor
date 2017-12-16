@@ -12,13 +12,11 @@ app.controller("DoctorsListController", ["$scope", 'httpGetService', "httpDelete
   httpGetService.getDoctors().then(function(raspuns) {
     var result = raspuns.data.result;
     tThis.doctorsObj = result;
-    console.log(raspuns, "raspuns=========================");
 
   });
 
   tThis.selectedRow = function(index) {
     tThis.rowIndex = index;
-    console.log(index, "index77777777777777777777777");
   };
 
   $scope.showConfirm = function(ev) {
@@ -30,12 +28,10 @@ app.controller("DoctorsListController", ["$scope", 'httpGetService', "httpDelete
       .ok('Yes')
       .cancel('No');
     $mdDialog.show(confirm).then(function() {
-      console.log(tThis.doctorsObj, "tThis.doctorsObjtThis.doctorsObjtThis.doctorsObj");
 
       $scope.status = 'You decided to delete this doctor.';
 
-      httpDeleteService.deleteDoctor(tThis.doctorsObj[tThis.rowIndex].dID).then(function(raspuns) {
-      });
+      httpDeleteService.deleteDoctor(tThis.doctorsObj[tThis.rowIndex].dID).then(function(raspuns) {});
       tThis.doctorsObj.splice(tThis.rowIndex, 1);
       tThis.rowIndex = -1;
     }, function() {
@@ -45,7 +41,7 @@ app.controller("DoctorsListController", ["$scope", 'httpGetService', "httpDelete
 
 
   tThis.updateDoctor = function() {
-      $location.path('/doctors/edit/'+tThis.doctorsObj[tThis.rowIndex].dID);
+    $location.path('/doctors/edit/' + tThis.doctorsObj[tThis.rowIndex].dID);
   };
 
 

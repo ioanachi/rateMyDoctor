@@ -18,7 +18,7 @@
             <td>{{item.Name}}</td>
             <td>{{item.Country+" " +item.County +" "+item.City+" "+item.Street+" "+item.Website}}</td>
             <td>{{item.Description}}</td>
-            <td ng-click="">{{item.DoctorsNr}}</td>
+            <td goto-path="/drByHosp/{{fhlctrl.selectedRowSH($index, true)}}">{{item.DoctorsNr}}</td>
             <td goto-path="/frontSpecByHosp/{{fhlctrl.selectedRowSH($index, true)}}">{{item.SpecialityNr}}</td>
           </tr>
         </table>

@@ -1,4 +1,4 @@
-<div class="specilityList" ng-controller="DrSpecHospController as dshlctrl">
+<div class="specilityList" ng-controller="DrHospController as dhctrl">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -13,7 +13,7 @@
             <th>Description</th>
             <th>Number of doctors</th>
           </tr>
-          <tr ng-click="dshlctrl.selectedRow($index)" ng-repeat="item in frontSpecByHospObj" ng-class="{active:$index==fsbyhlctrl.rowIndex}" >
+          <tr ng-click="dhctrl.selectedRow($index)" ng-repeat="item in frontSpecByHospObj" ng-class="{active:$index==dhctrl.rowIndex}" >
             <td>{{item.Picture}}</td>
             <td>{{item.Name}}</td>
             <td>{{item.Description}}</td>

@@ -78556,11 +78556,13 @@ __webpack_require__(44);
 
 __webpack_require__(45);
 
-__webpack_require__(48);
-
 __webpack_require__(46);
 
+__webpack_require__(49);
+
 __webpack_require__(47);
+
+__webpack_require__(48);
 
 /***/ }),
 /* 36 */
@@ -78612,6 +78614,13 @@ _main.app.config(function ($routeProvider) {
     // }
   }).when("/drBySpecByHosp/:idh/:ids", {
     templateUrl: "src/views/drBySpecByHosp.html"
+    // resolve:{
+    //   factoryResolve:function(generalService){
+    //     return generalService.isLogged();
+    //   },
+    // }
+  }).when("/drByHosp/:id", {
+    templateUrl: "src/views/drByHosp.html"
     // resolve:{
     //   factoryResolve:function(generalService){
     //     return generalService.isLogged();
@@ -78742,7 +78751,11 @@ _main.app.factory('httpGetService', ['generalService', '$http', '$localStorage',
     },
     getSpecByHosp: function getSpecByHosp(id) {
       return $http.get(generalService.requestLinks('/front/specialitiesByHospital/' + id));
+    },
+    getDrByHosp: function getDrByHosp(id) {
+      return $http.get(generalService.requestLinks('/front/doctorsByHospital/' + id));
     }
+
   };
 }]);
 
@@ -78904,6 +78917,37 @@ _main.app.controller("FrontSpecByHospListController", ["$scope", '$localStorage'
 
 var _main = __webpack_require__(0);
 
+_main.app.controller("DrSpecHospController", ["$scope", '$localStorage', 'httpGetService', '$mdDialog', '$location', '$routeParams', function ($scope, $localStorage, httpGetService, $mdDialog, $location, $routeParams) {
+  var tThis = this;
+  $scope.drBySpecByHospObj = [];
+  console.log($routeParams, "$routeParams");
+
+  tThis.paramIdF = $routeParams.id;
+  httpGetService.getSpecByHosp(tThis.paramIdF).then(function (raspuns) {
+    var result = raspuns.data.result;
+    console.log(result, "specccccccccccccccccccccccccccccccccccc");
+    $scope.frontSpecByHospObj = result;
+  });
+
+  tThis.selectedRowDS = function (index, isDirective) {
+    console.log(tThis.frontSpecByHospObj[index], "tThis.frontSpecByHospObj[index]");
+
+    if (!isDirective) {
+      tThis.rowIndex = index;
+    }
+    return tThis.frontSpecByHospObj[index].hID;
+  };
+}]);
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
 _main.app.directive("gotoPath", ["$location", function ($location) {
   return {
     restrictive: "A",
@@ -78919,7 +78963,7 @@ _main.app.directive("gotoPath", ["$location", function ($location) {
 }]);
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78950,7 +78994,7 @@ _main.app.directive("pwCheck", function () {
 });
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78958,25 +79002,20 @@ _main.app.directive("pwCheck", function () {
 
 var _main = __webpack_require__(0);
 
-_main.app.controller("DrSpecHospController", ["$scope", '$localStorage', 'httpGetService', '$mdDialog', '$location', '$routeParams', function ($scope, $localStorage, httpGetService, $mdDialog, $location, $routeParams) {
+_main.app.controller("DrHospController", ["$scope", '$localStorage', 'httpGetService', '$mdDialog', '$location', '$routeParams', function ($scope, $localStorage, httpGetService, $mdDialog, $location, $routeParams) {
   var tThis = this;
-  $scope.frontSpecByHospObj = [];
-  console.log($routeParams.id, "$routeParams");
+  $scope.drByHospObj = [];
+  console.log($routeParams, "$routeParams");
 
   tThis.paramIdF = $routeParams.id;
-  httpGetService.getSpecByHosp(tThis.paramIdF).then(function (raspuns) {
+  httpGetService.getDrByHosp(tThis.paramIdF).then(function (raspuns) {
     var result = raspuns.data.result;
-    console.log(result, "specccccccccccccccccccccccccccccccccccc");
-    $scope.frontSpecByHospObj = result;
+    console.log(result, "1");
+    $scope.drByHospObj = result;
   });
 
-  tThis.selectedRowDS = function (index, isDirective) {
-    console.log(tThis.frontSpecByHospObj[index], "tThis.frontSpecByHospObj[index]");
-
-    if (!isDirective) {
-      tThis.rowIndex = index;
-    }
-    return tThis.frontSpecByHospObj[index].hID;
+  tThis.selectedRowDh = function (index, isDirective) {
+    tThis.rowIndex = index;
   };
 }]);
 

@@ -41,5 +41,9 @@ app.factory('httpGetService', ['generalService', '$http', '$localStorage', funct
     getSpecByHosp: function(id) {
       return $http.get(generalService.requestLinks('/front/specialitiesByHospital/' + id));
     },
+    getDrByHosp: function(id) {
+      return $http.get(generalService.requestLinks('/front/doctorsByHospital/' + id));
+    },
+
   };
 }]);

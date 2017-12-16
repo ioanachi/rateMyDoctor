@@ -17,7 +17,7 @@ import './custom/controllers/frontDoctorsList.js';
 import './custom/controllers/frontSpecialitiesList.js';
 import './custom/controllers/frontSpecByHosp.js';
 import './custom/controllers/drBySpecByHosp.js';
-
+import './custom/controllers/drByHosp.js';
 
 
 

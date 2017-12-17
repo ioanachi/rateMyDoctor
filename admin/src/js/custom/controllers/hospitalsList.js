@@ -10,6 +10,7 @@ app.controller("HospitalsListController", ["$scope", 'httpGetService', "httpDele
 
   httpGetService.getHospital().then(function(raspuns) {
     var result = raspuns.data.result;
+    console.log(raspuns.data.result);
     tThis.hospitalsObj = result;
   });
 

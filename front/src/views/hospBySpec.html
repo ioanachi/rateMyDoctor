@@ -1,8 +1,8 @@
-<div class="specilityList" ng-controller="HospBySpecController as hsctrl">
+<div class="hospitalList" ng-controller="HospBySpecController as hsctrl">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h3>Doctors</h3>
+        <h3>Hospitals</h3>
 
 
 
@@ -10,24 +10,15 @@
           <tr>
             <th>Picture</th>
             <th>Name</th>
-            <th>Speciality</th>
-            <th>RankName</th>
-            <th>Hospital</th>
-            <th>CV</th>
-            <th>Reviews</th>
-            <th>Rating</th>
+            <th>Description</th>
+            <th>Adress</th>
 
           </tr>
           <tr ng-click="hsctrl.selectedRowHS($index)" ng-repeat="item in hospBySpecObj" ng-class="{active:$index==hsctrl.rowIndex}" >
             <td>{{item.Picture}}</td>
             <td>{{item.Name}}</td>
-            <td>{{item.SpecialityName}}</td>
-            <td>{{item.RankName}}</td>
-            <td>{{item.HospitalName}}</td>
-            <td>{{item.CV}}</td>
-            <td>{{item.Reviews}}</td>
-            <td>{{item.Rating}}</td>
-          </tr>
+            <td>{{item.Description}}</td>
+            <td>{{item.Country+" "+item.County+" "+item.City+" "+item.Street+" "+item.Website+" "+item.DoctorsNr}}</td>
         </table>
 
       </div>

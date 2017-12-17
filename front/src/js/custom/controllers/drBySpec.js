@@ -6,8 +6,9 @@ import {
 app.controller("DrSpecController", ["$scope", '$localStorage', 'httpGetService', '$mdDialog', '$location', '$routeParams', function($scope, $localStorage, httpGetService, $mdDialog, $location, $routeParams) {
   var tThis = this;
   $scope.drBySpecObj = [];
-  console.log($routeParams, "$routeParams");
+  console.log($routeParams, "nooooooooooooooo");
   tThis.paramIdF = $routeParams.id;
+  console.log(tThis.paramIdF, "nooooooooooooooo");
 
   httpGetService.getDrBySpec(tThis.paramIdF).then(function(raspuns) {
     var result = raspuns.data.result;
@@ -16,7 +17,7 @@ app.controller("DrSpecController", ["$scope", '$localStorage', 'httpGetService',
 
   });
 
-  tThis.selectedRowDh = function(index, isDirective) {
+  tThis.selectedRowDBS = function(index, isDirective) {
       tThis.rowIndex = index;
   };
 

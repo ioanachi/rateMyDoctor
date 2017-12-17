@@ -11,7 +11,7 @@ app.controller("HospBySpecController", ["$scope", '$localStorage', 'httpGetServi
 
   httpGetService.getHospBySpec(tThis.paramIdF).then(function(raspuns) {
     var result = raspuns.data.result;
-    console.log(result, "1");
+    console.log(result, "12121221212121121122");
     $scope.hospBySpecObj = result;
 
   });

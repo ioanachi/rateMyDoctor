@@ -14,6 +14,7 @@ app.factory('httpPutService', ['generalService', '$http', '$localStorage', funct
       return $http.put(generalService.requestLinks("/hospital" + '?token=' + $localStorage.user.token), _data);
     },
     addDoctor: function(_data) {
+      console.log(_data);
       return $http.put(generalService.requestLinks("/doctor" + '?token=' + $localStorage.user.token), _data);
     },
     addRank: function(_data) {

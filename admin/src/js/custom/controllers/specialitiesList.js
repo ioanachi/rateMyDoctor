@@ -11,6 +11,7 @@ app.controller("SpecialitiesListController", ["$scope", '$localStorage', 'httpGe
 
   httpGetService.getSpecialy().then(function(raspuns) {
     var result = raspuns.data.result;
+    console.log(result, "1111111111111111111");
     $scope.specialitiesObj = result;
     $localStorage.speciality = result;
 

@@ -18,7 +18,7 @@
             <th>Rating</th>
 
           </tr>
-          <tr ng-click="dsctrl.selectedRow($index)" ng-repeat="item in drBySpecObj" ng-class="{active:$index==dsctrl.rowIndex}" >
+          <tr ng-click="dsctrl.selectedRowDBS($index)" ng-repeat="item in drBySpecObj" ng-class="{active:$index==dsctrl.rowIndex}" >
             <td>{{item.Picture}}</td>
             <td>{{item.Name}}</td>
             <td>{{item.SpecialityName}}</td>

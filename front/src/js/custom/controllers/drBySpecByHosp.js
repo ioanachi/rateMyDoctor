@@ -1,7 +1,7 @@
 import {
   app
 } from '../main.js';
-
+ 
 
 app.controller("DrSpecHospController", ["$scope", '$localStorage', 'httpGetService', '$mdDialog', '$location', '$routeParams', function($scope, $localStorage, httpGetService, $mdDialog, $location, $routeParams) {
   var tThis = this;

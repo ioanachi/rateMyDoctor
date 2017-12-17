@@ -78765,6 +78765,7 @@ _main.app.factory('httpPutService', ['generalService', '$http', '$localStorage',
       return $http.put(generalService.requestLinks("/hospital" + '?token=' + $localStorage.user.token), _data);
     },
     addDoctor: function addDoctor(_data) {
+      console.log(_data);
       return $http.put(generalService.requestLinks("/doctor" + '?token=' + $localStorage.user.token), _data);
     },
     addRank: function addRank(_data) {
@@ -78825,7 +78826,7 @@ _main.app.factory('httpGetService', ['generalService', '$http', '$localStorage',
     getRankById: function getRankById(id) {
       return $http.get(generalService.requestLinks('/rank/' + id + '?token=' + $localStorage.user.token));
     },
-    getFrontSpecbyHospitalById: function getFrontSpecbyHospitalById(id) {
+    getSpecByHosp: function getSpecByHosp(id) {
       return $http.get(generalService.requestLinks('/front/specialitiesByHospital/' + id));
     },
     getFrontHosp: function getFrontHosp() {
@@ -79073,6 +79074,7 @@ _main.app.controller("SpecialitiesListController", ["$scope", '$localStorage', '
 
   httpGetService.getSpecialy().then(function (raspuns) {
     var result = raspuns.data.result;
+    console.log(result, "1111111111111111111");
     $scope.specialitiesObj = result;
     $localStorage.speciality = result;
   });
@@ -79115,28 +79117,23 @@ _main.app.controller("HospitalsListController", ["$scope", 'httpGetService', "ht
   tThis.rowIndex = -1;
 
   httpGetService.getHospital().then(function (raspuns) {
-    console.log(raspuns, "raspunsNN");
     var result = raspuns.data.result;
+    console.log(raspuns.data.result);
     tThis.hospitalsObj = result;
   });
 
   tThis.selectedRow = function (index) {
     tThis.rowIndex = index;
-    console.log(index, "index");
   };
 
   $scope.showConfirm = function (ev) {
-    console.log(tThis.hospitalsObj, "tThis.hospitalsObj");
 
     // Appending dialog to document.body to cover sidenav in docs app
     var confirm = $mdDialog.confirm().title('Would you like to delete hospital?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
     $mdDialog.show(confirm).then(function () {
-      console.log(tThis.hospitalsObj, "enter");
 
       $scope.status = 'You decided to delete this hospital.';
-      httpDeleteService.deleteHospital(tThis.hospitalsObj[tThis.rowIndex].hID).then(function (raspuns) {
-        console.log(raspuns, "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbs");
-      });
+      httpDeleteService.deleteHospital(tThis.hospitalsObj[tThis.rowIndex].hID).then(function (raspuns) {});
       tThis.hospitalsObj.splice(tThis.rowIndex, 1);
       tThis.rowIndex = -1;
     }, function () {
@@ -79158,7 +79155,6 @@ _main.app.controller("HospitalsListController", ["$scope", 'httpGetService', "ht
 
 var _main = __webpack_require__(0);
 
-console.log("efrejheruergygu");
 _main.app.controller("AddhospitalController", ['Notification', "$http", "httpPutService", "httpUpdateService", "$scope", "$routeParams", 'httpGetService', function (Notification, $http, httpPutService, httpUpdateService, $scope, $routeParams, httpGetService) {
   var tThis = this;
   tThis.paramId = $routeParams.id;
@@ -79171,6 +79167,7 @@ _main.app.controller("AddhospitalController", ['Notification', "$http", "httpPut
   $scope.hospPhoto;
   $scope.hospCountry;
   tThis.country2 = [];
+
   $http.get('./src/js/custom/controllers/countries.txt').then(function (response) {
     var country = response.data;
     country = country.split("\n");
@@ -79216,7 +79213,6 @@ _main.app.controller("AddhospitalController", ['Notification', "$http", "httpPut
         });
       } else {
         httpPutService.addHospital(_data).then(function (raspuns) {
-          console.log(raspuns, "raspuns");
 
           Notification.success("Hospital created");
           $scope.hospName = "";
@@ -79280,7 +79276,7 @@ _main.app.controller("AdddoctorController", ['Notification', "httpPutService", "
   $scope.idRank;
 
   httpGetService.getSpecialy().then(function (raspuns) {
-    console.log(raspuns, "====================================");
+
     var result = raspuns.data.result;
     tThis.specialityDr = result;
   });
@@ -79291,8 +79287,6 @@ _main.app.controller("AdddoctorController", ['Notification', "httpPutService", "
   httpGetService.getRank().then(function (rezultat) {
     var result3 = rezultat.data.result;
     tThis.rankDr = result3;
-    console.log(result3, "result3333333333333333333333333333");
-    console.log($scope.idRank, "$scope.idRank");
   });
 
   tThis.addEditDr = function () {
@@ -79306,13 +79300,14 @@ _main.app.controller("AdddoctorController", ['Notification', "httpPutService", "
         "CV": $scope.doctorDescription,
         "Picture": $scope.doctorPicture
       };
-      console.log(_data, "hgtftrfyuhruat000000000000000000000000000000000000000000");
       if ($routeParams.id) {
         httpUpdateService.updateDoctors(tThis.paramId, _data).then(function (raspuns) {
           Notification.success("Doctor Updated");
         });
       } else {
         httpPutService.addDoctor(_data).then(function (raspuns) {
+          console.log(_data);
+
           $scope.doctorName = "";
           $scope.idRank = "";
           $scope.idSpeciality = "";
@@ -79333,8 +79328,6 @@ _main.app.controller("AdddoctorController", ['Notification', "httpPutService", "
 
   var resetDefaults = function resetDefaults() {
     httpGetService.getDoctorsById(tThis.paramId).then(function (raspuns) {
-      console.log(raspuns, "raspuns");
-      console.log(tThis.paramId, "tThis.paramId");
 
       var data = raspuns.data.result;
       $scope.doctorName = data.Name;
@@ -79346,7 +79339,6 @@ _main.app.controller("AdddoctorController", ['Notification', "httpPutService", "
       $scope.doctorPicture = data.Picture;
 
       tThis.doctorBtn = "Update Doctor";
-      console.log(data, "999999999999999999999999999999999999999999999999999999999");
     });
   };
   if ($routeParams.id) {
@@ -79373,19 +79365,16 @@ _main.app.controller("DoctorsListController", ["$scope", 'httpGetService', "http
   httpGetService.getDoctors().then(function (raspuns) {
     var result = raspuns.data.result;
     tThis.doctorsObj = result;
-    console.log(raspuns, "raspuns=========================");
   });
 
   tThis.selectedRow = function (index) {
     tThis.rowIndex = index;
-    console.log(index, "index77777777777777777777777");
   };
 
   $scope.showConfirm = function (ev) {
     // Appending dialog to document.body to cover sidenav in docs app
     var confirm = $mdDialog.confirm().title('Would you like to delete doctor?').ariaLabel('Lucky day').targetEvent(ev).ok('Yes').cancel('No');
     $mdDialog.show(confirm).then(function () {
-      console.log(tThis.doctorsObj, "tThis.doctorsObjtThis.doctorsObjtThis.doctorsObj");
 
       $scope.status = 'You decided to delete this doctor.';
 

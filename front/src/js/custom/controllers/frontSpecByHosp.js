@@ -16,6 +16,12 @@ app.controller("FrontSpecByHospListController", ["$scope", '$localStorage', 'htt
     $scope.frontSpecByHospObj = result;
 
   });
+  httpGetService.getSpecificHosp(tThis.paramIdF).then(function(raspuns2) {
+  var hospName = raspuns2.data.result;
+  $scope.HospitalName=hospName[0].Name;
+  console.log($scope.HospitalName, "$scope.HospitalName");
+
+    });
   tThis.selectedRowsh = function(index, isDirective) {
     if (!isDirective) {
       tThis.rowIndex = index;

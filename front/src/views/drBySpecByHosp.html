@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h3>Doctors</h3>
+        <h3>Doctors of {{SpecName}} from {{HospitalName}}</h3>
 
 
 
@@ -10,7 +10,8 @@
           <tr>
             <th>Picture</th>
             <th>Name</th>
-            <th>Description</th>
+            <th>Rank</th>
+            <th>PrivatePractice</th>
             <th>Description</th>
             <th>Reviews Number</th>
             <th>Rating</th>
@@ -18,8 +19,9 @@
           <tr ng-click="dshlctrl.selectedRowDSH($index)" ng-repeat="item in frontSpecByHospObj" ng-class="{active:$index==fsbyhlctrl.rowIndex}" >
             <td>{{item.Picture}}</td>
             <td>{{item.Name}}</td>
-            <td>{{item.Description}}</td>
-            <td>{{item.doctorsNr}}</td>
+            <td>{{item.RankName}}</td>
+            <td>{{item.PrivatePractice}}</td>
+            <td>{{item.CV}}</td>
             <td>{{item.Reviews}}</td>
             <td>{{item.ReviewsNr}}</td>
           </tr>

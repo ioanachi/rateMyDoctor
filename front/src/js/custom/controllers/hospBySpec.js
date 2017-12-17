@@ -19,11 +19,11 @@ app.controller("HospBySpecController", ["$scope", '$localStorage', 'httpGetServi
   tThis.selectedRowHS = function(index, isDirective) {
       tThis.rowIndex = index;
   };
+  httpGetService.getSpecificSpeciality(tThis.paramIdF).then(function(raspuns3) {
+    var SpecialityName = raspuns3.data.result;
+    $scope.SpecName = SpecialityName[0].Name;
+    console.log($scope.SpecName, "$scope.SpecName");
 
-
-
-
-
-
+  });
 
 }]);

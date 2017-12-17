@@ -23,10 +23,20 @@ app.controller("DrSpecHospController", ["$scope", '$localStorage', 'httpGetServi
     if (!isDirective) {
       tThis.rowIndex = index;
     }
-      return tThis.frontSpecByHospObj[index].hID;
+    return tThis.frontSpecByHospObj[index].hID;
   };
+  httpGetService.getSpecificHosp(tThis.paramIdh).then(function(raspuns4) {
+    var hospName = raspuns4.data.result;
+    $scope.HospitalName = hospName[0].Name;
+    console.log($scope.HospitalName, "$scope.HospitalName");
 
+  });
+  httpGetService.getSpecificSpeciality(tThis.paramIds).then(function(raspuns3) {
+    var SpecialityName = raspuns3.data.result;
+    $scope.SpecName = SpecialityName[0].Name;
+    console.log($scope.SpecName, "$scope.SpecName");
 
+  });
 
 
 

@@ -16,11 +16,11 @@ app.controller("FrontSpecByHospListController", ["$scope", '$localStorage', 'htt
     $scope.frontSpecByHospObj = result;
 
   });
-  tThis.selectedRowDS = function(index, isDirective) {
+  tThis.selectedRowsh = function(index, isDirective) {
     if (!isDirective) {
       tThis.rowIndex = index;
     }
-    console.log($scope.frontSpecByHospObj, "b");
+    console.log($scope.frontSpecByHospObj[index].sID, "b");
 
     return $scope.frontSpecByHospObj[index].sID;
   };

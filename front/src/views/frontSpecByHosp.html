@@ -13,11 +13,11 @@
             <th>Description</th>
             <th>Number of doctors</th>
           </tr>
-          <tr ng-click="shlctrl.selectedRowDS($index,false)" ng-repeat="item in frontSpecByHospObj" ng-class="{active:$index==fsbyhlctrl.rowIndex}" >
+          <tr ng-click="shlctrl.selectedRowsh($index,false)" ng-repeat="item in frontSpecByHospObj" ng-class="{active:$index==shlctrl.rowIndex}" >
             <td>{{item.Picture}}</td>
             <td>{{item.Name}}</td>
             <td>{{item.Description}}</td>
-            <td goto-Path="/drBySpecByHosp/{{shlctrl.paramIdF}}/{{shlctrl.selectedRowDS($index, true)}}">{{item.doctorsNr}}</td>
+            <td goto-Path="/drBySpecByHosp/{{shlctrl.paramIdF}}/{{shlctrl.selectedRowsh($index, true)}}">{{item.doctorsNr}}</td>
           </tr>
         </table>
 

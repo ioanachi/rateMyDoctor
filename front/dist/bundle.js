@@ -78777,10 +78777,10 @@ _main.app.factory('httpGetService', ['generalService', '$http', '$localStorage',
       return $http.get(generalService.requestLinks('/front/doctorsBySpeciality/' + id));
     },
     getHospBySpec: function getHospBySpec(id) {
-      return $http.get(generalService.requestLinks('/front/hospitalBySpeciality/' + id));
+      return $http.get(generalService.requestLinks('/front/hospitalsBySpeciality/' + id));
     },
-    getDrbySpecAndHosp: function getDrbySpecAndHosp(idh, ids) {
-      return $http.get(generalService.requestLinks('/front/doctorsBySpecAndHosp/' + ids + idh));
+    getDrbySpecAndHosp: function getDrbySpecAndHosp(hid, sid) {
+      return $http.get(generalService.requestLinks('/front/doctorsBySpecAndHosp/' + hid + '/' + sid));
     }
 
   };
@@ -78929,11 +78929,11 @@ _main.app.controller("FrontSpecByHospListController", ["$scope", '$localStorage'
     console.log(result, "a");
     $scope.frontSpecByHospObj = result;
   });
-  tThis.selectedRowDS = function (index, isDirective) {
+  tThis.selectedRowsh = function (index, isDirective) {
     if (!isDirective) {
       tThis.rowIndex = index;
     }
-    console.log($scope.frontSpecByHospObj, "b");
+    console.log($scope.frontSpecByHospObj[index].sID, "b");
 
     return $scope.frontSpecByHospObj[index].sID;
   };
@@ -78951,16 +78951,17 @@ var _main = __webpack_require__(0);
 _main.app.controller("DrSpecHospController", ["$scope", '$localStorage', 'httpGetService', '$mdDialog', '$location', '$routeParams', function ($scope, $localStorage, httpGetService, $mdDialog, $location, $routeParams) {
   var tThis = this;
   $scope.drBySpecByHospObj = [];
-  console.log($routeParams, "$routeParams");
+  console.log($routeParams, "$routeParamseeeeeeeeeeeeee");
 
-  tThis.paramIdF = $routeParams.id;
-  httpGetService.getSpecByHosp(tThis.paramIdF).then(function (raspuns) {
+  tThis.paramIdh = $routeParams.idh;
+  tThis.paramIds = $routeParams.ids;
+  httpGetService.getDrbySpecAndHosp(tThis.paramIdh, tThis.paramIds).then(function (raspuns) {
     var result = raspuns.data.result;
     console.log(result, "specccccccccccccccccccccccccccccccccccc");
     $scope.frontSpecByHospObj = result;
   });
 
-  tThis.selectedRowDS = function (index, isDirective) {
+  tThis.selectedRowDSH = function (index, isDirective) {
     console.log(tThis.frontSpecByHospObj[index], "tThis.frontSpecByHospObj[index]");
 
     if (!isDirective) {

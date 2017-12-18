@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rate My Doctor User</title>
+</head>
+
+<body >
+  <div class="menu">
+
+    <ul class="menuUl">
+      <li goto-path="/front">Home</li>
+      <li goto-path="frontSpecialitiesList">Specialities</li>
+      <li goto-path='/frontHospitalsList'>Hospitals</li>
+      <li goto-path='/frontDoctorsList'>Doctors</li>
+    </ul>
+
+  </div>
+
+
+
+  <ng-view></ng-view>
+
+  <script src="./dist/commons.js"></script>
+  <script src="./dist/bundle.js"></script>
+</body>
+
+</html>

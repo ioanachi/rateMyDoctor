@@ -1,0 +1,27 @@
+<div class="drspechospList" ng-controller="FrontSpecByHospListController as shlctrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>Specialities from {{HospitalName}}</h3>
+
+
+
+        <table >
+          <tr>
+            <th>Picture</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Number of doctors</th>
+          </tr>
+          <tr ng-click="shlctrl.selectedRowsh($index,false)" ng-repeat="item in frontSpecByHospObj" ng-class="{active:$index==shlctrl.rowIndex}" >
+            <td>{{item.Picture}}</td>
+            <td>{{item.Name}}</td>
+            <td>{{item.Description}}</td>
+            <td goto-Path="/drBySpecByHosp/{{shlctrl.paramIdF}}/{{shlctrl.selectedRowsh($index, true)}}">{{item.doctorsNr}}</td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>

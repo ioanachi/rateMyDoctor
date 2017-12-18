@@ -1,0 +1,81 @@
+.whole {
+  min-width: 100%;
+  min-height: 100%;
+
+  .bigscreen {
+    padding: 50px;
+    min-height: 600px;
+    border: 1px solid rgb(187, 236, 246);
+    justify-content: center;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+
+    .centerbox {
+      position: absolute;
+      min-width: 280px;
+      height: 280px;
+      align-self: center;
+      align-items: center;
+    }
+
+    .hospfontP {
+      background-image: url("/src/img/hospitalDash.jpg");
+      bottom: 5px;
+      min-width: 280px;
+      min-height: 280px;
+      align-self: flex-end;
+      background-size: cover;
+      align-items: center;
+    }
+
+    .specfrontP {
+      background-image: url("/src/img/specialityDash.jpg");
+      min-width: 280px;
+      min-height: 280px;
+      align-self: flex-start;
+      margin-right: auto;
+      background-size: cover;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .drfrontP {
+      width: 280px;
+      min-height: 280px;
+      background-image: url("/src/img/drDash.jpg");
+      bottom: 5px;
+      background-size: cover;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .transparent {
+    min-width: 100%;
+    min-height: 300px;
+    background-color: rgba(0, 0, 0,0.4);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    p {
+      color: #fff;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0,0.0);
+      cursor: pointer;
+
+      p {
+        background-color: rgba(0, 0, 0,0.5);
+      }
+    }
+  }
+}

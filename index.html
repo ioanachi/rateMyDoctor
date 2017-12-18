@@ -1,21 +1,105 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html>
 
 <head>
   <meta charset="utf-8">
   <title></title>
 </head>
 
-<body ng-controller="MainController as mnctrl">
+<body>
+  <div class="div">
 
 
+    <a href="admin/index.html">
+      <div class="admin">
+        <div class="transparent">
+          <p> Admin Panel</p>
+        </div>
+      </div>
+    </a>
+    <a href="front/index.html">
+      <div class="front">
+        <div class="transparent">
+          <p>Front End</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <style type="text/css">
+    html,
+    body {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      background-image: url("./src/img/back.jpg");
+      background-size: cover;
 
-  <div ng-show="mnctrl.user" ng-include="'./src/views/menu.html'"></div>
-  <!-- <div ng-include="'./src/views/menu.html'"></div> -->
-  <ng-view></ng-view>
+    }
 
-  <script src="./dist/commons.js"></script>
-  <script src="./dist/bundle.js"></script>
+    .div {
+      justify-content: center;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      /* border: 1px solid #c3c3c3; */
+    }
+
+    .admin {
+      color: black;
+      height: 400px;
+      min-width: 400px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      margin: 0px;
+      padding: 10px;
+      background-image: url("./src/img/admin.jpg");
+      background-size: cover;
+
+    }
+
+    .front {
+      height: 400px;
+      min-width: 400px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin: 0px;
+      padding: 10px;
+      background-image: url("./src/img/front.jpg");
+      background-size: cover;
+
+    }
+    .transparent{
+      min-width: 100%;
+      min-height: 100%;
+      padding: 10px;
+
+      background-color: rgba(0, 0, 0,0.4);
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+
+
+    .transparent:hover {
+        background-color: rgba(0, 0, 0,0.0);
+        cursor: pointer;
+    }
+    .transparent:hover p{
+      background-color: rgba(0, 0, 0,0.5);
+
+    }
+    p {
+      color: #fff;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+  </style>
 </body>
 
 </html>
